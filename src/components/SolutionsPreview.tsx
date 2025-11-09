@@ -13,9 +13,14 @@ const SolutionsPreview = () => {
       id: 1,
       icon: Brain,
       title: "KYC Automation",
+      subtitle: "Real-time identity verification with 99.2% accuracy",
       description: "Autonomous identity verification and onboarding with real-time compliance monitoring",
-      metrics: { primary: "99.2%", secondary: "85%", label1: "Accuracy", label2: "Faster" },
+      problemHeadline: "Manual identity verification takes 5-7 days, causing 40% customer abandonment",
+      metrics: { primary: "99.2%", secondary: "85%", label1: "Accuracy", label2: "Faster Processing" },
       features: ["Biometric verification", "Document analysis", "Global database checks", "Fraud detection"],
+      technicalHighlights: ["OCR with 180+ document types", "Facial recognition & anti-spoofing", "50+ global database sources", "ML-powered fraud detection"],
+      regulatory: ["KYC", "CDD", "EDD", "AML", "GDPR"],
+      industries: ["Banking", "Insurance", "Fintech", "Wealth Management"],
       color: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-50 hover:bg-blue-100",
       demoLink: "/solutions/kyc-automation"
@@ -24,9 +29,14 @@ const SolutionsPreview = () => {
       id: 2,
       icon: TrendingUp,
       title: "Lending Compliance",
+      subtitle: "70% faster decisions with 45% lower defaults",
       description: "Intelligent loan underwriting and credit assessment with automated regulatory compliance",
-      metrics: { primary: "70%", secondary: "45%", label1: "Faster", label2: "Lower Defaults" },
+      problemHeadline: "Manual underwriting limiting loan capacity and increasing defaults",
+      metrics: { primary: "70%", secondary: "45%", label1: "Faster Decisions", label2: "Lower Defaults" },
       features: ["Credit scoring", "Alternative data", "Risk assessment", "Regulatory compliance"],
+      technicalHighlights: ["Alternative data integration", "ML credit scoring models", "Income verification", "Regulatory rule engines"],
+      regulatory: ["Basel III", "FCRA", "ECOA", "TILA", "Fair Lending"],
+      industries: ["Banks", "Credit Unions", "Fintech Lenders", "NBFC"],
       color: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-50 hover:bg-purple-100",
       demoLink: "/solutions/lending-compliance"
@@ -35,9 +45,14 @@ const SolutionsPreview = () => {
       id: 3,
       icon: Eye,
       title: "Transaction Monitoring",
+      subtitle: "90% false positive reduction with 99.5% threat detection",
       description: "Real-time suspicious activity detection with adaptive pattern recognition",
+      problemHeadline: "1000+ daily false positives overwhelming compliance teams",
       metrics: { primary: "90%", secondary: "99.5%", label1: "False Positive Reduction", label2: "Detection Rate" },
       features: ["Real-time monitoring", "Pattern recognition", "Network analysis", "SAR generation"],
+      technicalHighlights: ["Stream processing", "Graph databases", "Behavioral analytics", "Anomaly detection"],
+      regulatory: ["AML", "BSA", "FATF", "OFAC", "EU AML Directives"],
+      industries: ["Banks", "Payment Processors", "Cryptocurrency", "Remittance"],
       color: "from-green-500 to-emerald-500",
       bgColor: "bg-green-50 hover:bg-green-100",
       demoLink: "/solutions/transaction-monitoring"
@@ -46,9 +61,14 @@ const SolutionsPreview = () => {
       id: 4,
       icon: Shield,
       title: "Risk Management",
+      subtitle: "90% risk reduction with 100% audit readiness",
       description: "Continuous regulatory monitoring with automated policy alignment and predictive analytics",
+      problemHeadline: "Reactive compliance approach leading to violations and penalties",
       metrics: { primary: "90%", secondary: "100%", label1: "Risk Reduction", label2: "Audit Ready" },
       features: ["Risk assessment", "Policy automation", "Predictive analytics", "Audit trails"],
+      technicalHighlights: ["Regulatory API integrations", "Policy automation engines", "Predictive risk modeling", "Audit trail immutability"],
+      regulatory: ["SOX", "COSO", "ISO 27001", "PCI-DSS"],
+      industries: ["All BFSI sectors"],
       color: "from-orange-500 to-red-500",
       bgColor: "bg-orange-50 hover:bg-orange-100",
       demoLink: "/solutions/risk-management"
@@ -65,7 +85,7 @@ const SolutionsPreview = () => {
             🤖 Agentic AI Solutions
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Four Core Solutions,
+            Core Solutions,
             <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> Infinite Possibilities</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -164,22 +184,81 @@ const SolutionsPreview = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
                   {solution.title}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                {solution.subtitle && (
+                  <p className="text-sm font-semibold text-purple-600 mb-3">
+                    {solution.subtitle}
+                  </p>
+                )}
+                <p className="text-gray-600 mb-4 leading-relaxed text-sm">
                   {solution.description}
                 </p>
 
+                {/* Problem Statement */}
+                {solution.problemHeadline && (
+                  <div className="mb-4 p-3 bg-red-50 border-l-4 border-red-400 rounded-r">
+                    <p className="text-xs text-red-700 font-medium leading-relaxed">
+                      {solution.problemHeadline}
+                    </p>
+                  </div>
+                )}
+
                 {/* Features List */}
-                <div className="space-y-2 mb-6">
+                <div className="space-y-2 mb-4">
                   {solution.features.map((feature, index) => (
-                    <div key={index} className="flex items-center text-sm text-gray-600">
-                      <div className={`w-2 h-2 bg-gradient-to-r ${solution.color} rounded-full mr-3`}></div>
+                    <div key={index} className="flex items-center text-xs text-gray-600">
+                      <div className={`w-1.5 h-1.5 bg-gradient-to-r ${solution.color} rounded-full mr-2`}></div>
                       {feature}
                     </div>
                   ))}
                 </div>
+
+                {/* Technical Highlights */}
+                {solution.technicalHighlights && (
+                  <div className="mb-4 p-3 bg-white/50 rounded-lg border border-gray-200">
+                    <p className="text-xs font-semibold text-gray-700 mb-2">Technical Capabilities:</p>
+                    <div className="space-y-1">
+                      {solution.technicalHighlights.slice(0, 2).map((highlight, index) => (
+                        <div key={index} className="flex items-start text-xs text-gray-600">
+                          <span className="mr-2">•</span>
+                          <span>{highlight}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Regulatory & Industries */}
+                {(solution.regulatory || solution.industries) && (
+                  <div className="mb-4 grid grid-cols-2 gap-2">
+                    {solution.regulatory && (
+                      <div className="p-2 bg-white/50 rounded border border-gray-200">
+                        <p className="text-xs font-semibold text-gray-700 mb-1">Regulatory:</p>
+                        <div className="flex flex-wrap gap-1">
+                          {solution.regulatory.slice(0, 2).map((reg, idx) => (
+                            <span key={idx} className="text-xs px-1.5 py-0.5 bg-gray-100 text-gray-700 rounded">
+                              {reg}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    {solution.industries && (
+                      <div className="p-2 bg-white/50 rounded border border-gray-200">
+                        <p className="text-xs font-semibold text-gray-700 mb-1">Industries:</p>
+                        <div className="flex flex-wrap gap-1">
+                          {solution.industries.slice(0, 2).map((industry, idx) => (
+                            <span key={idx} className="text-xs px-1.5 py-0.5 bg-gray-100 text-gray-700 rounded">
+                              {industry}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
 
                 {/* Metrics Bar */}
                 <div className="flex items-center justify-between mb-6 p-4 bg-white/70 rounded-lg">

@@ -16,6 +16,13 @@ import KYCAutomation from "./pages/solutions/KYCAutomation";
 import LendingCompliance from "./pages/solutions/LendingCompliance";
 import TransactionMonitoring from "./pages/solutions/TransactionMonitoring";
 import RiskManagement from "./pages/solutions/RiskManagement";
+import SanctionsScreening from "./pages/solutions/SanctionsScreening";
+import CaseManagement from "./pages/solutions/CaseManagement";
+import AuditEvidence from "./pages/solutions/AuditEvidence";
+import PolicyGovernance from "./pages/solutions/PolicyGovernance";
+import RegulatoryIntelligence from "./pages/solutions/RegulatoryIntelligence";
+import FraudDetection from "./pages/solutions/FraudDetection";
+import DocumentIntelligence from "./pages/solutions/DocumentIntelligence";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Security from "./pages/Security";
@@ -38,6 +45,13 @@ const App = () => (
           <Route path="/solutions/lending-compliance" element={<LendingCompliance />} />
           <Route path="/solutions/transaction-monitoring" element={<TransactionMonitoring />} />
           <Route path="/solutions/risk-management" element={<RiskManagement />} />
+          <Route path="/solutions/sanctions-screening" element={<SanctionsScreening />} />
+          <Route path="/solutions/case-management" element={<CaseManagement />} />
+          <Route path="/solutions/audit-evidence" element={<AuditEvidence />} />
+          <Route path="/solutions/policy-governance" element={<PolicyGovernance />} />
+          <Route path="/solutions/regulatory-intelligence" element={<RegulatoryIntelligence />} />
+          <Route path="/solutions/fraud-detection" element={<FraudDetection />} />
+          <Route path="/solutions/document-intelligence" element={<DocumentIntelligence />} />
           <Route path="/platform" element={<Platform />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/about" element={<About />} />

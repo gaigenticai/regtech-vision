@@ -294,19 +294,19 @@ const KYCAutomation = () => {
       </section>
 
       {/* Technical Capabilities */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-12 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Technical Capabilities</h2>
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold text-gray-900 mb-3">Technical Capabilities</h2>
             <p className="text-xl text-gray-600">Enterprise-grade technology stack built for scale and security</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-5">
             {technicalCapabilities.map((capability, index) => (
               <Card key={index} className="bg-white shadow-lg border-0 hover:shadow-xl transition-shadow">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-6">{capability.category}</h3>
-                  <div className="space-y-4">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{capability.category}</h3>
+                  <div className="space-y-2.5">
                     {capability.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center">
                         <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
@@ -322,18 +322,18 @@ const KYCAutomation = () => {
       </section>
 
       {/* Regulatory Compliance */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Regulatory Compliance</h2>
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold text-gray-900 mb-3">Regulatory Compliance</h2>
             <p className="text-xl text-gray-600">Built-in compliance with global regulatory standards and frameworks</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-5">
             {regulatoryFrameworks.map((framework, index) => (
               <Card key={index} className="border-2 border-blue-200 hover:border-blue-400 transition-colors">
-                <CardContent className="p-8">
-                  <div className="flex items-center mb-4">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-3">
                     <Shield className="h-8 w-8 text-blue-600 mr-4" />
                     <h3 className="text-xl font-bold text-gray-900">{framework.name}</h3>
                   </div>
@@ -378,15 +378,26 @@ const KYCAutomation = () => {
             </div>
           </div>
 
-          <Link to="/contact">
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-2 border-white text-blue-600 hover:bg-blue-600 hover:text-white font-semibold px-8 py-4 rounded-xl"
-            >
-              Schedule Demo
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link to="/contact">
+              <Button
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-4 rounded-xl"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+            <Link to="/solutions">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-2 border-white text-blue-600 hover:bg-blue-600 hover:text-white font-semibold px-8 py-4 rounded-xl"
+              >
+                View All Solutions
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

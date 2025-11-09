@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, CheckCircle, Users, DollarSign, Target, Clock, Shield, TrendingUp, Settings, Grid3X3, Layers, Zap, Gauge, Puzzle, TrendingDown, Crosshair, Rocket } from "lucide-react";
+import { ArrowRight, CheckCircle, Users, DollarSign, Target, Clock, Shield, TrendingUp, Settings, Grid3X3, Layers, Zap, Gauge, Puzzle, TrendingDown, Crosshair, Rocket, Search, FileText, ClipboardCheck, BookOpen, Radio, Brain } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -104,6 +104,160 @@ const Solutions = () => {
       regulatory: ["Financial Controls", "Risk Frameworks", "Security Standards", "Payment Security", "Industry Best Practices"],
       industries: ["All BFSI sectors requiring regulatory compliance"],
       demoLink: "/solutions/risk-management"
+    },
+    {
+      id: "sanctions",
+      title: "Sanctions Screening Agent",
+      subtitle: "99.8% match accuracy with <2s screening time",
+      problemHeadline: "Manual screening processes taking hours, missing critical matches, and causing compliance gaps",
+      solutionSummary: "Automated sanctions, PEP, and adverse media screening across 50+ global databases in real-time",
+      keyResults: [
+        { metric: "99.8%", label: "match accuracy", icon: Target },
+        { metric: "<2s", label: "screening time", icon: Clock },
+        { metric: "50+", label: "data sources", icon: Search }
+      ],
+      technicalHighlights: [
+        "50+ global database sources",
+        "Fuzzy matching algorithms",
+        "Real-time list updates",
+        "Multi-jurisdiction coverage",
+        "Automated watchlist monitoring"
+      ],
+      regulatory: ["OFAC", "UN Sanctions", "EU Sanctions", "UK Sanctions", "FATF"],
+      industries: ["Banks", "Payment Processors", "Money Service Businesses", "Cryptocurrency"],
+      demoLink: "/solutions/sanctions-screening"
+    },
+    {
+      id: "case-management",
+      title: "Case Management Agent",
+      subtitle: "75% time saved with 60% automated SAR generation",
+      problemHeadline: "Case backlogs growing, manual SAR filing errors, and inconsistent investigation workflows",
+      solutionSummary: "Intelligent investigation case management with automated SAR generation and workflow orchestration",
+      keyResults: [
+        { metric: "75%", label: "time saved", icon: Clock },
+        { metric: "60%", label: "auto-SAR rate", icon: CheckCircle },
+        { metric: "100%", label: "compliance", icon: Shield }
+      ],
+      technicalHighlights: [
+        "AI-powered case prioritization",
+        "Automated SAR form filling",
+        "Workflow orchestration",
+        "Evidence linking",
+        "Investigation automation"
+      ],
+      regulatory: ["BSA", "FATF", "FinCEN", "EU AML Directives"],
+      industries: ["Banks", "MSBs", "Casinos", "Securities Firms"],
+      demoLink: "/solutions/case-management"
+    },
+    {
+      id: "audit-evidence",
+      title: "Audit & Evidence Agent",
+      subtitle: "100% audit coverage with 24/7 monitoring",
+      problemHeadline: "Fragmented audit trails, manual evidence collection, and compliance gaps in model governance",
+      solutionSummary: "Model governance, audit trails, and automated evidence collection for regulatory compliance",
+      keyResults: [
+        { metric: "100%", label: "audit coverage", icon: CheckCircle },
+        { metric: "24/7", label: "monitoring", icon: Clock },
+        { metric: "Zero", label: "gaps", icon: Shield }
+      ],
+      technicalHighlights: [
+        "Immutable audit logs",
+        "Automated evidence gathering",
+        "Model explainability",
+        "Regulatory reporting",
+        "Continuous compliance tracking"
+      ],
+      regulatory: ["Model Risk Management", "SR 11-7", "GDPR", "CCPA"],
+      industries: ["Banks", "Fintech", "Credit Unions", "Investment Firms"],
+      demoLink: "/solutions/audit-evidence"
+    },
+    {
+      id: "policy-governance",
+      title: "Policy Governance Agent",
+      subtitle: "95% policy coverage with automated updates",
+      problemHeadline: "Policy gaps, manual framework mapping, and inconsistent control validation processes",
+      solutionSummary: "Automated policy management, framework mapping, and compliance control validation",
+      keyResults: [
+        { metric: "95%", label: "policy coverage", icon: Target },
+        { metric: "Auto", label: "updates", icon: Zap },
+        { metric: "100%", label: "framework mapping", icon: CheckCircle }
+      ],
+      technicalHighlights: [
+        "Automated policy generation",
+        "Framework compliance mapping",
+        "Control testing automation",
+        "Attestation workflows",
+        "Policy version control"
+      ],
+      regulatory: ["COSO", "COBIT", "NIST", "ISO 27001"],
+      industries: ["All BFSI sectors"],
+      demoLink: "/solutions/policy-governance"
+    },
+    {
+      id: "regulatory-intelligence",
+      title: "Regulatory Intelligence Agent",
+      subtitle: "Real-time monitoring across 50+ regulatory sources",
+      problemHeadline: "Missing regulatory updates, manual impact assessment, and delayed compliance implementation",
+      solutionSummary: "Real-time regulatory change monitoring, impact analysis, and compliance gap identification",
+      keyResults: [
+        { metric: "Real-time", label: "monitoring", icon: Radio },
+        { metric: "50+", label: "sources", icon: Search },
+        { metric: "Auto", label: "alerts", icon: Zap }
+      ],
+      technicalHighlights: [
+        "NLP for regulatory text",
+        "Impact assessment algorithms",
+        "Gap analysis automation",
+        "Multi-jurisdiction tracking",
+        "Automated compliance mapping"
+      ],
+      regulatory: ["All Global Frameworks", "FATF", "Basel", "MiFID II"],
+      industries: ["All BFSI sectors"],
+      demoLink: "/solutions/regulatory-intelligence"
+    },
+    {
+      id: "fraud-detection",
+      title: "Fraud Detection Agent",
+      subtitle: "98.5% detection rate with real-time analysis",
+      problemHeadline: "Rising fraud losses, delayed detection, and high false positive rates overwhelming teams",
+      solutionSummary: "Advanced ML-powered fraud detection with behavioral analysis and anomaly detection",
+      keyResults: [
+        { metric: "98.5%", label: "detection rate", icon: Target },
+        { metric: "Real-time", label: "analysis", icon: Clock },
+        { metric: "90%", label: "false positive reduction", icon: Shield }
+      ],
+      technicalHighlights: [
+        "Deep learning models",
+        "Behavioral biometrics",
+        "Network analysis",
+        "Real-time scoring",
+        "Adaptive ML algorithms"
+      ],
+      regulatory: ["PCI-DSS", "Regulation E", "PSD2", "Fraud Prevention"],
+      industries: ["Banks", "Payment Processors", "E-commerce", "Fintech"],
+      demoLink: "/solutions/fraud-detection"
+    },
+    {
+      id: "document-intelligence",
+      title: "Document Intelligence Agent",
+      subtitle: "99.5% extraction accuracy, 10x faster processing",
+      problemHeadline: "Manual document review taking days, extraction errors, and inconsistent data validation",
+      solutionSummary: "AI-powered document processing, extraction, and validation for compliance workflows",
+      keyResults: [
+        { metric: "99.5%", label: "extraction accuracy", icon: Target },
+        { metric: "10x", label: "faster", icon: Clock },
+        { metric: "180+", label: "formats", icon: FileText }
+      ],
+      technicalHighlights: [
+        "Advanced OCR with 180+ formats",
+        "Intelligent data extraction",
+        "Document validation",
+        "Multi-language support",
+        "Automated data verification"
+      ],
+      regulatory: ["KYC", "CDD", "Documentation Requirements"],
+      industries: ["Banks", "Insurance", "Legal", "Real Estate"],
+      demoLink: "/solutions/document-intelligence"
     }
   ];
 
@@ -295,7 +449,7 @@ const Solutions = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Four Core Solutions, Infinite Possibilities
+              Core Solutions, Infinite Possibilities
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Each solution works independently or as part of an integrated compliance ecosystem
