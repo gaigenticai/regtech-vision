@@ -23,6 +23,7 @@ import PolicyGovernance from "./pages/solutions/PolicyGovernance";
 import RegulatoryIntelligence from "./pages/solutions/RegulatoryIntelligence";
 import FraudDetection from "./pages/solutions/FraudDetection";
 import DocumentIntelligence from "./pages/solutions/DocumentIntelligence";
+import VendorRisk from "./pages/solutions/VendorRisk";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Security from "./pages/Security";
@@ -50,6 +51,7 @@ const App = () => (
           <Route path="/solutions/audit-evidence" element={<AuditEvidence />} />
           <Route path="/solutions/policy-governance" element={<PolicyGovernance />} />
           <Route path="/solutions/regulatory-intelligence" element={<RegulatoryIntelligence />} />
+          <Route path="/solutions/vendor-risk" element={<VendorRisk />} />
           <Route path="/solutions/fraud-detection" element={<FraudDetection />} />
           <Route path="/solutions/document-intelligence" element={<DocumentIntelligence />} />
           <Route path="/platform" element={<Platform />} />

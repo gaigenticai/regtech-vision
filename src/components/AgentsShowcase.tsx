@@ -6,6 +6,7 @@ import {
   TrendingUp, 
   Eye, 
   Shield, 
+  Building2,
   Search, 
   FileText, 
   ClipboardCheck, 
@@ -27,7 +28,7 @@ const AgentsShowcase = () => {
   const autoScrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const resumeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // All 11 agents - 4 existing + 7 additional with comprehensive details
+  // Full agent suite with comprehensive details
   const allAgents = [
     {
       id: 1,
@@ -175,6 +176,22 @@ const AgentsShowcase = () => {
     },
     {
       id: 10,
+      icon: Building2,
+      title: "Vendor Risk Agent",
+      subtitle: "TPRM automation with audit-ready evidence and renewals",
+      description: "Centralize vendor evidence, manage renewals, and generate questionnaire answers grounded in approved artifacts.",
+      problemHeadline: "TPRM evidence is scattered and renewals slip, creating audit gaps and last-minute fire drills",
+      metrics: { primary: "Audit-ready", secondary: "Risk-tiered", label1: "Assessments", label2: "Renewals" },
+      features: ["Vendor inventory & tiering", "Evidence library", "Gap detection", "Auto-answer with citations"],
+      technicalHighlights: ["Evidence expiry tracking", "Per-answer citations", "Gap extraction & prioritization", "Immutable audit trail"],
+      regulatory: ["OCC 2013-29", "EBA Outsourcing", "SOC 2", "ISO 27001"],
+      industries: ["Banks", "Fintech", "Payment Processors", "Insurance"],
+      color: "from-indigo-500 to-purple-500",
+      bgColor: "bg-indigo-50 hover:bg-indigo-100",
+      demoLink: "/solutions/vendor-risk"
+    },
+    {
+      id: 11,
       icon: Shield,
       title: "Fraud Detection Agent",
       subtitle: "98.5% detection rate with real-time analysis",
@@ -190,7 +207,7 @@ const AgentsShowcase = () => {
       demoLink: "/solutions/fraud-detection"
     },
     {
-      id: 11,
+      id: 12,
       icon: Brain,
       title: "Document Intelligence Agent",
       subtitle: "99.5% extraction accuracy, 10x faster processing",
@@ -542,4 +559,3 @@ const AgentsShowcase = () => {
 };
 
 export default AgentsShowcase;
-

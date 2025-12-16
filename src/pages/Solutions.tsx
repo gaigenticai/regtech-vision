@@ -216,6 +216,28 @@ const Solutions = () => {
       demoLink: "/solutions/regulatory-intelligence"
     },
     {
+      id: "vendor-risk",
+      title: "Vendor Risk / TPRM Automation",
+      subtitle: "Audit-ready assessments with evidence and renewal control",
+      problemHeadline: "Scattered evidence, missed expirations, and manual questionnaires create audit gaps and delays",
+      solutionSummary: "Centralize vendor evidence, automate renewals, and generate questionnaire responses grounded in approved artifacts.",
+      keyResults: [
+        { metric: "Audit-ready", label: "evidence trail", icon: CheckCircle },
+        { metric: "Risk-tiered", label: "renewals", icon: Shield },
+        { metric: "Expiry-driven", label: "evidence control", icon: Clock }
+      ],
+      technicalHighlights: [
+        "Vendor inventory with tiering and ownership",
+        "Evidence library with expirations and reuse",
+        "Gap detection from questionnaire responses",
+        "Auto-answer with citations and confidence",
+        "Immutable audit trail for every change"
+      ],
+      regulatory: ["OCC 2013-29", "EBA Outsourcing", "SOC 2", "ISO 27001"],
+      industries: ["Banks", "Fintech", "Payment Processors", "Insurance"],
+      demoLink: "/solutions/vendor-risk"
+    },
+    {
       id: "fraud-detection",
       title: "Fraud Detection Agent",
       subtitle: "98.5% detection rate with real-time analysis",
