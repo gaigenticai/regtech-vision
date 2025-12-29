@@ -35,15 +35,31 @@ const FeatureCard = ({
   const isHighlight = variant === 'highlight';
   const isHorizontal = layout === 'horizontal';
 
-  const cardClass = `bg-white shadow-sm border-0 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 ${
+  const cardClass = `bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 ${
     isHighlight ? 'border-l-4 border-l-primary' : ''
   } ${isHorizontal ? 'flex-row' : ''}`;
+
+  const tagPalette = [
+    "bg-emerald-50 border-emerald-200 text-emerald-700 hover:bg-emerald-100",
+    "bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100",
+    "bg-violet-50 border-violet-200 text-violet-700 hover:bg-violet-100",
+    "bg-amber-50 border-amber-200 text-amber-700 hover:bg-amber-100",
+    "bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100"
+  ] as const;
+
+  const tagClass = (tag: string) => {
+    let hash = 0;
+    for (let i = 0; i < tag.length; i++) hash = (hash * 31 + tag.charCodeAt(i)) >>> 0;
+    return tagPalette[hash % tagPalette.length];
+  };
 
   return (
     <Card className={cardClass}>
       <CardHeader className={isCompact ? 'pb-4' : 'pb-6'}>
         <div className={`flex ${isHorizontal ? 'flex-row' : 'flex-col'} ${isHorizontal ? 'items-center space-x-4' : 'items-start'}`}>
-          <div className={`${isCompact ? 'w-10 h-10' : 'w-12 h-12'} bg-gray-50 rounded-lg flex items-center justify-center flex-shrink-0 ${isHorizontal ? '' : 'mb-4'}`}>
+          <div
+            className={`${isCompact ? 'w-10 h-10' : 'w-12 h-12'} rounded-xl flex items-center justify-center flex-shrink-0 border border-slate-200 bg-gradient-to-br from-white to-slate-50 ${isHorizontal ? '' : 'mb-4'}`}
+          >
             <feature.icon className={`${isCompact ? 'h-5 w-5' : 'h-6 w-6'} text-primary hover:text-secondary transition-colors`} />
           </div>
           
@@ -55,7 +71,11 @@ const FeatureCard = ({
             {feature.tags && !isCompact && (
               <div className="flex flex-wrap gap-2 mb-3">
                 {feature.tags.map((tag, index) => (
-                  <Badge key={index} variant="secondary" className="text-xs">
+                  <Badge
+                    key={index}
+                    variant="outline"
+                    className={`text-[11px] font-semibold backdrop-blur-sm ${tagClass(tag)}`}
+                  >
                     {tag}
                   </Badge>
                 ))}

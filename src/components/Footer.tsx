@@ -4,6 +4,14 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const footerSections = [
     {
+      title: "Product",
+      links: [
+        { name: "Solutions", href: "/solutions" },
+        { name: "Platform", href: "/platform" },
+        { name: "Sentinel", href: "/sentinel" }
+      ]
+    },
+    {
       title: "Company",
       links: [
         { name: "About Us", href: "/about" },
@@ -16,7 +24,7 @@ const Footer = () => {
     <footer className="bg-muted-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Company Info */}
           <div>
             <div className="mb-4">

@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Solutions from "./pages/Solutions";
 import Platform from "./pages/Platform";
+import Sentinel from "./pages/Sentinel";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -55,6 +56,7 @@ const App = () => (
           <Route path="/solutions/fraud-detection" element={<FraudDetection />} />
           <Route path="/solutions/document-intelligence" element={<DocumentIntelligence />} />
           <Route path="/platform" element={<Platform />} />
+          <Route path="/sentinel" element={<Sentinel />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
