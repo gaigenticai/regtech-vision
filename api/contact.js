@@ -47,10 +47,14 @@ module.exports = async (req, res) => {
       </html>
     `;
 
+    const fromName = process.env.RESEND_FROM_NAME || 'Gaigentic AI Contact';
+    const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
+    const toEmail = process.env.CONTACT_TO_EMAIL || 'info@gaigentic.ai';
+
     // Send email
     const result = await resend.emails.send({
-      from: 'Gaigentic AI Contact <noreply@gaigentic.ai>',
-      to: ['info@gaigentic.ai'],
+      from: `${fromName} <${fromEmail}>`,
+      to: [toEmail],
       subject: `💬 New Contact: ${formData.firstName} ${formData.lastName} from ${formData.company}`,
       html: emailContent,
       replyTo: formData.email,
