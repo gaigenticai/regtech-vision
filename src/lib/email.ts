@@ -69,7 +69,8 @@ export const sendDemoRequestEmail = async (formData: DemoRequestData): Promise<{
 
 export const sendContactFormEmail = async (formData: ContactFormData): Promise<{ success: boolean; error?: string }> => {
   try {
-  const response = await fetch('/api/contact', {
+    const apiBaseUrl = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
+    const response = await fetch(`${apiBaseUrl}/api/contact`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -77,10 +78,35 @@ export const sendContactFormEmail = async (formData: ContactFormData): Promise<{
       body: JSON.stringify(formData),
     });
 
-    const result = await response.json();
+    const responseText = await response.text();
+    let result: any = null;
+
+    if (responseText) {
+      try {
+        result = JSON.parse(responseText);
+      } catch {
+        result = null;
+      }
+    }
 
     if (!response.ok) {
-      throw new Error(result.error || 'Failed to send contact form');
+      const message =
+        result && typeof result === 'object' && typeof result.error === 'string' && result.error.trim()
+          ? result.error
+          : `Server error (${response.status}). Please try again later.`;
+      throw new Error(message);
+    }
+
+    if (!result && responseText.trim()) {
+      throw new Error('Unexpected server response. Please try again later.');
+    }
+
+    if (result && typeof result === 'object' && result.success === false) {
+      const message =
+        typeof result.error === 'string' && result.error.trim()
+          ? result.error
+          : 'Failed to send contact form';
+      throw new Error(message);
     }
 
     return { success: true };
