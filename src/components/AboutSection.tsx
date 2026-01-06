@@ -1,43 +1,50 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { 
-  Users, 
-  Globe, 
   Shield,
-  Building2,
-  TrendingUp,
-  Clock,
+  Layers,
   CheckCircle2
 } from "lucide-react";
 
 const AboutSection = () => {
-  const achievements = [
-    { icon: Building2, label: "Beta Partners", value: "3" },
-    { icon: Globe, label: "Regions Targeted", value: "2" },
-    { icon: Users, label: "Team Members", value: "4" },
-    { icon: Shield, label: "Agent Infrastructure", value: "5" }
-  ];
-
-  const values = [
-    {
-      icon: TrendingUp,
-      title: "Innovation",
-      description: "Pushing the boundaries of compliance technology with cutting-edge AI and machine learning."
-    },
+  const differentiators = [
     {
       icon: Shield,
-      title: "Trust & Security",
-      description: "Enterprise-grade security and privacy protection for your most sensitive compliance data."
-    },
-    {
-      icon: Clock,
-      title: "Efficiency",
-      description: "Streamlining compliance processes to save time and reduce operational costs significantly."
+      title: "Security & privacy built in",
+      description: "Security-first foundations designed for sensitive financial data and operational reliability.",
+      points: [
+        "Encryption in transit and at rest, with modern cipher suites",
+        "Role-based access control with least-privilege defaults",
+        "Tenant isolation and configurable data retention policies",
+        "Secrets hygiene and key management-friendly architecture",
+        "Data minimization patterns and sensitive-field protection",
+        "Safe-by-default agent tool access via allowlists"
+      ]
     },
     {
       icon: CheckCircle2,
-      title: "Accuracy",
-      description: "Delivering precise compliance outcomes with our 99.9% accuracy guarantee across all solutions."
+      title: "Auditability by default",
+      description: "Transparent traceability across users, agents, tools, and outcomes—ready for review and oversight.",
+      points: [
+        "End-to-end traces for each agent run: inputs, tool calls, decisions, and outputs",
+        "Searchable event logs with timestamps and user/agent attribution",
+        "Versioned prompts, policies, and configurations for governance",
+        "Evidence packaging for reviews, investigations, and incident response",
+        "Replayable runs to reproduce outcomes and validate changes",
+        "Clear lineage for outputs back to source inputs and actions"
+      ]
+    },
+    {
+      icon: Layers,
+      title: "Shadow Layer control plane",
+      description: "A safety layer that observes, constrains, and validates automation before it acts.",
+      points: [
+        "Shadow mode to monitor outcomes before turning on automation",
+        "Policy guardrails for sensitive actions (redaction, allow/deny rules, thresholds)",
+        "Approval gates for high-impact steps and exception handling",
+        "Deterministic replay and run-to-run comparisons to reduce regressions",
+        "Change control support: promote from shadow → gated → autonomous"
+      ]
     }
   ];
 
@@ -50,51 +57,38 @@ const AboutSection = () => {
             Security and privacy at our core
           </h2>
           <p className="text-lg text-neutral-dark/70">
-            Trust is built on security and privacy. That's why we adhere to the
-            highest industry standards, maintaining compliance and certifications to safeguard you
-            and your customers.
+            Built for financial services teams that need secure automation with clear oversight.
+            We pair strong security and privacy controls with auditability and a Shadow Layer that
+            helps you validate, govern, and safely scale agentic AI.
           </p>
         </div>
 
-        {/* Achievement Stats */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {achievements.map((achievement, index) => (
-            <Card key={index} className="text-center border-border/50 hover:border-accent/20 transition-colors">
+        {/* Differentiators */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {differentiators.map((item, index) => (
+            <Card key={index} className="border-border/50 hover:border-accent/20 transition-colors">
               <CardContent className="pt-6">
-                <div className="flex items-center justify-center mb-4">
+                <div className="flex items-center gap-3 mb-4">
                   <div className="p-3 bg-accent/10 rounded-full">
-                    <achievement.icon className="h-6 w-6 text-accent" />
+                    <item.icon className="h-6 w-6 text-accent" />
+                  </div>
+                  <div className="text-lg font-semibold text-neutral-dark">
+                    {item.title}
                   </div>
                 </div>
-                <div className="text-3xl font-bold text-primary mb-2">
-                  {achievement.value}
-                </div>
-                <div className="text-sm text-neutral-dark/60">
-                  {achievement.label}
-                </div>
+                <p className="text-sm text-neutral-dark/70 mb-4">
+                  {item.description}
+                </p>
+                <ul className="space-y-2 text-sm text-neutral-dark/70">
+                  {item.points.map((point, pointIndex) => (
+                    <li key={pointIndex} className="flex gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-neutral-dark/40 flex-shrink-0" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </CardContent>
             </Card>
-          ))}
-        </div>
-
-        {/* Company Values */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {values.map((value, index) => (
-            <div key={index} className="flex space-x-4">
-              <div className="flex-shrink-0">
-                <div className="p-3 bg-primary/10 rounded-xl">
-                  <value.icon className="h-6 w-6 text-primary" />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-neutral-dark">
-                  {value.title}
-                </h3>
-                <p className="text-neutral-dark/60">
-                  {value.description}
-                </p>
-              </div>
-            </div>
           ))}
         </div>
       </div>

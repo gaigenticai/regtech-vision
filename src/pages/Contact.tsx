@@ -30,12 +30,12 @@ const Contact = () => {
                 </div>
 
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in-up delay-200">
-                  Ready to Transform Your
-                  <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent"> Compliance Operations?</span>
+                  Ready to
+                  <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent"> boost your productivity?</span>
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-8 max-w-2xl animate-fade-in-up delay-400">
-                  Be among the first to experience our AI-powered compliance platform. <strong>Schedule a personalized demo</strong> to explore how we can help you achieve regulatory excellence.
+                  Be among the first to experience our agentic AI platform for financial services. <strong>Schedule a personalized demo</strong> to see how our AI agents can streamline workflows, elevate customer experience, and deliver measurable productivity gains.
                 </p>
 
                 {/* Trust Indicators with Animation */}

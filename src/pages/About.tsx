@@ -28,7 +28,7 @@ const About = () => {
     {
       icon: Lightbulb,
       title: "Innovation",
-      description: "Pioneering cutting-edge agentic AI solutions that transform how financial institutions approach compliance."
+      description: "Pioneering cutting-edge agentic AI solutions that transform how financial services teams run high-volume workflows."
     },
     {
       icon: Shield,
@@ -51,7 +51,7 @@ const About = () => {
     {
       name: "Auke D Veenstra",
       title: "CEO & Co-Founder",
-      background: "Experienced entrepreneur and business leader with a strong background in technology and financial services. Founded and scaled multiple successful ventures, bringing deep expertise in business development, strategic partnerships, and market expansion. Passionate about leveraging AI to solve complex compliance challenges in the financial sector.",
+      background: "Experienced entrepreneur and business leader with a strong background in technology and financial services. Founded and scaled multiple successful ventures, bringing deep expertise in business development, strategic partnerships, and market expansion. Passionate about leveraging AI to solve complex operational challenges across the financial sector.",
       education: "Master Degree in Business Law & Civil Law from University of Groningen",
       expertise: ["Entrepreneurship", "Business Development", "Strategic Partnerships", "Financial Technology"],
   image: "https://i.ibb.co/dJXP4JWR/Auke.jpg",
@@ -100,15 +100,15 @@ const About = () => {
     { metric: "200+", label: "Years Combined Experience", description: "Combined expertise in finance and AI" },
     { metric: "Seed", label: "Funding Stage", description: "Early-stage startup focused on innovation" },
     { metric: "10+", label: "Pilot Programs", description: "Working with select financial institutions" },
-    { metric: "15+", label: "Team Members", description: "AI experts and compliance professionals" },
+    { metric: "15+", label: "Team Members", description: "AI experts and financial services professionals" },
     { metric: "99.9%", label: "System Uptime", description: "Enterprise-grade reliability" },
     { metric: "75%", label: "Average Cost Savings", description: "For our clients within 12 months" }
   ];
 
   const testimonials = [
     {
-      quote: "As a pilot partner, we've been impressed with the team's innovative approach and the potential of their AI solution for streamlining our compliance processes.",
-      author: "Compliance Manager",
+      quote: "As a pilot partner, we've been impressed with the team's innovative approach and the potential of their AI solution for streamlining our day-to-day operations.",
+      author: "Operations Leader",
       company: "Regional Credit Union",
       industry: "Banking"
     },
@@ -119,7 +119,7 @@ const About = () => {
       industry: "Fintech"
     },
     {
-      quote: "Working with this startup has been refreshing - their agile approach and focus on real problems in compliance automation is exactly what the industry needs.",
+      quote: "Working with this startup has been refreshing — their agile approach and focus on real workflow automation is exactly what the industry needs.",
       author: "Head of Risk",
       company: "Community Bank",
       industry: "Banking"
@@ -193,11 +193,11 @@ const About = () => {
 
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in-up delay-200">
                   Leading the Future of
-                  <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent"> Financial Compliance</span>
+                  <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent"> Agentic Financial Services</span>
                 </h1>
 
                 <p className="text-xl text-gray-600 mb-8 max-w-2xl animate-fade-in-up delay-400">
-                  We're industry veterans with decades of experience in financial compliance and AI, pioneering autonomous AI agents that transform how financial institutions approach compliance, making regulatory adherence <strong>seamless, intelligent, and cost-effective</strong>.
+                  We're industry veterans with decades of experience across financial services and AI, pioneering autonomous AI agents that work alongside human experts to streamline onboarding, customer service, operations, and reporting—making productivity gains <strong>fast, measurable, and sustainable</strong>.
                 </p>
 
                 {/* Trust Indicators with Animation */}
@@ -305,36 +305,113 @@ const About = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
               <div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Mission</h3>
-                <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  To transform financial compliance through autonomous AI agents that eliminate manual processes, 
-                  reduce operational costs, and ensure perfect regulatory adherence across BFSI operations.
-                  As industry veterans with decades of experience, we're building the future of compliance automation from the ground up.
-                </p>
-                
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Vision</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  A world where every financial institution operates with autonomous compliance systems that 
-                  adapt in real-time to regulatory changes, enabling them to focus on serving customers 
-                  while maintaining perfect regulatory adherence.
-                </p>
+                <div className="space-y-6">
+                  <Card className="bg-white/70 backdrop-blur border border-gray-200 shadow-lg">
+                    <CardContent className="p-8">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+                          <Target className="h-6 w-6 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-2xl font-bold text-gray-900">Mission</h3>
+                          <p className="mt-3 text-gray-600 text-lg leading-relaxed">
+                            We boost productivity in financial services by helping companies become agentic enterprises—deploying intelligent AI
+                            agents that work alongside human experts, multiplying their capabilities and impact.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-white/70 backdrop-blur border border-gray-200 shadow-lg">
+                    <CardContent className="p-8">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+                          <Globe className="h-6 w-6 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-2xl font-bold text-gray-900">Vision</h3>
+                          <p className="mt-3 text-gray-600 text-lg leading-relaxed">
+                            Every financial services company becomes an agentic enterprise where humans and agents drive customer success
+                            together—creating unprecedented value and efficiency. This isn’t about replacing people; it’s about empowering them
+                            with digital colleagues that take on repetitive work with high accuracy and consistency.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-white/70 backdrop-blur border border-gray-200 shadow-lg">
+                    <CardContent className="p-8">
+                      <div className="flex items-start gap-4 mb-6">
+                        <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-green-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
+                          <TrendingUp className="h-6 w-6 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-2xl font-bold text-gray-900">Impact</h3>
+                          <p className="mt-3 text-gray-600 text-lg leading-relaxed">
+                            Practical outcomes you can measure—across cost, speed, and customer experience.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 gap-4">
+                        {[
+                          {
+                            icon: TrendingUp,
+                            title: "Reduce costs",
+                            description: "Eliminate manual processes and reduce operational costs by up to 60%."
+                          },
+                          {
+                            icon: Heart,
+                            title: "Improve customer experience",
+                            description: "Faster cycle times and more consistent execution across teams."
+                          },
+                          {
+                            icon: Shield,
+                            title: "Maintain audit-ready adherence",
+                            description:
+                              "Strengthen regulatory adherence across compliance functions with clear oversight and traceability."
+                          }
+                        ].map((item) => (
+                          <div
+                            key={item.title}
+                            className="flex items-start gap-4 rounded-2xl border border-gray-200 bg-white/60 p-5"
+                          >
+                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-white to-slate-50 border border-slate-200 flex items-center justify-center flex-shrink-0">
+                              <item.icon className="h-5 w-5 text-gray-900" />
+                            </div>
+                            <div>
+                              <div className="font-semibold text-gray-900">{item.title}</div>
+                              <div className="mt-1 text-gray-600 leading-relaxed">{item.description}</div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
               
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">Our Values</h3>
-                <div className="space-y-6">
-                  {companyValues.map((value, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <value.icon className="h-6 w-6 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h4>
-                        <p className="text-gray-600">{value.description}</p>
-                      </div>
+                <Card className="bg-white/70 backdrop-blur border border-gray-200 shadow-lg">
+                  <CardContent className="p-8">
+                    <h3 className="text-2xl font-bold mb-6 text-gray-900">Our Values</h3>
+                    <div className="space-y-6">
+                      {companyValues.map((value, index) => (
+                        <div key={index} className="flex items-start space-x-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <value.icon className="h-6 w-6 text-white" />
+                          </div>
+                          <div>
+                            <h4 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h4>
+                            <p className="text-gray-600">{value.description}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
@@ -348,8 +425,7 @@ const About = () => {
                 Leadership Team
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Experienced professionals in AI, financial services, and regulatory compliance 
-                driving innovation in compliance automation for the modern financial industry.
+                Experienced professionals in AI and financial services building secure, auditable agentic systems for the modern financial industry.
               </p>
             </div>
 

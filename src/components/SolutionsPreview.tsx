@@ -23,7 +23,7 @@ const SolutionsPreview = () => {
       industries: ["Banking", "Insurance", "Fintech", "Wealth Management"],
       color: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-50 hover:bg-blue-100",
-      demoLink: "/solutions/kyc-automation"
+      demoLink: "/solutions/regulens/kyc-automation"
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ const SolutionsPreview = () => {
       industries: ["Banks", "Credit Unions", "Fintech Lenders", "NBFC"],
       color: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-50 hover:bg-purple-100",
-      demoLink: "/solutions/lending-compliance"
+      demoLink: "/solutions/regulens/lending-compliance"
     },
     {
       id: 3,
@@ -55,7 +55,7 @@ const SolutionsPreview = () => {
       industries: ["Banks", "Payment Processors", "Cryptocurrency", "Remittance"],
       color: "from-green-500 to-emerald-500",
       bgColor: "bg-green-50 hover:bg-green-100",
-      demoLink: "/solutions/transaction-monitoring"
+      demoLink: "/solutions/regulens/transaction-monitoring"
     },
     {
       id: 4,
@@ -71,7 +71,7 @@ const SolutionsPreview = () => {
       industries: ["All BFSI sectors"],
       color: "from-orange-500 to-red-500",
       bgColor: "bg-orange-50 hover:bg-orange-100",
-      demoLink: "/solutions/risk-management"
+      demoLink: "/solutions/regulens/risk-management"
     }
   ];
 
@@ -299,7 +299,7 @@ const SolutionsPreview = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <Link to="/solutions">
+          <Link to="/solutions/regulens">
             <Button
               size="lg"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl"

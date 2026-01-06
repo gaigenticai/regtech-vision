@@ -297,7 +297,7 @@ const AuditEvidence = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
-          <Link to="/solutions">
+          <Link to="/solutions/regulens">
             <Button variant="outline" size="lg" className="border-2 border-white text-violet-600 hover:bg-violet-600 hover:text-white font-semibold px-8 py-4 rounded-xl">
               View All Solutions
             </Button>
@@ -309,4 +309,3 @@ const AuditEvidence = () => {
 };
 
 export default AuditEvidence;
-

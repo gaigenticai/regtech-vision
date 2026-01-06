@@ -44,7 +44,7 @@ const AgentsShowcase = () => {
       industries: ["Banking", "Insurance", "Fintech", "Wealth Management"],
       color: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-50 hover:bg-blue-100",
-      demoLink: "/solutions/kyc-automation"
+      demoLink: "/solutions/regulens/kyc-automation"
     },
     {
       id: 2,
@@ -60,7 +60,7 @@ const AgentsShowcase = () => {
       industries: ["Banks", "Credit Unions", "Fintech Lenders", "NBFC"],
       color: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-50 hover:bg-purple-100",
-      demoLink: "/solutions/lending-compliance"
+      demoLink: "/solutions/regulens/lending-compliance"
     },
     {
       id: 3,
@@ -76,7 +76,7 @@ const AgentsShowcase = () => {
       industries: ["Banks", "Payment Processors", "Cryptocurrency", "Remittance"],
       color: "from-green-500 to-emerald-500",
       bgColor: "bg-green-50 hover:bg-green-100",
-      demoLink: "/solutions/transaction-monitoring"
+      demoLink: "/solutions/regulens/transaction-monitoring"
     },
     {
       id: 4,
@@ -92,7 +92,7 @@ const AgentsShowcase = () => {
       industries: ["All BFSI sectors"],
       color: "from-orange-500 to-red-500",
       bgColor: "bg-orange-50 hover:bg-orange-100",
-      demoLink: "/solutions/risk-management"
+      demoLink: "/solutions/regulens/risk-management"
     },
     {
       id: 5,
@@ -108,7 +108,7 @@ const AgentsShowcase = () => {
       industries: ["Banks", "Payment Processors", "Money Service Businesses", "Cryptocurrency"],
       color: "from-indigo-500 to-blue-500",
       bgColor: "bg-indigo-50 hover:bg-indigo-100",
-      demoLink: "/solutions/sanctions-screening"
+      demoLink: "/solutions/regulens/sanctions-screening"
     },
     {
       id: 6,
@@ -124,7 +124,7 @@ const AgentsShowcase = () => {
       industries: ["Banks", "MSBs", "Casinos", "Securities Firms"],
       color: "from-teal-500 to-cyan-500",
       bgColor: "bg-teal-50 hover:bg-teal-100",
-      demoLink: "/solutions/case-management"
+      demoLink: "/solutions/regulens/case-management"
     },
     {
       id: 7,
@@ -140,7 +140,7 @@ const AgentsShowcase = () => {
       industries: ["Banks", "Fintech", "Credit Unions", "Investment Firms"],
       color: "from-violet-500 to-purple-500",
       bgColor: "bg-violet-50 hover:bg-violet-100",
-      demoLink: "/solutions/audit-evidence"
+      demoLink: "/solutions/regulens/audit-evidence"
     },
     {
       id: 8,
@@ -156,7 +156,7 @@ const AgentsShowcase = () => {
       industries: ["All BFSI sectors"],
       color: "from-amber-500 to-orange-500",
       bgColor: "bg-amber-50 hover:bg-amber-100",
-      demoLink: "/solutions/policy-governance"
+      demoLink: "/solutions/regulens/policy-governance"
     },
     {
       id: 9,
@@ -172,7 +172,7 @@ const AgentsShowcase = () => {
       industries: ["All BFSI sectors"],
       color: "from-rose-500 to-pink-500",
       bgColor: "bg-rose-50 hover:bg-rose-100",
-      demoLink: "/solutions/regulatory-intelligence"
+      demoLink: "/solutions/regulens/regulatory-intelligence"
     },
     {
       id: 10,
@@ -188,7 +188,7 @@ const AgentsShowcase = () => {
       industries: ["Banks", "Fintech", "Payment Processors", "Insurance"],
       color: "from-indigo-500 to-purple-500",
       bgColor: "bg-indigo-50 hover:bg-indigo-100",
-      demoLink: "/solutions/vendor-risk"
+      demoLink: "/solutions/regulens/vendor-risk"
     },
     {
       id: 11,
@@ -204,7 +204,7 @@ const AgentsShowcase = () => {
       industries: ["Banks", "Payment Processors", "E-commerce", "Fintech"],
       color: "from-red-500 to-rose-500",
       bgColor: "bg-red-50 hover:bg-red-100",
-      demoLink: "/solutions/fraud-detection"
+      demoLink: "/solutions/regulens/fraud-detection"
     },
     {
       id: 12,
@@ -220,7 +220,7 @@ const AgentsShowcase = () => {
       industries: ["Banks", "Insurance", "Legal", "Real Estate"],
       color: "from-sky-500 to-blue-500",
       bgColor: "bg-sky-50 hover:bg-sky-100",
-      demoLink: "/solutions/document-intelligence"
+      demoLink: "/solutions/regulens/document-intelligence"
     }
   ];
 
@@ -542,7 +542,7 @@ const AgentsShowcase = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-12">
-          <Link to="/solutions">
+          <Link to="/solutions/regulens">
             <Button
               size="lg"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"

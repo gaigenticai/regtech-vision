@@ -46,18 +46,18 @@ const HeroSection = () => {
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center bg-gradient-to-r from-purple-100 to-blue-100 rounded-full px-4 py-2 mb-6 animate-fade-in-up">
               <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-semibold text-sm">
-                ✨ Autonomous AI Agents for Financial Compliance
+                ✨ Autonomous AI Agents for Financial Services
               </span>
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in-up delay-200">
-              Transform Your
-              <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent"> Risk and Compliance </span>
+              Boost your productivity in
+              <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent"> Financial services </span>
               with Agentic AI
             </h1>
 
             <p className="text-xl text-gray-600 mb-8 max-w-2xl animate-fade-in-up delay-400">
-              Deploy intelligent AI agents that autonomously handle KYC, fraud detection, transaction monitoring, and regulatory compliance across BFSI operations with <strong>99.9% accuracy</strong>.
+              Deploy agentic AI that streamlines onboarding, document processing, customer service, operations, and reporting across financial services—helping teams move faster and serve customers better, with up to <strong>99.9% accuracy</strong>.
             </p>
 
             {/* CTA Buttons */}

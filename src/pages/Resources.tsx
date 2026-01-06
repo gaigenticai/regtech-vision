@@ -267,7 +267,7 @@ const Resources = () => {
         "50% reduction in compliance costs",
         "30% improvement in customer satisfaction scores"
       ],
-      solutionLink: "/solutions/kyc-automation",
+      solutionLink: "/solutions/regulens/kyc-automation",
       solutionName: "KYC Automation",
       icon: UserCheck,
       color: "#10B981"
@@ -284,7 +284,7 @@ const Resources = () => {
         "75% faster investigation resolution",
         "Zero regulatory penalties in 18 months"
       ],
-      solutionLink: "/solutions/transaction-monitoring",
+      solutionLink: "/solutions/regulens/transaction-monitoring",
       solutionName: "Transaction Monitoring & AML",
       icon: Activity,
       color: "#F59E0B"
@@ -301,7 +301,7 @@ const Resources = () => {
         "45% reduction in default rates",
         "100% regulatory compliance across all jurisdictions"
       ],
-      solutionLink: "/solutions/lending-compliance",
+      solutionLink: "/solutions/regulens/lending-compliance",
       solutionName: "Lending Compliance & Risk Assessment",
       icon: CreditCard,
       color: "#3B82F6"
@@ -318,7 +318,7 @@ const Resources = () => {
         "75% reduction in operational compliance costs",
         "Zero regulatory violations in 24 months"
       ],
-      solutionLink: "/solutions/risk-management",
+      solutionLink: "/solutions/regulens/risk-management",
       solutionName: "Proactive Risk & Compliance Management",
       icon: Shield,
       color: "#8B5CF6"

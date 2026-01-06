@@ -388,7 +388,7 @@ const RiskManagement = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link to="/solutions">
+            <Link to="/solutions/regulens">
               <Button
                 variant="outline"
                 size="lg"

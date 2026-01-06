@@ -102,7 +102,7 @@ const VendorRisk = () => {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Link to="/solutions">
+                <Link to="/solutions/regulens">
                   <Button variant="outline" size="lg" className="border-2 border-gray-300 hover:bg-indigo-50 font-semibold px-8 py-4 rounded-xl">
                     View All Solutions
                   </Button>
@@ -237,4 +237,3 @@ const VendorRisk = () => {
 };
 
 export default VendorRisk;
-
