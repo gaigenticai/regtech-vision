@@ -54,7 +54,10 @@ const AboutSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl font-bold mb-6 text-neutral-dark">
-            Security and privacy at our core
+            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              Security and privacy
+            </span>{" "}
+            at our core
           </h2>
           <p className="text-xl text-neutral-dark/70 leading-relaxed">
             Built for financial services teams that need secure automation with clear oversight.
