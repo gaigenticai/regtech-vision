@@ -49,14 +49,14 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-20 bg-neutral-light">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="mb-4 text-neutral-dark">
+          <h2 className="text-4xl font-bold mb-6 text-neutral-dark">
             Security and privacy at our core
           </h2>
-          <p className="text-lg text-neutral-dark/70">
+          <p className="text-xl text-neutral-dark/70 leading-relaxed">
             Built for financial services teams that need secure automation with clear oversight.
             We pair strong security and privacy controls with auditability and a Shadow Layer that
             helps you validate, govern, and safely scale agentic AI.
@@ -64,26 +64,34 @@ const AboutSection = () => {
         </div>
 
         {/* Differentiators */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {differentiators.map((item, index) => (
-            <Card key={index} className="border-border/50 hover:border-accent/20 transition-colors">
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-accent/10 rounded-full">
+            <Card
+              key={index}
+              className="h-full bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4 mb-5">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 border border-slate-200 bg-gradient-to-br from-white to-slate-50">
                     <item.icon className="h-6 w-6 text-accent" />
                   </div>
-                  <div className="text-lg font-semibold text-neutral-dark">
-                    {item.title}
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl font-semibold text-neutral-dark leading-snug">
+                      {item.title}
+                    </h3>
                   </div>
                 </div>
-                <p className="text-sm text-neutral-dark/70 mb-4">
+                <p className="text-sm text-neutral-dark/70 leading-relaxed mb-6">
                   {item.description}
                 </p>
-                <ul className="space-y-2 text-sm text-neutral-dark/70">
+                <ul className="space-y-3">
                   {item.points.map((point, pointIndex) => (
-                    <li key={pointIndex} className="flex gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-neutral-dark/40 flex-shrink-0" />
-                      <span>{point}</span>
+                    <li
+                      key={pointIndex}
+                      className="flex items-start gap-3 text-sm text-neutral-dark/70 leading-relaxed"
+                    >
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+                      <span className="flex-1">{point}</span>
                     </li>
                   ))}
                 </ul>
