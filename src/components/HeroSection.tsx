@@ -51,7 +51,8 @@ const HeroSection = () => {
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in-up delay-200">
-              Boost your productivity in
+              Boost your{" "}
+              <span className="text-purple-600">productivity</span> in
               <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent"> Financial services </span>
               with Agentic AI
             </h1>

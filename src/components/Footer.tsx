@@ -6,7 +6,7 @@ const Footer = () => {
     {
       title: "Product",
       links: [
-        { name: "Solutions", href: "/solutions" },
+        { name: "Products", href: "/solutions" },
         { name: "Platform", href: "/platform" },
         { name: "Sentinel", href: "/sentinel" }
       ]

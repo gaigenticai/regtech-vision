@@ -49,21 +49,51 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-neutral-light">
-      <div className="container mx-auto px-4">
+    <section
+      id="about"
+      className="relative py-24 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50"
+    >
+      {/* Background accents (match hero styling) */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+        <div className="absolute -top-10 right-10 w-72 h-72 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full mix-blend-multiply filter blur-xl animate-float delay-1000"></div>
+        <div className="absolute bottom-10 left-1/2 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full mix-blend-multiply filter blur-xl animate-float delay-2000"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold mb-6 text-neutral-dark">
-            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              Security and privacy
-            </span>{" "}
-            at our core
-          </h2>
-          <p className="text-xl text-neutral-dark/70 leading-relaxed">
-            Built for financial services teams that need secure automation with clear oversight.
-            We pair strong security and privacy controls with auditability and a Shadow Layer that
-            helps you validate, govern, and safely scale agentic AI.
-          </p>
+        <div className="text-center max-w-4xl mx-auto mb-16">
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-100 to-blue-100 rounded-full px-4 py-2 mb-6">
+            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-semibold text-sm">
+              🔒 Security-first foundations
+            </span>
+          </div>
+
+          <div className="rounded-3xl border border-slate-200 bg-white/70 backdrop-blur-sm shadow-xl px-6 sm:px-10 py-10">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-5 text-neutral-dark leading-tight">
+              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                Security and privacy
+              </span>{" "}
+              at our core
+            </h2>
+            <p className="text-lg sm:text-xl text-neutral-dark/70 leading-relaxed max-w-3xl mx-auto">
+              Built for financial services teams that need secure automation with clear oversight.
+              We pair strong security and privacy controls with auditability, traceability, and a Shadow Layer that
+              helps you validate, govern, and safely scale agentic AI.
+            </p>
+
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+              {["Security", "Privacy", "Auditability", "Traceability"].map((pill) => (
+                <span
+                  key={pill}
+                  className="px-3 py-1 rounded-full text-sm font-semibold border border-slate-200 bg-white/80 text-slate-700"
+                >
+                  {pill}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Differentiators */}
