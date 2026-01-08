@@ -58,7 +58,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-xl text-gray-600 mb-8 max-w-2xl animate-fade-in-up delay-400">
-              We design, build, and train Agentic (hybrid) teams that streamline risk,compliance, collections,onboarding, document processing, customer service, operations, and reporting across financial services, helping your business to become more cost-efficient, faster, and serve customers better, with up to <strong>99.9% accuracy</strong>.
+              We design, build, and train Agentic (hybrid) teams that streamline risk, compliance, collections, onboarding, document processing, customer service, operations and reporting across financial services, helping your business to become more cost-efficient, faster, and serve customers better, with up to <strong>99.9% accuracy</strong>.
             </p>
 
             {/* CTA Buttons */}
