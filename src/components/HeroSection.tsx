@@ -52,13 +52,13 @@ const HeroSection = () => {
 
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in-up delay-200">
               Boost your{" "}
-              <span className="text-purple-600">productivity</span> in
+              <span className="text-purple-600">Productivity</span> in
               {" "}Financial Services with{" "}
               <span className="text-pink-500">Agentic Teams</span>
             </h1>
 
             <p className="text-xl text-gray-600 mb-8 max-w-2xl animate-fade-in-up delay-400">
-              We design, build, and train Agentic (hybrid) teams that streamline onboarding, document processing, customer service, operations, and reporting across financial services, helping your business to become more cost-efficient, faster, and serve customers better, with up to <strong>99.9% accuracy</strong>.
+              We design, build, and train Agentic (hybrid) teams that streamline risk,compliance, collections,onboarding, document processing, customer service, operations, and reporting across financial services, helping your business to become more cost-efficient, faster, and serve customers better, with up to <strong>99.9% accuracy</strong>.
             </p>
 
             {/* CTA Buttons */}
