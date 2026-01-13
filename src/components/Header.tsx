@@ -34,7 +34,6 @@ const Header = () => {
         { name: "Cognito", href: "/infrastructure/cognito" },
       ],
     },
-    { kind: "link" as const, name: "Resources", href: "/resources" },
     { kind: "link" as const, name: "About", href: "/about" },
     { kind: "link" as const, name: "Contact Us", href: "/contact" },
   ];
