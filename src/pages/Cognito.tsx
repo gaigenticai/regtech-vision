@@ -146,7 +146,7 @@ const Cognito = () => {
                     ))}
                   </div>
 
-                  <div className="mt-6 grid grid-cols-3 gap-3">
+                  <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
                     {[
                       { label: "Runs", value: "Temporal", icon: Workflow },
                       { label: "Decisions", value: "versioned", icon: GitBranch },

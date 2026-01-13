@@ -434,7 +434,7 @@ export default function CognitoSandbox() {
             if (v === "wizard" || v === "workbench" || v === "versions") setTab(v);
           }}
         >
-          <TabsList className="grid grid-cols-3 w-full">
+          <TabsList className="grid grid-cols-1 sm:grid-cols-3 w-full">
             <TabsTrigger value="wizard">Wizard</TabsTrigger>
             <TabsTrigger value="workbench" disabled={!activeRun}>
               Workbench
@@ -649,7 +649,7 @@ export default function CognitoSandbox() {
                     <CardDescription>Quick decisions with explainability (“why”) and evidence snippets.</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
+                    <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
                       <table className="w-full text-left text-sm">
                         <thead className="bg-gray-50 text-xs font-semibold uppercase tracking-wide text-gray-600">
                           <tr>

@@ -100,7 +100,7 @@ const FraudDetection = () => {
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Advanced ML-powered fraud detection with behavioral analysis and anomaly detection.
               </p>
-              <div className="grid grid-cols-3 gap-4 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                 <div className="text-center p-4 bg-white rounded-lg shadow-sm">
                   <Target className="h-8 w-8 text-red-600 mx-auto mb-2" />
                   <div className="text-2xl font-bold text-gray-900">98.5%</div>

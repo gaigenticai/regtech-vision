@@ -348,7 +348,7 @@ const Regulens = () => {
               </div>
 
               {/* Animated KPI chips */}
-              <div className="grid grid-cols-3 gap-4 animate-fade-in-up delay-800">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 animate-fade-in-up delay-800">
                 {[
                   { value: '75%', label: 'Cost Reduction', color: 'from-purple-600 to-fuchsia-600' },
                   { value: '99.9%', label: 'Accuracy Rate', color: 'from-blue-600 to-cyan-600' },
@@ -426,13 +426,31 @@ const Regulens = () => {
             {comparisonRows.map((row) => (
               <div key={row.dimension} className="bg-white border border-slate-200 rounded-2xl shadow-sm p-4">
                 <div className="font-semibold text-slate-900 mb-3">{row.dimension}</div>
-                <div className="grid grid-cols-3 gap-2 text-sm items-start">
-                  <div className="text-slate-600">Manual</div>
-                  <div className="col-span-2"><span className="inline-flex items-center rounded-full border border-rose-200 bg-rose-50 text-rose-700 px-2.5 py-1">{row.manual}</span></div>
-                  <div className="text-slate-600">Agentic AI</div>
-                  <div className="col-span-2"><span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 text-emerald-700 px-2.5 py-1">{row.ai}</span></div>
-                  <div className="text-slate-600">Benefit</div>
-                  <div className="col-span-2"><span className="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-50 text-indigo-700 px-2.5 py-1">{row.benefit}</span></div>
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-start gap-3">
+                    <div className="w-24 shrink-0 text-slate-600">Manual</div>
+                    <div className="flex-1 min-w-0">
+                      <span className="inline-flex items-center rounded-full border border-rose-200 bg-rose-50 text-rose-700 px-2.5 py-1">
+                        {row.manual}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-24 shrink-0 text-slate-600">Agentic AI</div>
+                    <div className="flex-1 min-w-0">
+                      <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 text-emerald-700 px-2.5 py-1">
+                        {row.ai}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-24 shrink-0 text-slate-600">Benefit</div>
+                    <div className="flex-1 min-w-0">
+                      <span className="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-50 text-indigo-700 px-2.5 py-1">
+                        {row.benefit}
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -511,7 +529,7 @@ const Regulens = () => {
                     </div>
 
                     {/* Key Results */}
-                    <div className="grid grid-cols-3 gap-4 mb-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                       {solution.keyResults.map((result, idx) => (
                         <div key={idx} className="text-center p-4 bg-gray-50 rounded-lg">
                           <result.icon className="h-6 w-6 text-purple-600 mx-auto mb-2" />

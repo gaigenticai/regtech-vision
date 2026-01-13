@@ -99,7 +99,7 @@ const DocumentIntelligence = () => {
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 AI-powered document processing, extraction, and validation for compliance workflows.
               </p>
-              <div className="grid grid-cols-3 gap-4 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                 <div className="text-center p-4 bg-white rounded-lg shadow-sm">
                   <Target className="h-8 w-8 text-sky-600 mx-auto mb-2" />
                   <div className="text-2xl font-bold text-gray-900">99.5%</div>

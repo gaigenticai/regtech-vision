@@ -277,7 +277,7 @@ const Solutions = () => {
                     </div>
 
                     {/* Metrics */}
-                    <div className="grid grid-cols-3 gap-4 mb-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                       <div className="text-center p-4 bg-white rounded-lg shadow-sm">
                         <div className="text-2xl font-bold" style={{ color: solution.color }}>
                           {solution.metrics.speed.split(' ')[0]}

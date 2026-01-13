@@ -240,8 +240,8 @@ const Header = () => {
       {breadcrumbs && breadcrumbs.length > 1 && (
         <div className="fixed top-16 w-full bg-neutral-light border-b border-neutral-light z-40">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="flex items-center py-3 text-sm">
-              <nav className="flex items-center space-x-2">
+            <div className="flex items-center py-3 text-sm overflow-x-auto">
+              <nav className="flex items-center space-x-2 whitespace-nowrap">
                 {breadcrumbs.map((crumb, index) => (
                   <div key={crumb.href} className="flex items-center">
                     {index > 0 && (

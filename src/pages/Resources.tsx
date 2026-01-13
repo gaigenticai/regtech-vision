@@ -376,7 +376,7 @@ const Resources = () => {
                 </div>
 
                 {/* Trust Indicators with Animation */}
-                <div className="grid grid-cols-3 gap-8 animate-fade-in-up delay-800">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 animate-fade-in-up delay-800">
                   <div className="text-center group">
                     <div className="text-3xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300">
                       99.2%

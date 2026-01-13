@@ -200,7 +200,7 @@ const Solutions = () => {
                     </div>
 
                     {/* Key Results */}
-                    <div className="grid grid-cols-3 gap-4 mb-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                       {solution.keyResults.map((result, idx) => (
                         <div key={idx} className="text-center p-4 bg-gray-50 rounded-lg">
                           <result.icon className="h-6 w-6 text-purple-600 mx-auto mb-2" />

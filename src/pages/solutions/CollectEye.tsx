@@ -218,7 +218,7 @@ const CollectEye = () => {
               </div>
 
               {/* Animated KPI chips */}
-              <div className="grid grid-cols-3 gap-4 animate-fade-in-up delay-800">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 animate-fade-in-up delay-800">
                 {[
                   { value: "Read‑only", label: "Ingestion", color: "from-blue-600 to-cyan-600" },
                   { value: "Policy‑gated", label: "Communications", color: "from-indigo-600 to-blue-600" },

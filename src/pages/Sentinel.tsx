@@ -142,7 +142,7 @@ const Sentinel = () => {
                   </a>
                 </div>
 
-                <div className="grid grid-cols-3 gap-4 animate-fade-in-up delay-800">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 animate-fade-in-up delay-800">
                   {[
                     { value: "Postgres", label: "Durable state + pgvector", color: "from-purple-600 to-fuchsia-600" },
                     { value: "OPA", label: "Policy enforcement", color: "from-blue-600 to-cyan-600" },
@@ -225,7 +225,7 @@ const Sentinel = () => {
                     ))}
                   </div>
 
-                  <div className="mt-6 grid grid-cols-3 gap-3">
+                  <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
                     {[
                       { icon: Lock, label: "Secrets", value: "encrypted" },
                       { icon: GitBranch, label: "Prompts", value: "versioned" },

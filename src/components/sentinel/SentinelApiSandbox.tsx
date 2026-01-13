@@ -251,7 +251,7 @@ export default function SentinelApiSandbox(props: SentinelApiSandboxProps) {
   return (
     <Card className="border border-gray-200 shadow-2xl rounded-2xl">
       <CardHeader>
-        <div className="flex items-start justify-between gap-6">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
           <div>
             <CardTitle className="flex items-center gap-2">
               <Terminal className="h-5 w-5 text-primary" />
@@ -261,9 +261,9 @@ export default function SentinelApiSandbox(props: SentinelApiSandboxProps) {
               Point this sandbox at any Sentinel deployment and run real requests from your browser.
             </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2 justify-start sm:justify-end">
             <Select value={mode} onValueChange={(v) => setMode(v as "local" | "remote")}>
-              <SelectTrigger className="w-[160px]">
+              <SelectTrigger className="w-full sm:w-[160px]">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
@@ -380,7 +380,7 @@ export default function SentinelApiSandbox(props: SentinelApiSandboxProps) {
         </div>
 
         <Tabs defaultValue="body">
-          <TabsList className="grid grid-cols-3 w-full">
+          <TabsList className="grid grid-cols-1 sm:grid-cols-3 w-full">
             <TabsTrigger value="body">Body</TabsTrigger>
             <TabsTrigger value="curl">curl</TabsTrigger>
             <TabsTrigger value="headers">Headers</TabsTrigger>
