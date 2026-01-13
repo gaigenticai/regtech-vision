@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronRight, Home } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Menu, X, ChevronRight, Home, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -9,9 +15,25 @@ const Header = () => {
 
   const navigation = [
     { kind: "link" as const, name: "Home", href: "/" },
-    { kind: "link" as const, name: "Products", href: "/solutions" },
+    {
+      kind: "menu" as const,
+      name: "Products",
+      href: "/solutions",
+      children: [
+        { name: "Regulens", href: "/solutions/regulens" },
+        { name: "CollectEye", href: "/solutions/collecteye" },
+      ],
+    },
     { kind: "link" as const, name: "Platform", href: "/platform" },
-    { kind: "link" as const, name: "Infrastructure", href: "/infrastructure" },
+    {
+      kind: "menu" as const,
+      name: "Infrastructure",
+      href: "/infrastructure",
+      children: [
+        { name: "Sentinel", href: "/infrastructure/sentinel" },
+        { name: "Cognito", href: "/infrastructure/cognito" },
+      ],
+    },
     { kind: "link" as const, name: "Resources", href: "/resources" },
     { kind: "link" as const, name: "About", href: "/about" },
     { kind: "link" as const, name: "Contact Us", href: "/contact" },
@@ -83,6 +105,36 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-6">
               {navigation.map((item) => {
+                if (item.kind === "menu") {
+                  const active = isActivePath(item.href);
+                  return (
+                    <DropdownMenu key={item.name}>
+                      <DropdownMenuTrigger asChild>
+                        <button
+                          type="button"
+                          className={`text-sm font-medium transition-colors relative py-2 inline-flex items-center gap-1 ${
+                            active ? "text-primary" : "text-neutral-dark/60 hover:text-neutral-dark"
+                          }`}
+                          aria-label={`${item.name} menu`}
+                        >
+                          {item.name}
+                          <ChevronDown className="h-4 w-4 opacity-70" />
+                          {active && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />}
+                        </button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="start" className="w-56">
+                        {item.children.map((child) => (
+                          <DropdownMenuItem key={child.href} asChild>
+                            <Link to={child.href} className="cursor-pointer">
+                              {child.name}
+                            </Link>
+                          </DropdownMenuItem>
+                        ))}
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  );
+                }
+
                 const active = isActivePath(item.href);
                 return (
                   <Link
@@ -134,6 +186,33 @@ const Header = () => {
           >
             <div className="py-4 space-y-2">
               {navigation.map((item) => {
+                if (item.kind === "menu") {
+                  return (
+                    <div key={item.name} className="px-2">
+                      <div className="px-2 py-2 text-xs font-semibold uppercase tracking-wide text-neutral-dark/50">{item.name}</div>
+                      <div className="space-y-1">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            to={child.href}
+                            className={`block px-4 py-3 text-base font-medium transition-all duration-200 rounded-lg touch-manipulation ${
+                              isActivePath(child.href)
+                                ? "text-primary bg-neutral-light"
+                                : "text-neutral-dark/60 hover:text-neutral-dark hover:bg-neutral-light/50"
+                            }`}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <div className="flex items-center justify-between">
+                              {child.name}
+                              {isActivePath(child.href) && <div className="w-2 h-2 bg-primary rounded-full" />}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={item.name}
