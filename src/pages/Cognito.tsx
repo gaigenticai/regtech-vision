@@ -1,6 +1,7 @@
 // Header is rendered globally from App.tsx
 import CTASection from "@/components/shared/CTASection";
 import { type Feature, FeaturesSection } from "@/components/shared/FeatureCard";
+import CognitoSandbox from "@/components/cognito/CognitoSandbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, CheckCircle2, Database, FileSearch, Gauge, GitBranch, Layers, ShieldCheck, Table2, Timer, WandSparkles, Workflow } from "lucide-react";
@@ -104,12 +105,12 @@ const Cognito = () => {
                   >
                     Book a Demo <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
-                  <Link
-                    to="/infrastructure"
+                  <a
+                    href="#sandbox"
                     className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl border border-gray-200 hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
-                    Explore Infrastructure <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
+                    Try the Sandbox <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
                 </div>
               </div>
 
@@ -232,6 +233,19 @@ const Cognito = () => {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </section>
+
+        <section id="sandbox" className="py-20 bg-neutral-light">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4 text-gray-900">Cognito Sandbox</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Play with Cognito’s core workflow: select host scope, generate alignment, triage in the workbench, and approve a versioned export
+                contract.
+              </p>
+            </div>
+            <CognitoSandbox />
           </div>
         </section>
 

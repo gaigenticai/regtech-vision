@@ -237,9 +237,6 @@ export default function CognitoSandbox() {
   const [activeRunId, setActiveRunId] = useState<string>("");
   const activeRun = runs.find((r) => r.id === activeRunId) ?? null;
 
-  const [hostEvidence, setHostEvidence] = useState(HOST_EVIDENCE_TEXT);
-  const [acquiredEvidence, setAcquiredEvidence] = useState(ACQUIRED_EVIDENCE_TEXT);
-
   useEffect(() => {
     const loaded = loadRuns();
     setRuns(loaded);
@@ -264,7 +261,13 @@ export default function CognitoSandbox() {
   const createRun = () => {
     if (!hostBaseTable) return;
     const scope = Array.from(new Set([hostBaseTable, ...hostScopeTables])).filter(Boolean);
-    const reportRows = generateReport({ hostSchema, acquiredSchema, hostScopeTables: scope, hostEvidence, acquiredEvidence });
+    const reportRows = generateReport({
+      hostSchema,
+      acquiredSchema,
+      hostScopeTables: scope,
+      hostEvidence: HOST_EVIDENCE_TEXT,
+      acquiredEvidence: ACQUIRED_EVIDENCE_TEXT,
+    });
 
     const run: RunSnapshot = {
       id: randomId("run"),
@@ -398,6 +401,10 @@ export default function CognitoSandbox() {
     return diffSummary(activeRun.approvedVersion, { reportRows: activeRun.reportRows, overrides: activeRun.overrides });
   }, [activeRun]);
 
+  const SUGGESTED_VALUE = "__SUGGESTED__";
+  const REVIEW_VALUE = "__REVIEW__";
+  const NO_MATCH_VALUE = "__NO_MATCH__";
+
   return (
     <Card className="border border-gray-200 shadow-2xl rounded-2xl">
       <CardHeader>
@@ -408,7 +415,7 @@ export default function CognitoSandbox() {
               Cognito Sandbox
             </CardTitle>
             <CardDescription className="mt-2">
-              A self-contained, in-browser demo of Cognito’s wizard → workbench → approvals workflow. No backend required.
+              An interactive sandbox for Cognito’s wizard → workbench → approvals workflow. No backend required.
             </CardDescription>
           </div>
           <div className="flex items-center gap-2">
@@ -421,7 +428,12 @@ export default function CognitoSandbox() {
       </CardHeader>
 
       <CardContent className="space-y-6">
-        <Tabs value={tab} onValueChange={(v) => setTab(v as any)}>
+        <Tabs
+          value={tab}
+          onValueChange={(v) => {
+            if (v === "wizard" || v === "workbench" || v === "versions") setTab(v);
+          }}
+        >
           <TabsList className="grid grid-cols-3 w-full">
             <TabsTrigger value="wizard">Wizard</TabsTrigger>
             <TabsTrigger value="workbench" disabled={!activeRun}>
@@ -487,7 +499,7 @@ export default function CognitoSandbox() {
                               onCheckedChange={(v) => {
                                 setHostScopeTables((prev) => {
                                   const next = new Set(prev);
-                                  if (v) next.add(t.name);
+                                  if (v === true) next.add(t.name);
                                   else next.delete(t.name);
                                   return Array.from(next);
                                 });
@@ -574,23 +586,6 @@ export default function CognitoSandbox() {
                 </CardContent>
               </Card>
             </div>
-
-            <Card className="border border-gray-200 rounded-2xl shadow-lg">
-              <CardHeader>
-                <CardTitle>Evidence (optional)</CardTitle>
-                <CardDescription>Paste a few lines from your data dictionaries to see evidence snippets attached to mappings.</CardDescription>
-              </CardHeader>
-              <CardContent className="grid gap-6 lg:grid-cols-2">
-                <div className="space-y-2">
-                  <Label>Host evidence</Label>
-                  <Textarea value={hostEvidence} onChange={(e) => setHostEvidence(e.target.value)} className="min-h-32" />
-                </div>
-                <div className="space-y-2">
-                  <Label>Acquired evidence</Label>
-                  <Textarea value={acquiredEvidence} onChange={(e) => setAcquiredEvidence(e.target.value)} className="min-h-32" />
-                </div>
-              </CardContent>
-            </Card>
           </TabsContent>
 
           <TabsContent value="workbench" className="space-y-6">
@@ -671,14 +666,14 @@ export default function CognitoSandbox() {
                             const options = row.alternatives.length ? row.alternatives : row.best_match ? [row.best_match] : [];
                             const selectedKey =
                               !ov
-                                ? ""
+                                ? SUGGESTED_VALUE
                                 : ov.decision === "review"
-                                  ? "__REVIEW__"
+                                  ? REVIEW_VALUE
                                   : ov.decision === "no_match"
-                                    ? "__NO_MATCH__"
+                                    ? NO_MATCH_VALUE
                                     : ov.selected?.table && ov.selected?.column
                                       ? `${ov.selected.table}||${ov.selected.column}`
-                                      : "";
+                                      : SUGGESTED_VALUE;
 
                             return (
                               <tr key={k} className="align-top hover:bg-gray-50/60">
@@ -735,15 +730,15 @@ export default function CognitoSandbox() {
                                     <Select
                                       value={selectedKey}
                                       onValueChange={(v) => {
-                                        if (v === "") {
+                                        if (v === SUGGESTED_VALUE) {
                                           upsertOverride(row.host.table, row.host.column, null);
                                           return;
                                         }
-                                        if (v === "__REVIEW__") {
+                                        if (v === REVIEW_VALUE) {
                                           upsertOverride(row.host.table, row.host.column, { decision: "review", selected: null, note: "Flagged for review.", updatedAt: Date.now() });
                                           return;
                                         }
-                                        if (v === "__NO_MATCH__") {
+                                        if (v === NO_MATCH_VALUE) {
                                           upsertOverride(row.host.table, row.host.column, { decision: "no_match", selected: null, note: "Explicit no-match.", updatedAt: Date.now() });
                                           return;
                                         }
@@ -756,9 +751,9 @@ export default function CognitoSandbox() {
                                         <SelectValue placeholder="Choose decision" />
                                       </SelectTrigger>
                                       <SelectContent>
-                                        <SelectItem value="">Use system suggestion</SelectItem>
-                                        <SelectItem value="__REVIEW__">Flag for review</SelectItem>
-                                        <SelectItem value="__NO_MATCH__">No match</SelectItem>
+                                        <SelectItem value={SUGGESTED_VALUE}>Use system suggestion</SelectItem>
+                                        <SelectItem value={REVIEW_VALUE}>Flag for review</SelectItem>
+                                        <SelectItem value={NO_MATCH_VALUE}>No match</SelectItem>
                                         {options.map((o) => (
                                           <SelectItem key={`${o.table}||${o.column}`} value={`${o.table}||${o.column}`}>
                                             {o.table}.{o.column} (conf {o.confidence.toFixed(3)})
@@ -935,12 +930,3 @@ function generateReport(opts: {
 
   return rows;
 }
-
-function flattenTables(schema: Schema) {
-  const out: Array<{ table: string; column: Column }> = [];
-  for (const t of schema.tables) {
-    for (const c of t.columns) out.push({ table: t.name, column: c });
-  }
-  return out;
-}
-
