@@ -1,6 +1,6 @@
 // Header is rendered globally from App.tsx
 import CTASection from "@/components/shared/CTASection";
-import { FeaturesSection } from "@/components/shared/FeatureCard";
+import { type Feature, FeaturesSection } from "@/components/shared/FeatureCard";
 import SentinelApiSandbox from "@/components/sentinel/SentinelApiSandbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -27,7 +27,7 @@ import {
 } from "lucide-react";
 
 const Sentinel = () => {
-  const features = [
+  const features: Feature[] = [
     {
       icon: Database,
       title: "Memory + Knowledge Base",
@@ -247,7 +247,7 @@ const Sentinel = () => {
         <FeaturesSection
           title="What Sentinel Includes"
           subtitle="Reusable building blocks you can embed into any agent or product, across any industry."
-          features={features as any}
+          features={features}
           variant="detailed"
           columns={3}
           backgroundVariant="gray"

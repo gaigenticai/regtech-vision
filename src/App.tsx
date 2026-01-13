@@ -9,6 +9,8 @@ import Index from "./pages/Index";
 import Solutions from "./pages/Solutions";
 import Platform from "./pages/Platform";
 import Sentinel from "./pages/Sentinel";
+import Infrastructure from "./pages/Infrastructure";
+import Cognito from "./pages/Cognito";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -75,7 +77,10 @@ const App = () => (
           <Route path="/solutions/fraud-detection" element={<Navigate to="/solutions/regulens/fraud-detection" replace />} />
           <Route path="/solutions/document-intelligence" element={<Navigate to="/solutions/regulens/document-intelligence" replace />} />
           <Route path="/platform" element={<Platform />} />
-          <Route path="/sentinel" element={<Sentinel />} />
+          <Route path="/infrastructure" element={<Infrastructure />} />
+          <Route path="/infrastructure/sentinel" element={<Sentinel />} />
+          <Route path="/infrastructure/cognito" element={<Cognito />} />
+          <Route path="/sentinel" element={<Navigate to="/infrastructure/sentinel" replace />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

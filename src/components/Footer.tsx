@@ -8,7 +8,14 @@ const Footer = () => {
       links: [
         { name: "Products", href: "/solutions" },
         { name: "Platform", href: "/platform" },
-        { name: "Sentinel", href: "/sentinel" }
+        { name: "Infrastructure", href: "/infrastructure" }
+      ]
+    },
+    {
+      title: "Infrastructure",
+      links: [
+        { name: "Sentinel", href: "/infrastructure/sentinel" },
+        { name: "Cognito", href: "/infrastructure/cognito" }
       ]
     },
     {
@@ -24,7 +31,7 @@ const Footer = () => {
     <footer className="bg-muted-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
             <div className="mb-4">

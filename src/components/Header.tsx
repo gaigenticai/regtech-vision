@@ -8,13 +8,13 @@ const Header = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: "Home", href: "/" },
-    { name: "Products", href: "/solutions" },
-    { name: "Platform", href: "/platform" },
-    { name: "Sentinel", href: "/sentinel" },
-    { name: "Resources", href: "/resources" },
-    { name: "About", href: "/about" },
-    { name: "Contact Us", href: "/contact" }
+    { kind: "link" as const, name: "Home", href: "/" },
+    { kind: "link" as const, name: "Products", href: "/solutions" },
+    { kind: "link" as const, name: "Platform", href: "/platform" },
+    { kind: "link" as const, name: "Infrastructure", href: "/infrastructure" },
+    { kind: "link" as const, name: "Resources", href: "/resources" },
+    { kind: "link" as const, name: "About", href: "/about" },
+    { kind: "link" as const, name: "Contact Us", href: "/contact" },
   ];
 
   // Close mobile menu when route changes
@@ -82,22 +82,21 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-6">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`text-sm font-medium transition-colors relative py-2 ${
-                    isActivePath(item.href)
-                      ? 'text-primary'
-                      : 'text-neutral-dark/60 hover:text-neutral-dark'
-                  }`}
-                >
-                  {item.name}
-                  {isActivePath(item.href) && (
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
-                  )}
-                </Link>
-              ))}
+              {navigation.map((item) => {
+                const active = isActivePath(item.href);
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`text-sm font-medium transition-colors relative py-2 ${
+                      active ? "text-primary" : "text-neutral-dark/60 hover:text-neutral-dark"
+                    }`}
+                  >
+                    {item.name}
+                    {active && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />}
+                  </Link>
+                );
+              })}
             </nav>
 
             {/* CTA Button removed as requested */}
@@ -134,25 +133,25 @@ const Header = () => {
             }`}
           >
             <div className="py-4 space-y-2">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`block px-4 py-4 text-base font-medium transition-all duration-200 rounded-lg touch-manipulation ${
-                    isActivePath(item.href)
-                      ? 'text-primary bg-neutral-light'
-                      : 'text-neutral-dark/60 hover:text-neutral-dark hover:bg-neutral-light/50'
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <div className="flex items-center justify-between">
-                    {item.name}
-                    {isActivePath(item.href) && (
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                    )}
-                  </div>
-                </Link>
-              ))}
+              {navigation.map((item) => {
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`block px-4 py-4 text-base font-medium transition-all duration-200 rounded-lg touch-manipulation ${
+                      isActivePath(item.href)
+                        ? "text-primary bg-neutral-light"
+                        : "text-neutral-dark/60 hover:text-neutral-dark hover:bg-neutral-light/50"
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <div className="flex items-center justify-between">
+                      {item.name}
+                      {isActivePath(item.href) && <div className="w-2 h-2 bg-primary rounded-full" />}
+                    </div>
+                  </Link>
+                );
+              })}
               {/* Mobile CTA removed by request */}
             </div>
           </div>

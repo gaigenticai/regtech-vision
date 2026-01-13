@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, LucideIcon } from "lucide-react";
 
-interface Feature {
+export interface Feature {
   icon: LucideIcon;
   title: string;
   description: string;
@@ -132,7 +132,7 @@ const FeatureCard = ({
   );
 };
 
-interface FeaturesSectionProps {
+export interface FeaturesSectionProps {
   title?: string;
   subtitle?: string;
   features: Feature[];
