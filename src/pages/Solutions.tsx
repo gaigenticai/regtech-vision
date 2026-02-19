@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Eye, Layers, ShieldCheck } from "lucide-react";
+import { ArrowRight, Eye, Layers, ShieldCheck, Landmark, CreditCard } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Solutions = () => {
@@ -23,6 +23,26 @@ const Solutions = () => {
       icon: Eye,
       accent: "from-blue-600 to-cyan-600",
       href: "/solutions/collecteye"
+    },
+    {
+      title: "Galileo",
+      subtitle: "Agentic AI loan origination system",
+      description:
+        "Autonomous underwriting powered by four AI agents—Detective, Analyst, Judge, and Supervisor—delivering fair, compliant, and explainable credit decisions in under 30 seconds.",
+      highlights: ["30‑second decisions", "ECOA compliant", "Explainable AI"],
+      icon: Landmark,
+      accent: "from-amber-600 to-orange-600",
+      href: "/solutions/galileo"
+    },
+    {
+      title: "CredAI",
+      subtitle: "API‑first credit decisioning console",
+      description:
+        "Borrower 360 with instant decisioning—evaluate consumer and SME borrowers using alternative data sources (e‑commerce, payments, fintech, telco, banking) and return a credit decision in under 3 seconds.",
+      highlights: ["Instant decisioning", "Alternative data", "Policy engine"],
+      icon: CreditCard,
+      accent: "from-emerald-600 to-teal-600",
+      href: "/solutions/credai"
     }
   ] as const;
 
@@ -53,7 +73,7 @@ const Solutions = () => {
               </p>
             </div>
 
-            <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {products.map((product) => (
                 <Link
                   key={product.title}

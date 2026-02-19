@@ -29,6 +29,8 @@ import FraudDetection from "./pages/solutions/FraudDetection";
 import DocumentIntelligence from "./pages/solutions/DocumentIntelligence";
 import VendorRisk from "./pages/solutions/VendorRisk";
 import CollectEye from "./pages/solutions/CollectEye";
+import Galileo from "./pages/solutions/Galileo";
+import CredAI from "./pages/solutions/CredAI";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Security from "./pages/Security";
@@ -49,6 +51,8 @@ const App = () => (
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/solutions/regulens" element={<Regulens />} />
           <Route path="/solutions/collecteye" element={<CollectEye />} />
+          <Route path="/solutions/galileo" element={<Galileo />} />
+          <Route path="/solutions/credai" element={<CredAI />} />
 
           <Route path="/solutions/regulens/kyc-automation" element={<KYCAutomation />} />
           <Route path="/solutions/regulens/lending-compliance" element={<LendingCompliance />} />

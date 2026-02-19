@@ -22,6 +22,8 @@ const Header = () => {
       children: [
         { name: "Regulens", href: "/solutions/regulens" },
         { name: "CollectEye", href: "/solutions/collecteye" },
+        { name: "Galileo", href: "/solutions/galileo" },
+        { name: "CredAI", href: "/solutions/credai" },
       ],
     },
     { kind: "link" as const, name: "Platform", href: "/platform" },
