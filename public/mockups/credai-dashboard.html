@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CredAI - Decisioning Console</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; background: #f8fafc; }
+  .score-ring { background: conic-gradient(#059669 0deg, #059669 237deg, #e2e8f0 237deg); }
+</style>
+</head>
+<body class="antialiased">
+<div class="min-h-screen">
+  <!-- Top Nav -->
+  <header class="bg-white border-b border-slate-200 px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-6">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        </div>
+        <div>
+          <div class="font-bold text-sm text-slate-900 leading-tight">CredAI</div>
+          <div class="text-[10px] text-slate-400">Decisioning Console</div>
+        </div>
+      </div>
+      <nav class="flex items-center gap-1 text-sm">
+        <a class="px-3 py-1.5 rounded-lg text-slate-500 hover:bg-slate-50 font-medium">Dashboard</a>
+        <a class="px-3 py-1.5 rounded-lg text-slate-500 hover:bg-slate-50 font-medium">Policy</a>
+        <a class="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-700 font-semibold">Borrowers</a>
+        <a class="px-3 py-1.5 rounded-lg text-slate-500 hover:bg-slate-50 font-medium">Compliance</a>
+        <a class="px-3 py-1.5 rounded-lg text-slate-500 hover:bg-slate-50 font-medium">Collection</a>
+        <a class="px-3 py-1.5 rounded-lg text-slate-500 hover:bg-slate-50 font-medium">Settings</a>
+      </nav>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="flex items-center gap-1.5 text-xs font-medium text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>AI Connected
+      </span>
+    </div>
+  </header>
+
+  <div class="max-w-[1400px] mx-auto px-6 py-6">
+    <!-- Breadcrumb -->
+    <div class="text-xs text-slate-400 mb-4 flex items-center gap-1.5">
+      <span>Borrowers</span><span>/</span><span class="text-slate-600 font-medium">Fatima Al-Rashid</span><span>/</span><span class="text-slate-600 font-medium">Borrower 360</span>
+    </div>
+
+    <div class="grid grid-cols-3 gap-6">
+      <!-- Left Column - Borrower Profile -->
+      <div class="col-span-2 space-y-5">
+        <!-- Borrower Header -->
+        <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+          <div class="flex items-start justify-between">
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-white text-xl font-bold">FA</div>
+              <div>
+                <h2 class="text-lg font-bold text-slate-900">Fatima Al-Rashid</h2>
+                <div class="flex items-center gap-3 mt-1">
+                  <span class="text-xs font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">Consumer</span>
+                  <span class="text-xs text-slate-500">+974 5512 3489</span>
+                  <span class="text-xs text-slate-500">fatima.rashid@email.qa</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-xs text-slate-500">Credit Score</div>
+              <div class="text-3xl font-bold text-emerald-600">742</div>
+              <div class="text-[10px] text-slate-400">out of 1,000</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Source Coverage -->
+        <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+          <h3 class="text-sm font-semibold text-slate-900 mb-4">Alternative Data Sources (90-day window)</h3>
+          <div class="grid grid-cols-3 gap-3">
+            <div class="rounded-lg border border-slate-200 p-3.5 bg-slate-50/50">
+              <div class="flex items-center justify-between mb-2"><span class="text-xs font-medium text-slate-600 uppercase tracking-wide">Card</span><span class="w-2 h-2 rounded-full bg-emerald-500"></span></div>
+              <div class="text-xl font-bold text-slate-900">24,998</div><div class="text-[10px] text-slate-400">transactions</div>
+              <div class="mt-2 flex items-center gap-1"><span class="text-[10px] font-medium text-emerald-600">Stability: 87</span></div>
+            </div>
+            <div class="rounded-lg border border-slate-200 p-3.5 bg-slate-50/50">
+              <div class="flex items-center justify-between mb-2"><span class="text-xs font-medium text-slate-600 uppercase tracking-wide">Payments</span><span class="w-2 h-2 rounded-full bg-emerald-500"></span></div>
+              <div class="text-xl font-bold text-slate-900">11,157</div><div class="text-[10px] text-slate-400">transactions</div>
+              <div class="mt-2 flex items-center gap-1"><span class="text-[10px] font-medium text-emerald-600">Stability: 82</span></div>
+            </div>
+            <div class="rounded-lg border border-slate-200 p-3.5 bg-slate-50/50">
+              <div class="flex items-center justify-between mb-2"><span class="text-xs font-medium text-slate-600 uppercase tracking-wide">E-comm</span><span class="w-2 h-2 rounded-full bg-emerald-500"></span></div>
+              <div class="text-xl font-bold text-slate-900">10,789</div><div class="text-[10px] text-slate-400">transactions</div>
+              <div class="mt-2 flex items-center gap-1"><span class="text-[10px] font-medium text-amber-600">Stability: 71</span></div>
+            </div>
+            <div class="rounded-lg border border-slate-200 p-3.5 bg-slate-50/50">
+              <div class="flex items-center justify-between mb-2"><span class="text-xs font-medium text-slate-600 uppercase tracking-wide">Fintech</span><span class="w-2 h-2 rounded-full bg-emerald-500"></span></div>
+              <div class="text-xl font-bold text-slate-900">9,995</div><div class="text-[10px] text-slate-400">transactions</div>
+              <div class="mt-2 flex items-center gap-1"><span class="text-[10px] font-medium text-emerald-600">Stability: 79</span></div>
+            </div>
+            <div class="rounded-lg border border-slate-200 p-3.5 bg-slate-50/50">
+              <div class="flex items-center justify-between mb-2"><span class="text-xs font-medium text-slate-600 uppercase tracking-wide">Bank</span><span class="w-2 h-2 rounded-full bg-emerald-500"></span></div>
+              <div class="text-xl font-bold text-slate-900">6,914</div><div class="text-[10px] text-slate-400">transactions</div>
+              <div class="mt-2 flex items-center gap-1"><span class="text-[10px] font-medium text-emerald-600">Stability: 91</span></div>
+            </div>
+            <div class="rounded-lg border border-slate-200 p-3.5 bg-slate-50/50">
+              <div class="flex items-center justify-between mb-2"><span class="text-xs font-medium text-slate-600 uppercase tracking-wide">Telco</span><span class="w-2 h-2 rounded-full bg-emerald-500"></span></div>
+              <div class="text-xl font-bold text-slate-900">1,816</div><div class="text-[10px] text-slate-400">records</div>
+              <div class="mt-2 flex items-center gap-1"><span class="text-[10px] font-medium text-emerald-600">Tenure: 4.2 yrs</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cashflow Summary -->
+        <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+          <h3 class="text-sm font-semibold text-slate-900 mb-4">Cashflow Summary (90 days)</h3>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="text-center p-4 rounded-lg bg-emerald-50 border border-emerald-100">
+              <div class="text-xs font-medium text-emerald-600 uppercase tracking-wide mb-1">Inflow</div>
+              <div class="text-2xl font-bold text-emerald-700">QAR 187,450</div>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-red-50 border border-red-100">
+              <div class="text-xs font-medium text-red-600 uppercase tracking-wide mb-1">Outflow</div>
+              <div class="text-2xl font-bold text-red-700">QAR 142,380</div>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-blue-50 border border-blue-100">
+              <div class="text-xs font-medium text-blue-600 uppercase tracking-wide mb-1">Net Flow</div>
+              <div class="text-2xl font-bold text-blue-700">QAR 45,070</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column - Decision & Simulator -->
+      <div class="space-y-5">
+        <!-- Decision Outcome -->
+        <div class="bg-white rounded-xl border-2 border-emerald-200 p-5 shadow-sm">
+          <div class="text-center">
+            <div class="text-xs font-medium text-slate-500 uppercase tracking-wide mb-3">Latest Decision</div>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 mb-3">
+              <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+              <span class="text-lg font-bold text-emerald-700">APPROVED</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3 mt-4 text-xs">
+              <div class="p-2.5 rounded-lg bg-slate-50">
+                <div class="text-slate-500">Score</div>
+                <div class="text-lg font-bold text-slate-900">742</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-slate-50">
+                <div class="text-slate-500">Confidence</div>
+                <div class="text-lg font-bold text-emerald-600">94%</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-slate-50">
+                <div class="text-slate-500">Suggested APR</div>
+                <div class="text-lg font-bold text-slate-900">8.5%</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-slate-50">
+                <div class="text-slate-500">Credit Limit</div>
+                <div class="text-lg font-bold text-slate-900">QAR 75K</div>
+              </div>
+            </div>
+            <div class="mt-3 text-[10px] text-slate-400">Decided in 1.8 seconds</div>
+          </div>
+        </div>
+
+        <!-- Key Signals -->
+        <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+          <h3 class="text-sm font-semibold text-slate-900 mb-3">Key Signals</h3>
+          <div class="space-y-2">
+            <div class="flex items-start gap-2 p-2.5 rounded-lg bg-emerald-50/60 border border-emerald-100 text-xs">
+              <svg class="w-3.5 h-3.5 text-emerald-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+              <span class="text-slate-700">Consistent income over 90 days with low volatility</span>
+            </div>
+            <div class="flex items-start gap-2 p-2.5 rounded-lg bg-emerald-50/60 border border-emerald-100 text-xs">
+              <svg class="w-3.5 h-3.5 text-emerald-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+              <span class="text-slate-700">Telco tenure 4.2 years with 96% bill punctuality</span>
+            </div>
+            <div class="flex items-start gap-2 p-2.5 rounded-lg bg-emerald-50/60 border border-emerald-100 text-xs">
+              <svg class="w-3.5 h-3.5 text-emerald-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+              <span class="text-slate-700">Zero chargebacks across all payment sources</span>
+            </div>
+            <div class="flex items-start gap-2 p-2.5 rounded-lg bg-amber-50/60 border border-amber-100 text-xs">
+              <svg class="w-3.5 h-3.5 text-amber-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01"/><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+              <span class="text-slate-700">E-commerce stability slightly below threshold</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decision Simulator -->
+        <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+          <h3 class="text-sm font-semibold text-slate-900 mb-3">Decision Simulator</h3>
+          <div class="space-y-3 text-xs">
+            <div>
+              <label class="text-slate-500 font-medium block mb-1">Loan Amount</label>
+              <input type="text" value="QAR 50,000" class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-400" readonly>
+            </div>
+            <div>
+              <label class="text-slate-500 font-medium block mb-1">Tenor</label>
+              <input type="text" value="12 months" class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-900 focus:outline-none" readonly>
+            </div>
+            <div>
+              <label class="text-slate-500 font-medium block mb-1">Channel</label>
+              <input type="text" value="Mobile App" class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-900 focus:outline-none" readonly>
+            </div>
+            <button class="w-full mt-1 py-2.5 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold text-sm hover:opacity-90 transition">Run Simulation</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

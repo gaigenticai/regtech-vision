@@ -261,6 +261,45 @@ const Galileo = () => {
         </div>
       </section>
 
+      {/* Product Preview */}
+      <section className="py-16 bg-gradient-to-b from-white to-slate-50/50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-10">
+            <Badge variant="outline" className="mb-4 px-3 py-1 text-amber-700 border-amber-200">
+              Live Product
+            </Badge>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">AI Operations Center</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Real-time dashboard showing autonomous underwriting decisions, agent confidence scores, and live activity across your lending portfolio.
+            </p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative max-w-6xl mx-auto"
+          >
+            <div className="absolute -inset-4 bg-gradient-to-r from-amber-400/20 via-orange-400/20 to-red-400/20 rounded-3xl blur-2xl"></div>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
+              <div className="flex items-center gap-2 px-4 py-3 bg-slate-100 border-b border-slate-200">
+                <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                <span className="ml-3 text-sm text-slate-500 font-medium">Galileo - AI Operations Center</span>
+              </div>
+              <img
+                src="/assets/galileo-dashboard.png"
+                alt="Galileo AI Operations Center showing real-time underwriting decisions, agent confidence scores, and live activity feed"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* AI Agents */}
       <section className="py-16">
         <div className="container mx-auto px-6">
