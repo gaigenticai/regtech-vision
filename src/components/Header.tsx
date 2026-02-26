@@ -37,6 +37,7 @@ const Header = () => {
       ],
     },
     { kind: "link" as const, name: "About", href: "/about" },
+    { kind: "external" as const, name: "Agent Hub", href: "https://hub.gaigentic.ai" },
     { kind: "link" as const, name: "Contact Us", href: "/contact" },
   ];
 
@@ -136,6 +137,20 @@ const Header = () => {
                   );
                 }
 
+                if (item.kind === "external") {
+                  return (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-medium transition-colors relative py-2 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent hover:from-purple-700 hover:to-blue-700"
+                    >
+                      {item.name}
+                    </a>
+                  );
+                }
+
                 const active = isActivePath(item.href);
                 return (
                   <Link
@@ -211,6 +226,21 @@ const Header = () => {
                         ))}
                       </div>
                     </div>
+                  );
+                }
+
+                if (item.kind === "external") {
+                  return (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-4 text-base font-medium transition-all duration-200 rounded-lg touch-manipulation bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </a>
                   );
                 }
 
