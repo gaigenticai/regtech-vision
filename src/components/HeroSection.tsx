@@ -53,8 +53,8 @@ const HeroSection = () => {
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in-up delay-200">
               Boost your{" "}
               <span className="text-purple-600">Productivity</span> in
-              {" "}Financial Services with{" "}
-              <span className="text-pink-500">Agentic Teams</span>
+              {" "}Financial Services and become{" "}
+              <span className="text-pink-500">AI Native</span>
             </h1>
 
             <p className="text-xl text-gray-600 mb-8 max-w-2xl animate-fade-in-up delay-400">
