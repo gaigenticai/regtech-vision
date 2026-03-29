@@ -771,7 +771,7 @@ const Greenshield = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               {
-                vs: "vs osapiens",
+                vs: "vs Competitor 1",
                 points: [
                   "Agentic AI brain that learns across assessments",
                   "Faster setup with guided templates",
@@ -779,7 +779,7 @@ const Greenshield = () => {
                 ],
               },
               {
-                vs: "vs Master Sustainability",
+                vs: "vs Competitor 2",
                 points: [
                   "6 regulations vs 4",
                   "Built-in CO2 and CBAM calculators",
