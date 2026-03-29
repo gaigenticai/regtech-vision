@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Eye, Layers, ShieldCheck, Landmark, CreditCard } from "lucide-react";
+import { ArrowRight, Eye, Layers, ShieldCheck, Landmark, CreditCard, Leaf } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Solutions = () => {
@@ -43,6 +43,16 @@ const Solutions = () => {
       icon: CreditCard,
       accent: "from-emerald-600 to-teal-600",
       href: "/solutions/credai"
+    },
+    {
+      title: "Greenshield",
+      subtitle: "AI-powered sustainability compliance",
+      description:
+        "The only compliance platform with an agentic AI brain that learns across assessments. 6 EU regulations (EUDR, CSRD, CBAM, PPWR, VSME, CO2), 65+ API endpoints, dual-engine OCR, satellite deforestation analysis, and production-grade document intelligence.",
+      highlights: ["6 EU regulations", "Agentic AI brain", "65+ API endpoints"],
+      icon: Leaf,
+      accent: "from-green-600 to-emerald-600",
+      href: "/solutions/greenshield"
     }
   ] as const;
 

@@ -11,6 +11,7 @@ import Platform from "./pages/Platform";
 import Sentinel from "./pages/Sentinel";
 import Infrastructure from "./pages/Infrastructure";
 import Cognito from "./pages/Cognito";
+import Covenant from "./pages/Covenant";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -31,6 +32,7 @@ import VendorRisk from "./pages/solutions/VendorRisk";
 import CollectEye from "./pages/solutions/CollectEye";
 import Galileo from "./pages/solutions/Galileo";
 import CredAI from "./pages/solutions/CredAI";
+import Greenshield from "./pages/solutions/Greenshield";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Security from "./pages/Security";
@@ -53,6 +55,9 @@ const App = () => (
           <Route path="/solutions/collecteye" element={<CollectEye />} />
           <Route path="/solutions/galileo" element={<Galileo />} />
           <Route path="/solutions/credai" element={<CredAI />} />
+          <Route path="/solutions/greenshield" element={<Greenshield />} />
+          {/* Redirect old Canopy URL to Greenshield */}
+          <Route path="/solutions/canopy" element={<Navigate to="/solutions/greenshield" replace />} />
 
           <Route path="/solutions/regulens/kyc-automation" element={<KYCAutomation />} />
           <Route path="/solutions/regulens/lending-compliance" element={<LendingCompliance />} />
@@ -84,7 +89,9 @@ const App = () => (
           <Route path="/infrastructure" element={<Infrastructure />} />
           <Route path="/infrastructure/sentinel" element={<Sentinel />} />
           <Route path="/infrastructure/cognito" element={<Cognito />} />
+          <Route path="/infrastructure/covenant" element={<Covenant />} />
           <Route path="/sentinel" element={<Navigate to="/infrastructure/sentinel" replace />} />
+          <Route path="/covenant" element={<Navigate to="/infrastructure/covenant" replace />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
