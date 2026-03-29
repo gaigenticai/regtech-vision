@@ -11,7 +11,6 @@ import Platform from "./pages/Platform";
 import Sentinel from "./pages/Sentinel";
 import Infrastructure from "./pages/Infrastructure";
 import Cognito from "./pages/Cognito";
-import Covenant from "./pages/Covenant";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -89,9 +88,7 @@ const App = () => (
           <Route path="/infrastructure" element={<Infrastructure />} />
           <Route path="/infrastructure/sentinel" element={<Sentinel />} />
           <Route path="/infrastructure/cognito" element={<Cognito />} />
-          <Route path="/infrastructure/covenant" element={<Covenant />} />
           <Route path="/sentinel" element={<Navigate to="/infrastructure/sentinel" replace />} />
-          <Route path="/covenant" element={<Navigate to="/infrastructure/covenant" replace />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
