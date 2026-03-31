@@ -58,17 +58,17 @@ const Greenshield = () => {
     },
     {
       icon: Gauge,
-      value: "65+ Endpoints",
+      value: "70+ Endpoints",
       label: "API Coverage",
       description:
-        "Production-grade REST API with 65+ endpoints powering every compliance workflow.",
+        "Production-grade REST API with 70+ endpoints powering every compliance workflow.",
     },
     {
       icon: Shield,
       value: "Audit-Ready",
       label: "Evidence Trail",
       description:
-        "Per-category confidence scores with citations, evidence weight, and document coverage.",
+        "Full evidence provenance — every claim traced to source documents, pages, and direct excerpts.",
     },
   ];
 
@@ -82,10 +82,11 @@ const Greenshield = () => {
       subtitle: "EU Deforestation Regulation",
       bullets: [
         "Due diligence under Article 8 — information collection, risk assessment, and mitigation",
-        "15 risk categories from Article 10(2)(a)-(o)",
+        "15 risk categories from Article 10(2)(a)-(o) with evidence provenance",
         "7 commodities: cattle, cocoa, coffee, oil palm, rubber, soya, wood",
-        "Automated DDS generation and EU TRACES submission",
-        "Satellite deforestation analysis via Global Forest Watch",
+        "DDS Filing Assistant — validates all 22 Annex II fields before TRACES NT submission",
+        "Satellite deforestation analysis via Global Forest Watch with polygon boundaries",
+        "141-country risk database with CPI, deforestation, and carbon pricing data",
       ],
     },
     {
@@ -96,10 +97,10 @@ const Greenshield = () => {
       subtitle: "Corporate Sustainability Reporting Directive",
       bullets: [
         "Full ESRS alignment per EU Delegated Regulation 2023/2772",
-        "82 Disclosure Requirements across 12 topical standards",
-        "194 datapoints with mandatory / materiality classification",
-        "Interactive ESRS questionnaire (E1-E5, S1-S4, G1)",
-        "iXBRL report generation for digital filing",
+        "86 Disclosure Requirements across 11 topical standards with 296 datapoints",
+        "Double materiality engine — impact + financial scoring with NACE sector guidance",
+        "Interactive ESRS questionnaire (E1-E5, S1-S4, G1) with Omnibus status tracking",
+        "iXBRL report generation for digital filing to meet EU ESEF requirements",
       ],
     },
     {
@@ -109,11 +110,12 @@ const Greenshield = () => {
       title: "CBAM",
       subtitle: "Carbon Border Adjustment Mechanism",
       bullets: [
-        "Embedded emissions calculation per CN code",
-        "14 CN code categories across 6 commodity groups",
-        "Carbon price deduction from country of origin",
-        "CBAM cost estimation per import",
-        "Transitional reporting support",
+        "Full Annex III calculation engine — benchmarks, phase-out factors, precursor emissions",
+        "74 CN codes with 100% Annex I coverage across 5 commodity groups",
+        "83 country carbon prices with Article 9 deduction engine",
+        "Operations Cockpit — declarant checklist, deadline calendar, certificate planning",
+        "Phase-out scenario modelling 2026-2034 with ETS price slider",
+        "Quarterly report and annual declaration PDF generation",
       ],
     },
     {
@@ -123,23 +125,25 @@ const Greenshield = () => {
       title: "PPWR",
       subtitle: "Packaging and Packaging Waste Regulation",
       bullets: [
-        "10 compliance categories (recyclability, recycled content, PFAS, minimisation, reuse, DPP)",
-        "Material composition analysis",
-        "Recycled content target tracking (2030 / 2035 / 2040)",
-        "Packaging format restriction checks",
+        "Annex II recyclability engine — 8 material streams with RecyClass design-for-recycling grades",
+        "Recycled content verification with 6 Chain of Custody schemes",
+        "EPR fee calculator across 28 EU countries with modulated fees by recyclability grade",
+        "EN 13432 compostability validation, PFAS substance screening (3 methods)",
+        "Digital Product Passport template and packaging minimisation checker",
       ],
     },
     {
       id: "vsme",
       icon: Building2,
-      tag: "EFRAG VSME ED",
+      tag: "EFRAG VSME (finalized Dec 2024)",
       title: "VSME",
       subtitle: "Voluntary SME Sustainability Standard",
       bullets: [
-        "3-module structure: Basic (B1-B11), PAT, Business Partners (BP1-BP3)",
-        "15 compliance categories",
-        "Workforce, energy, GHG, and biodiversity metrics",
-        "Supply chain reporting for SME suppliers",
+        "3-module structure: Basic (B1-B11), Policies/Actions/Targets, Business Partners (BP1-BP3)",
+        "36 sector benchmarks — 13 NACE sections + 23 division-level with Eurostat SBS 2024 data",
+        "Simplified materiality with proportionality (micro / small / medium) and supply chain pressure",
+        "Plausibility checks, CSRD disclosure mapping, and structured supplier data requests",
+        "Supplier self-service portal with VSME-specific data request workflows",
       ],
     },
     {
@@ -149,10 +153,11 @@ const Greenshield = () => {
       title: "CO2",
       subtitle: "GHG Protocol & ISO 14064-1",
       bullets: [
-        "Scope 1 / 2 / 3 emissions calculator with DEFRA 2024 emission factors",
-        "15 country grid emission factors for Scope 2",
-        "Activity data x emission factor methodology",
-        "GHG Protocol formatted reports",
+        "Scope 1 / 2 / 3 emissions calculator with 73 emission factors across all 15 Scope 3 categories",
+        "83 countries for Scope 2 — location-based (grid average) + market-based (residual mix, GoOs, PPAs)",
+        "PCAF financed emissions for banks — 7 asset classes per PCAF Standard v1.0",
+        "SBTi target validation — 1.5°C and Well Below 2°C pathways with trajectory modelling",
+        "Base year tracking with GHG Protocol Chapter 6 recalculation policy",
       ],
     },
   ];
@@ -177,27 +182,52 @@ const Greenshield = () => {
     {
       icon: Satellite,
       title: "Satellite Deforestation Analysis",
-      desc: "Global Forest Watch integration. Tree cover loss data, deforestation alerts, and EUDR cutoff compliance verification.",
+      desc: "Global Forest Watch integration. Tree cover loss data, deforestation alerts, polygon boundaries, and EUDR cutoff verification.",
     },
     {
       icon: BadgeCheck,
-      title: "Confidence Derivation",
-      desc: "Shows exactly WHY a confidence score is what it is. Evidence weight, citation count, document coverage, and recency.",
+      title: "Evidence Provenance Graph",
+      desc: "Every compliance claim traced to source documents, pages, and direct excerpts. Full lineage preserved for audit and regulatory review.",
+    },
+    {
+      icon: Layers,
+      title: "Org-Level Compliance Dashboard",
+      desc: "Real-time compliance posture across all regulations. Supplier intelligence, environmental footprint (Scope 1/2/3), and financial impact metrics.",
+    },
+    {
+      icon: Map,
+      title: "Regulatory Change Radar",
+      desc: "Tracks 10+ EU regulatory changes with legal status, impact assessments, and source links. Auto-alerts on pending actions affecting your assessments.",
+    },
+    {
+      icon: Shield,
+      title: "Supplier Remediation Workspace",
+      desc: "Structured corrective action plans with severity-based deadlines (14/30/60/90d), evidence submission tracking, and auto-escalation for overdue items.",
+    },
+    {
+      icon: BarChart3,
+      title: "Benchmarking & Scenario Planning",
+      desc: "CBAM phase-out cost modelling 2026-2034, EPR multi-market comparison, VSME sector benchmarks, and SBTi target trajectory validation.",
     },
     {
       icon: Users,
       title: "Supplier Self-Service Portal",
-      desc: "Token-based upload links. Suppliers upload docs directly without accounts or onboarding overhead.",
+      desc: "Token-based upload links with VSME data request workflows. Suppliers upload docs and respond to remediation actions without accounts.",
     },
     {
       icon: Calculator,
       title: "CO2 Emissions Calculator",
-      desc: "Scope 1 / 2 / 3 with real DEFRA/EPA emission factors. 8 fuel types, 15 countries, 12 transport modes.",
+      desc: "Scope 1/2/3 with 73 emission factors, 83 country grid factors, PCAF financed emissions for banks, and SBTi target validation.",
     },
     {
-      icon: BarChart3,
-      title: "CBAM Cost Estimator",
-      desc: "Calculate embedded emissions and CBAM financial exposure per import across 14 CN code categories.",
+      icon: Factory,
+      title: "CBAM Operations Cockpit",
+      desc: "Declarant readiness checklist, regulatory deadline calendar, import portfolio analysis, certificate planning, and de minimis checks.",
+    },
+    {
+      icon: Lock,
+      title: "EUDR Filing Assistant",
+      desc: "Validates all 22 Annex II DDS fields against assessment data. Evidence completeness scoring, critical blockers, section-by-section readiness.",
     },
     {
       icon: Mail,
@@ -218,6 +248,11 @@ const Greenshield = () => {
       icon: ScrollText,
       title: "iXBRL Export",
       desc: "Generate ESRS-tagged iXBRL reports for CSRD digital filing to meet EU ESEF requirements.",
+    },
+    {
+      icon: Package,
+      title: "PPWR Compliance Toolkit",
+      desc: "EPR fee calculator (28 EU countries), recyclability grading, recycled content verification, compostability validation, and Digital Product Passport.",
     },
     {
       icon: ClipboardList,
@@ -255,18 +290,28 @@ const Greenshield = () => {
     },
     {
       num: "04",
-      title: "Risk Report",
-      desc: "Per-category risk assessment with evidence citations, confidence scores, and full derivation of how each score was calculated.",
+      title: "Evidence Provenance",
+      desc: "Every compliance claim is traced to source documents, pages, and direct excerpts. Full evidence lineage preserved for audit and regulatory review.",
     },
     {
       num: "05",
-      title: "Action Items",
-      desc: "Missing documents, compliance gaps, and prioritised recommendations so your team knows exactly what to address first.",
+      title: "Remediation & Action",
+      desc: "Structured corrective action plans with severity-based deadlines. Suppliers receive remediation tasks and submit evidence through the self-service portal.",
     },
     {
       num: "06",
-      title: "Learn",
-      desc: "The Agentic AI Brain accumulates patterns across every assessment, surfacing cross-supplier and cross-regulation insights over time.",
+      title: "Benchmark & Scenario",
+      desc: "Model regulatory cost scenarios (CBAM phase-out, EPR multi-market), compare ESG metrics against sector benchmarks, and validate science-based targets.",
+    },
+    {
+      num: "07",
+      title: "File & Submit",
+      desc: "EUDR DDS Filing Assistant validates Annex II readiness. CBAM quarterly reports and annual declarations generated as PDFs. CSRD iXBRL export for digital filing.",
+    },
+    {
+      num: "08",
+      title: "Learn & Improve",
+      desc: "The Agentic AI Brain accumulates patterns across every assessment, surfacing cross-supplier and cross-regulation insights. The platform gets smarter over time.",
     },
   ];
 
@@ -275,7 +320,7 @@ const Greenshield = () => {
     {
       dimension: "Regulation coverage",
       legacy: "1-2 regulations",
-      greenshield: "6 EU regulations",
+      greenshield: "6 EU regulations, deep",
       benefit: "Single platform, full coverage",
     },
     {
@@ -285,28 +330,40 @@ const Greenshield = () => {
       benefit: "Improves with every assessment",
     },
     {
-      dimension: "Document processing",
-      legacy: "Manual data entry",
-      greenshield: "Dual-engine OCR + classification",
-      benefit: "Minutes instead of days",
+      dimension: "Evidence chain",
+      legacy: "Pass / fail checklist",
+      greenshield: "Full provenance to page & excerpt",
+      benefit: "Audit-proof, regulator-ready",
+    },
+    {
+      dimension: "Supplier management",
+      legacy: "Email follow-ups",
+      greenshield: "Remediation workspace + portal",
+      benefit: "Structured deadlines & escalation",
+    },
+    {
+      dimension: "Scenario planning",
+      legacy: "Spreadsheets",
+      greenshield: "Built-in CBAM/EPR/SBTi modelling",
+      benefit: "Data-driven cost projections",
+    },
+    {
+      dimension: "Filing readiness",
+      legacy: "Manual validation",
+      greenshield: "Auto-validates DDS / CBAM / iXBRL",
+      benefit: "Submit with confidence",
+    },
+    {
+      dimension: "Emissions calculator",
+      legacy: "Separate tool",
+      greenshield: "Scope 1/2/3 + PCAF + SBTi",
+      benefit: "Unified carbon management",
     },
     {
       dimension: "Satellite verification",
       legacy: "Not available",
-      greenshield: "Global Forest Watch integration",
+      greenshield: "Global Forest Watch + polygons",
       benefit: "Objective deforestation proof",
-    },
-    {
-      dimension: "Emissions calculator",
-      legacy: "Separate tool or spreadsheet",
-      greenshield: "Built-in Scope 1/2/3 calculator",
-      benefit: "Unified workflow",
-    },
-    {
-      dimension: "Confidence scoring",
-      legacy: "Pass / fail",
-      greenshield: "Derived confidence with evidence",
-      benefit: "Transparent, auditable results",
     },
   ];
 
@@ -343,7 +400,7 @@ const Greenshield = () => {
                 The only compliance platform with an{" "}
                 <strong>agentic AI brain</strong> that learns across
                 assessments.{" "}
-                <strong>6 EU regulations, 65+ API endpoints</strong>,
+                <strong>6 EU regulations, 70+ API endpoints</strong>,
                 production-grade document intelligence.
               </p>
 
@@ -376,7 +433,7 @@ const Greenshield = () => {
                     color: "from-green-700 to-emerald-600",
                   },
                   {
-                    value: "65+",
+                    value: "70+",
                     label: "API Endpoints",
                     color: "from-emerald-600 to-lime-600",
                   },
@@ -528,7 +585,7 @@ const Greenshield = () => {
               Capabilities
             </Badge>
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              15 production-grade capabilities
+              21 production-grade capabilities
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               From dual-engine OCR to satellite deforestation analysis — every
@@ -573,7 +630,7 @@ const Greenshield = () => {
               How it works
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Six steps from raw documents to actionable compliance intelligence
+              Eight steps from raw documents to submission-ready compliance
               — with the AI brain getting smarter at every stage.
             </p>
           </div>
@@ -625,12 +682,12 @@ const Greenshield = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
-              { label: "API Endpoints", value: "65+" },
+              { label: "API Endpoints", value: "70+" },
               { label: "Database Tables", value: "11 with Alembic migrations" },
               {
                 label: "Backend Services",
                 value:
-                  "7 (email, satellite, traces, portal, iXBRL, ERP, brain)",
+                  "14 (EUDR filing, CBAM ops, remediation, benchmarks, satellite, portal, brain, radar, and more)",
               },
               { label: "AI Model", value: "Anthropic Claude Sonnet 4.6" },
               {
@@ -774,24 +831,24 @@ const Greenshield = () => {
                 vs: "vs Competitor 1",
                 points: [
                   "Agentic AI brain that learns across assessments",
-                  "Faster setup with guided templates",
-                  "Open architecture with 65+ API endpoints",
+                  "Full evidence provenance — claim to page to excerpt",
+                  "Open architecture with 70+ API endpoints",
                 ],
               },
               {
                 vs: "vs Competitor 2",
                 points: [
-                  "6 regulations vs 4",
-                  "Built-in CO2 and CBAM calculators",
-                  "Satellite deforestation integration",
+                  "6 regulations vs 4 — each built to production depth",
+                  "Built-in CBAM operations cockpit with phase-out modelling",
+                  "Supplier remediation workspace with auto-escalation",
                 ],
               },
               {
                 vs: "Unique to Greenshield",
                 points: [
                   "Only platform that LEARNS from every assessment",
-                  "Dual-engine OCR for any document type",
-                  "Confidence derivation with full evidence chain",
+                  "Regulatory Change Radar tracking 10+ EU legislative changes",
+                  "Cross-regulation benchmarking and scenario planning",
                 ],
               },
             ].map((block) => (
