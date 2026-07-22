@@ -92,7 +92,7 @@ const Index = () => {
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 pt-12 md:pt-16 pb-14 md:pb-20">
             {/* Top strip */}
             <div className="flex items-center justify-between mb-16 md:mb-24">
-              <span className="eyebrow text-ink-faint">The independent verification layer</span>
+              <span className="eyebrow text-ink-faint">The verification layer for the office of the CFO</span>
               <span className="eyebrow text-ink-soft hidden sm:flex items-center gap-2">
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-tick" aria-hidden />
                 Design partner program open
@@ -108,9 +108,11 @@ const Index = () => {
 
             <div className="mt-10 md:mt-14 grid md:grid-cols-2 gap-8 md:gap-16 items-end">
               <p className="text-lg md:text-xl text-ink-soft leading-relaxed max-w-xl">
-                Gaigentic Verify is the independent check in between. It continuously re-verifies
-                what your finance AI agents produce — AML monitoring decisions, reconciliations,
-                filings — and turns every check into evidence built for supervisory review.
+                AI is entering the office of the CFO workflow by workflow — monitoring,
+                reconciliation, close, reporting. Gaigentic Verify is the independent check in
+                between: it continuously re-verifies what those agents produce and turns every
+                check into evidence built for supervisory review. One layer across the whole
+                finance function.
               </p>
 
               <div className="flex flex-wrap gap-3 md:justify-end">
@@ -190,6 +192,32 @@ const Index = () => {
             </p>
             <p className="text-paper font-medium">
               Verification has to be independent, continuous, and evidenced.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ OFFICE OF THE CFO — dark ============ */}
+      <section className="max-w-[1400px] mx-auto px-5 md:px-12 pb-16 md:pb-24">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
+          <div>
+            <div className="eyebrow text-paper/45 mb-6">Who we serve</div>
+            <h2 className="font-sans font-expanded font-extrabold text-paper tracking-tight leading-tight text-4xl md:text-6xl">
+              Built for the
+              <br />
+              office of the CFO.
+            </h2>
+          </div>
+          <div className="space-y-5 text-paper/65 leading-relaxed text-lg max-w-xl">
+            <p>
+              The finance function adopts AI vendor by vendor — AP and AR, monitoring,
+              reconciliation and close, reporting, treasury — each tool with its own dashboard.
+              What the CFO signs is the sum of all of them.
+            </p>
+            <p>
+              Verify is the one trust layer across that stack: every agent's outputs checked the
+              same three ways, every check landing in the same register, one evidence pack for the
+              whole finance function. Add an agent; the layer already covers it.
             </p>
           </div>
         </div>

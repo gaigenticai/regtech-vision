@@ -137,8 +137,10 @@ const Header = () => {
 
         {/* Mobile nav */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
-            isMenuOpen ? "max-h-[480px] opacity-100 pb-6" : "max-h-0 opacity-0"
+          className={`md:hidden transition-all duration-300 ${
+            isMenuOpen
+              ? "max-h-[calc(100vh-4rem)] overflow-y-auto opacity-100 pb-6"
+              : "max-h-0 overflow-hidden opacity-0"
           }`}
         >
           <div className="pt-2 space-y-1 border-t border-paper/10">
