@@ -1,107 +1,84 @@
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Layers, ServerCog, Workflow } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
+
+const products = [
+  {
+    index: "01",
+    name: "Sentinel",
+    href: "/infrastructure/sentinel",
+    tagline: "API-first infrastructure for agentic systems",
+    description:
+      "A reusable backend for durable sessions, memory and knowledge base, tool execution, policy enforcement, and evidence-first auditing.",
+    tags: ["Tool gateway + audit", "Hybrid retrieval", "Policy + safety"],
+  },
+  {
+    index: "02",
+    name: "Cognito",
+    href: "/infrastructure/cognito",
+    tagline: "Enterprise intake & alignment",
+    description:
+      "Temporal-orchestrated schema alignment for host vs acquired systems: connectors, evidence ingestion, mapping workbench, approvals, and versioned export contracts.",
+    tags: ["Temporal runs + history", "Evidence-backed mappings", "Approval + versioning"],
+  },
+];
 
 const Infrastructure = () => {
-  const products = [
-    {
-      title: "Sentinel",
-      subtitle: "API-first infrastructure for agentic systems",
-      description:
-        "A reusable backend for durable sessions, memory + knowledge base, tool execution, policy enforcement, and evidence-first auditing.",
-      highlights: ["Tool gateway + audit", "Hybrid retrieval", "Policy + safety"],
-      icon: ServerCog,
-      accent: "from-purple-600 to-blue-600",
-      href: "/infrastructure/sentinel",
-    },
-    {
-      title: "Cognito",
-      subtitle: "Enterprise intake & alignment",
-      description:
-        "Temporal-orchestrated schema alignment for host vs acquired systems: connectors, evidence ingestion, mapping workbench, approvals, and versioned export contracts.",
-      highlights: ["Temporal runs + history", "Evidence-backed mappings", "Approval + versioning"],
-      icon: Workflow,
-      accent: "from-blue-600 to-cyan-600",
-      href: "/infrastructure/cognito",
-    },
-  ] as const;
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
-      <main className="pt-28">
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-10 left-10 w-80 h-80 bg-gradient-to-r from-purple-400/20 to-blue-400/20 rounded-full mix-blend-multiply filter blur-2xl animate-float" />
-            <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full mix-blend-multiply filter blur-2xl animate-float delay-1000" />
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:14px_24px]" />
+    <div className="bg-ink min-h-screen pt-16">
+      {/* Hero — paper */}
+      <section className="px-3 md:px-5 pt-3 md:pt-5">
+        <div className="bg-paper rounded-2xl md:rounded-3xl">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
+            <span className="eyebrow text-ink-faint">Infrastructure</span>
+            <h1 className="mt-6 font-sans font-expanded font-extrabold text-ink tracking-tight leading-[1.0] text-5xl md:text-7xl max-w-4xl">
+              Core building blocks for <span className="text-ledger">enterprise-grade AI</span>
+            </h1>
+            <p className="mt-8 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl">
+              The infrastructure underneath our products — and available on its own. Built to make
+              regulated systems safe, observable, and repeatable.
+            </p>
           </div>
+        </div>
+      </section>
 
-          <div className="container mx-auto px-6 relative z-10 py-16">
-            <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="outline" className="bg-white/70 backdrop-blur border-slate-200 px-4 py-2 text-sm font-semibold">
-                <Layers className="h-4 w-4 mr-2" />
-                Infrastructure
-              </Badge>
-
-              <h1 className="mt-6 text-4xl md:text-6xl font-bold text-slate-900 leading-tight">
-                Core building blocks for{" "}
-                <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">enterprise-grade AI</span>
-              </h1>
-
-              <p className="mt-4 text-lg text-slate-600 leading-relaxed">
-                Products that make regulated systems safe, observable, and repeatable: durable workflows, evidence, governance, and integrations.
-              </p>
-            </div>
-
-            <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {products.map((product) => (
-                <Link
-                  key={product.title}
-                  to={product.href}
-                  aria-label={`Open ${product.title}`}
-                  className="group relative rounded-3xl border border-slate-200 bg-white/70 backdrop-blur shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
-                >
-                  <div className={`absolute -top-24 -right-24 w-72 h-72 rounded-full bg-gradient-to-r ${product.accent} opacity-15 blur-2xl`} />
-
-                  <div className="relative p-10">
-                    <div className="flex items-start justify-between gap-6">
-                      <div className="flex items-start gap-4">
-                        <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${product.accent} flex items-center justify-center shadow-lg flex-shrink-0`}>
-                          <product.icon className="h-7 w-7 text-white" />
-                        </div>
-                        <div>
-                          <div className="text-sm font-semibold text-slate-600">{product.subtitle}</div>
-                          <h2 className="text-3xl font-bold text-slate-900 mt-1">{product.title}</h2>
-                        </div>
-                      </div>
-
-                      <div className="w-11 h-11 rounded-full border border-slate-200 bg-white/70 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
-                        <ArrowRight className="h-5 w-5 text-slate-600" />
-                      </div>
-                    </div>
-
-                    <p className="mt-5 text-slate-600 leading-relaxed">{product.description}</p>
-
-                    <div className="mt-8 flex flex-wrap gap-2">
-                      {product.highlights.map((h) => (
-                        <span
-                          key={h}
-                          className="inline-flex items-center rounded-full border border-slate-200 bg-white/60 px-3 py-1 text-sm font-semibold text-slate-700"
-                        >
-                          {h}
-                        </span>
-                      ))}
-                    </div>
+      {/* Product index — dark */}
+      <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
+        <div className="border-t border-paper/10">
+          {products.map((product) => (
+            <Link
+              key={product.index}
+              to={product.href}
+              className="group block py-8 md:py-10 border-b border-paper/10 hover:bg-paper/[0.03] transition-colors px-2 -mx-2 rounded-sm"
+            >
+              <div className="grid md:grid-cols-[56px_260px_1fr_auto] gap-4 md:gap-8 items-start">
+                <span className="font-mono text-xs text-paper/35 pt-2">{product.index}</span>
+                <div>
+                  <span className="font-sans font-expanded font-bold text-2xl md:text-3xl text-paper tracking-tight">
+                    {product.name}
+                  </span>
+                  <div className="eyebrow text-paper/40 mt-2.5">{product.tagline}</div>
+                </div>
+                <div>
+                  <p className="text-paper/60 leading-relaxed max-w-2xl">{product.description}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {product.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="font-mono text-[11px] uppercase tracking-[0.14em] text-paper/45 border border-paper/15 rounded-full px-3 py-1"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      </main>
+                </div>
+                <ArrowUpRight className="h-4 w-4 text-paper/35 group-hover:text-paper transition-colors justify-self-end mt-2 hidden md:block" />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };
 
 export default Infrastructure;
-

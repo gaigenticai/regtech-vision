@@ -6,12 +6,13 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
+import Verify from "./pages/Verify";
+import Competition from "./pages/Competition";
 import Solutions from "./pages/Solutions";
 import Platform from "./pages/Platform";
 import Sentinel from "./pages/Sentinel";
 import Infrastructure from "./pages/Infrastructure";
 import Cognito from "./pages/Cognito";
-import Resources from "./pages/Resources";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -31,6 +32,7 @@ import VendorRisk from "./pages/solutions/VendorRisk";
 import CollectEye from "./pages/solutions/CollectEye";
 import Galileo from "./pages/solutions/Galileo";
 import CredAI from "./pages/solutions/CredAI";
+import CardOS from "./pages/solutions/CardOS";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Security from "./pages/Security";
@@ -48,11 +50,15 @@ const App = () => (
   <Header />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/verify" element={<Verify />} />
+          {/* Internal reference — deliberately not linked from any nav/footer */}
+          <Route path="/competition" element={<Competition />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/solutions/regulens" element={<Regulens />} />
           <Route path="/solutions/collecteye" element={<CollectEye />} />
           <Route path="/solutions/galileo" element={<Galileo />} />
           <Route path="/solutions/credai" element={<CredAI />} />
+          <Route path="/solutions/cardos" element={<CardOS />} />
           {/* Greenshield hidden pending NDA */}
           <Route path="/solutions/canopy" element={<Navigate to="/solutions" replace />} />
 
@@ -87,7 +93,7 @@ const App = () => (
           <Route path="/infrastructure/sentinel" element={<Sentinel />} />
           <Route path="/infrastructure/cognito" element={<Cognito />} />
           <Route path="/sentinel" element={<Navigate to="/infrastructure/sentinel" replace />} />
-          <Route path="/resources" element={<Resources />} />
+          {/* Resources hidden pending sourced, verifiable content */}
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

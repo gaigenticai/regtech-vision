@@ -20,6 +20,15 @@ export default {
     },
     extend: {
       colors: {
+        // Ledger design system (flipprr family language)
+        paper: { DEFAULT: '#E9E8E2', shade: '#E0DFD8', bright: '#F2F1EC' },
+        ink: { DEFAULT: '#121410', soft: '#3C3F38', faint: '#6E7168' },
+        ledger: { DEFAULT: '#1E5B41', deep: '#143D2C', wash: '#DCE5DE' },
+        tick: { DEFAULT: '#2E9E6B', wash: '#DEEDE4' },
+        flag: { DEFAULT: '#C2402A', wash: '#F0E0DB' },
+        amber: { DEFAULT: '#DF8A1F', deep: '#B86E12' },
+        rule: { DEFAULT: '#D3D2C8', dark: '#B9B8AC', inkline: '#26291F' },
+
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -169,11 +178,12 @@ export default {
       },
 
       fontFamily: {
-        'headline': ['Inter Variable', 'Inter', 'system-ui', 'sans-serif'],
-        'body': ['Inter Variable', 'Inter', 'system-ui', 'sans-serif'],
-        'accent': ['Inter Variable', 'Inter', 'system-ui', 'sans-serif'],
-        'sans': ['Inter Variable', 'Inter', 'system-ui', 'sans-serif'],
-        'mono': ['JetBrains Mono Variable', 'JetBrains Mono', 'monospace'],
+        'headline': ['Archivo', 'system-ui', 'sans-serif'],
+        'body': ['Archivo', 'system-ui', 'sans-serif'],
+        'accent': ['Archivo', 'system-ui', 'sans-serif'],
+        'sans': ['Archivo', 'system-ui', 'sans-serif'],
+        'display': ['Archivo', 'system-ui', 'sans-serif'],
+        'mono': ['Spline Sans Mono', 'JetBrains Mono', 'monospace'],
       },
 
       fontSize: {

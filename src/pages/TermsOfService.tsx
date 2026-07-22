@@ -1,221 +1,205 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { FileText, Scale, AlertCircle, CheckCircle, Users, Shield, AlertTriangle } from "lucide-react";
+// Header is rendered globally from App.tsx
 
 const TermsOfService = () => {
   return (
-    <div className="min-h-screen bg-white pt-28">
-      <main className="max-w-4xl mx-auto px-4 py-16">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-4">
-            <Scale className="h-12 w-12 text-blue-600 mr-4" />
-            <h1 className="text-4xl font-bold text-gray-900">Terms of Service</h1>
-          </div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            These terms govern your use of Gaigentic AI's services and platform. By using our services, you agree to these terms.
-          </p>
-          <Badge variant="outline" className="mt-4">Effective: September 2025</Badge>
-        </div>
+    <div className="bg-ink min-h-screen pt-16">
+      <section className="px-3 md:px-5 py-3 md:py-5">
+        <div className="bg-paper rounded-2xl md:rounded-3xl">
+          <div className="max-w-3xl mx-auto px-5 md:px-8 py-12 md:py-16">
+            <span className="eyebrow text-ink-faint">Legal</span>
+            <h1 className="mt-6 font-sans font-expanded font-extrabold text-ink tracking-tight leading-[1.05] text-4xl md:text-5xl">
+              Terms of Service
+            </h1>
+            <p className="mt-6 text-lg text-ink-soft leading-relaxed">
+              These terms govern your use of Gaigentic AI&rsquo;s services and platform. By using
+              our services, you agree to these terms.
+            </p>
+            <div className="mt-5 font-mono text-xs text-ink-faint uppercase tracking-[0.14em]">
+              Effective · September 2025
+            </div>
 
-        {/* Content Sections */}
-        <div className="space-y-8">
-
-          {/* Acceptance of Terms */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <CheckCircle className="h-5 w-5 mr-2 text-green-600" />
+            {/* 01 — Acceptance of Terms */}
+            <div className="mt-12 border-t border-rule pt-8">
+              <div className="font-mono text-xs text-ledger mb-3">01</div>
+              <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
                 Acceptance of Terms
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600">
-                By accessing and using Gaigentic AI's services, you accept and agree to be bound by the terms and provision
-                of this agreement. If you do not agree to abide by the above, please do not use this service.
+              </h2>
+              <p className="text-ink-soft leading-relaxed">
+                By accessing and using Gaigentic AI's services, you accept and agree to be bound by
+                the terms and provision of this agreement. If you do not agree to abide by the
+                above, please do not use this service.
               </p>
-            </CardContent>
-          </Card>
+            </div>
 
-          {/* Service Description */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <FileText className="h-5 w-5 mr-2 text-blue-600" />
+            {/* 02 — Service Description */}
+            <div className="mt-12 border-t border-rule pt-8">
+              <div className="font-mono text-xs text-ledger mb-3">02</div>
+              <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
                 Service Description
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-600">
-                Gaigentic AI provides autonomous AI agent technology for financial compliance and regulatory operations,
-                including but not limited to:
+              </h2>
+              <p className="text-ink-soft leading-relaxed mb-4">
+                Gaigentic AI provides autonomous AI agent technology for financial compliance and
+                regulatory operations, including but not limited to:
               </p>
-              <ul className="space-y-2 text-gray-600 ml-4">
-                <li>• KYC (Know Your Customer) automation</li>
-                <li>• Transaction monitoring and AML compliance</li>
-                <li>• Lending compliance and risk assessment</li>
-                <li>• Regulatory reporting and compliance management</li>
-                <li>• AI-powered fraud detection and prevention</li>
+              <ul className="space-y-2.5 text-ink-soft leading-relaxed list-disc pl-5">
+                <li>KYC (Know Your Customer) automation</li>
+                <li>Transaction monitoring and AML compliance</li>
+                <li>Lending compliance and risk assessment</li>
+                <li>Regulatory reporting and compliance management</li>
+                <li>AI-powered fraud detection and prevention</li>
               </ul>
-            </CardContent>
-          </Card>
+            </div>
 
-          {/* User Responsibilities */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Users className="h-5 w-5 mr-2 text-purple-600" />
+            {/* 03 — User Responsibilities */}
+            <div className="mt-12 border-t border-rule pt-8">
+              <div className="font-mono text-xs text-ledger mb-3">03</div>
+              <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
                 User Responsibilities
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
+              </h2>
+              <div className="space-y-5">
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Account Security</h4>
-                  <p className="text-gray-600">
-                    You are responsible for maintaining the confidentiality of your account credentials and for all activities
-                    that occur under your account. You must immediately notify us of any unauthorized use.
+                  <h3 className="font-semibold text-ink mb-1.5">Account Security</h3>
+                  <p className="text-ink-soft leading-relaxed">
+                    You are responsible for maintaining the confidentiality of your account
+                    credentials and for all activities that occur under your account. You must
+                    immediately notify us of any unauthorized use.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Lawful Use</h4>
-                  <p className="text-gray-600">
-                    You agree to use our services only for lawful purposes and in compliance with all applicable laws,
-                    regulations, and our acceptable use policy.
+                  <h3 className="font-semibold text-ink mb-1.5">Lawful Use</h3>
+                  <p className="text-ink-soft leading-relaxed">
+                    You agree to use our services only for lawful purposes and in compliance with
+                    all applicable laws, regulations, and our acceptable use policy.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Data Accuracy</h4>
-                  <p className="text-gray-600">
-                    You are responsible for the accuracy and completeness of data provided to our services.
-                    We are not liable for issues arising from inaccurate or incomplete data.
+                  <h3 className="font-semibold text-ink mb-1.5">Data Accuracy</h3>
+                  <p className="text-ink-soft leading-relaxed">
+                    You are responsible for the accuracy and completeness of data provided to our
+                    services. We are not liable for issues arising from inaccurate or incomplete
+                    data.
                   </p>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
 
-          {/* Intellectual Property */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Shield className="h-5 w-5 mr-2 text-orange-600" />
+            {/* 04 — Intellectual Property */}
+            <div className="mt-12 border-t border-rule pt-8">
+              <div className="font-mono text-xs text-ledger mb-3">04</div>
+              <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
                 Intellectual Property
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 mb-4">
-                All content, features, and functionality of our services are owned by Gaigentic AI and are protected by
-                international copyright, trademark, and other intellectual property laws.
+              </h2>
+              <p className="text-ink-soft leading-relaxed mb-4">
+                All content, features, and functionality of our services are owned by Gaigentic AI
+                and are protected by international copyright, trademark, and other intellectual
+                property laws.
               </p>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <p className="text-blue-800 text-sm">
-                  <strong>License:</strong> We grant you a limited, non-exclusive, non-transferable license to use our
-                  services in accordance with these terms. This license does not include any resale or commercial use
-                  of our services or their contents.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+              <p className="text-ink-soft leading-relaxed border-l-2 border-rule-dark pl-4">
+                <strong className="text-ink">License:</strong> We grant you a limited,
+                non-exclusive, non-transferable license to use our services in accordance with
+                these terms. This license does not include any resale or commercial use of our
+                services or their contents.
+              </p>
+            </div>
 
-          {/* Service Availability */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <AlertCircle className="h-5 w-5 mr-2 text-yellow-600" />
-                Service Availability & Support
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Uptime Commitment</h4>
-                <p className="text-gray-600">
-                  We strive to maintain 99.9% uptime for our services but do not guarantee uninterrupted access.
-                  We reserve the right to perform maintenance that may temporarily disrupt service availability.
-                </p>
+            {/* 05 — Service Availability & Support */}
+            <div className="mt-12 border-t border-rule pt-8">
+              <div className="font-mono text-xs text-ledger mb-3">05</div>
+              <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
+                Service Availability &amp; Support
+              </h2>
+              <div className="space-y-5">
+                <div>
+                  <h3 className="font-semibold text-ink mb-1.5">Uptime Commitment</h3>
+                  <p className="text-ink-soft leading-relaxed">
+                    We strive to maintain 99.9% uptime for our services but do not guarantee
+                    uninterrupted access. We reserve the right to perform maintenance that may
+                    temporarily disrupt service availability.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-ink mb-1.5">Support Services</h3>
+                  <p className="text-ink-soft leading-relaxed">
+                    Technical support is provided during business hours. Emergency support for
+                    critical issues is available 24/7. Response times vary based on support tier
+                    and issue severity.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-ink mb-1.5">Claims and metrics</h3>
+                  <p className="text-ink-soft leading-relaxed">
+                    Any percentages, accuracy rates, performance metrics, or other quantitative
+                    claims published by Gaigentic AI are based on controlled datasets and testing
+                    conditions used during development. These figures are provided for
+                    informational purposes and do not constitute a guarantee or warranty of future
+                    results; actual performance may vary in production depending on factors such as
+                    data quality, data volume, configuration, integration, and the operating
+                    environment.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Support Services</h4>
-                <p className="text-gray-600">
-                  Technical support is provided during business hours. Emergency support for critical issues is available 24/7.
-                  Response times vary based on support tier and issue severity.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Claims and metrics</h4>
-                <p className="text-gray-600">
-                  Any percentages, accuracy rates, performance metrics, or other quantitative claims published by Gaigentic AI
-                  are based on controlled datasets and testing conditions used during development. These figures are provided
-                  for informational purposes and do not constitute a guarantee or warranty of future results; actual performance
-                  may vary in production depending on factors such as data quality, data volume, configuration, integration,
-                  and the operating environment.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+            </div>
 
-          {/* Limitation of Liability */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <AlertTriangle className="h-5 w-5 mr-2 text-red-600" />
+            {/* 06 — Limitation of Liability */}
+            <div className="mt-12 border-t border-rule pt-8">
+              <div className="font-mono text-xs text-ledger mb-3">06</div>
+              <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
                 Limitation of Liability
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 mb-4">
-                In no event shall Gaigentic AI be liable for any indirect, incidental, special, consequential, or punitive
-                damages arising out of or relating to your use of our services.
+              </h2>
+              <p className="text-ink-soft leading-relaxed mb-4">
+                In no event shall Gaigentic AI be liable for any indirect, incidental, special,
+                consequential, or punitive damages arising out of or relating to your use of our
+                services.
               </p>
-              <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
-                <p className="text-yellow-800 text-sm">
-                  <strong>Important:</strong> Our total liability shall not exceed the amount paid by you for the services
-                  during the twelve (12) months preceding the claim.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+              <p className="text-ink-soft leading-relaxed border-l-2 border-rule-dark pl-4">
+                <strong className="text-ink">Important:</strong> Our total liability shall not
+                exceed the amount paid by you for the services during the twelve (12) months
+                preceding the claim.
+              </p>
+            </div>
 
-          {/* Termination */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <FileText className="h-5 w-5 mr-2 text-gray-600" />
+            {/* 07 — Termination */}
+            <div className="mt-12 border-t border-rule pt-8">
+              <div className="font-mono text-xs text-ledger mb-3">07</div>
+              <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
                 Termination
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 mb-4">
+              </h2>
+              <p className="text-ink-soft leading-relaxed mb-4">
                 Either party may terminate this agreement at any time. Upon termination:
               </p>
-              <ul className="space-y-2 text-gray-600 ml-4">
-                <li>• Your access to the services will be immediately terminated</li>
-                <li>• We will delete your data within 30 days unless legally required to retain it</li>
-                <li>• Outstanding payments for services rendered will remain due</li>
-                <li>• Certain provisions will survive termination (data protection, liability, etc.)</li>
+              <ul className="space-y-2.5 text-ink-soft leading-relaxed list-disc pl-5">
+                <li>Your access to the services will be immediately terminated</li>
+                <li>We will delete your data within 30 days unless legally required to retain it</li>
+                <li>Outstanding payments for services rendered will remain due</li>
+                <li>Certain provisions will survive termination (data protection, liability, etc.)</li>
               </ul>
-            </CardContent>
-          </Card>
+            </div>
 
-          {/* Contact Information */}
-          <Card className="bg-blue-50 border-blue-200">
-            <CardContent className="pt-6">
-              <div className="text-center">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">Questions About Terms?</h3>
-                <p className="text-blue-700 mb-4">
-                  If you have any questions about these Terms of Service, please contact us:
+            {/* 08 — Contact */}
+            <div className="mt-12 border-t border-rule pt-8">
+              <div className="font-mono text-xs text-ledger mb-3">08</div>
+              <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
+                Questions About Terms?
+              </h2>
+              <p className="text-ink-soft leading-relaxed mb-5">
+                If you have any questions about these Terms of Service, please contact us:
+              </p>
+              <div className="space-y-2 text-ink-soft leading-relaxed">
+                <p>
+                  <strong className="text-ink">Email:</strong> info@gaigentic.ai
                 </p>
-                <div className="space-y-2 text-blue-800">
-                  <p><strong>Email:</strong> info@gaigentic.ai</p>
-                  <p><strong>Phone:</strong> +31 6 20343034</p>
-                  <p><strong>Address:</strong> Gustav Mahlerplein 2, 1082MA Amsterdam, Netherlands</p>
-                </div>
+                <p>
+                  <strong className="text-ink">Phone:</strong> +31 6 20343034
+                </p>
+                <p>
+                  <strong className="text-ink">Address:</strong> Gustav Mahlerplein 2, 1082MA
+                  Amsterdam, Netherlands
+                </p>
               </div>
-            </CardContent>
-          </Card>
-
+            </div>
+          </div>
         </div>
-      </main>
+      </section>
     </div>
   );
 };

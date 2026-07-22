@@ -3,6 +3,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Ledger design system utilities (flipprr family language) */
+@layer utilities {
+  .font-expanded {
+    font-stretch: 115%;
+  }
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.22em];
+  }
+  .hatch-band {
+    background-image: repeating-linear-gradient(
+      -55deg,
+      transparent 0px,
+      transparent 5px,
+      rgba(233, 232, 226, 0.28) 5px,
+      rgba(233, 232, 226, 0.28) 6px
+    );
+  }
+  .hatch-band-light {
+    background-image: repeating-linear-gradient(
+      -55deg,
+      transparent 0px,
+      transparent 5px,
+      rgba(18, 20, 16, 0.16) 5px,
+      rgba(18, 20, 16, 0.16) 6px
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* ComplianceAI Design System - Professional B2B Compliance Platform */
 
 @layer base {

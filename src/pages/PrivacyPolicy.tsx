@@ -1,166 +1,165 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Shield, Lock, Eye, FileText, AlertTriangle, CheckCircle } from "lucide-react";
+// Header is rendered globally from App.tsx
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-white pt-28">
-      <main className="max-w-4xl mx-auto px-4 py-16">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-4">
-            <Shield className="h-12 w-12 text-blue-600 mr-4" />
-            <h1 className="text-4xl font-bold text-gray-900">Privacy Policy</h1>
-          </div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Your privacy and data security are fundamental to our mission. This policy outlines how we protect and handle your information.
-          </p>
-          <Badge variant="outline" className="mt-4">Last updated: September 2025</Badge>
-        </div>
+    <div className="bg-ink min-h-screen pt-16">
+      <section className="px-3 md:px-5 py-3 md:py-5">
+        <div className="bg-paper rounded-2xl md:rounded-3xl">
+          <div className="max-w-3xl mx-auto px-5 md:px-8 py-12 md:py-16">
+            <span className="eyebrow text-ink-faint">Legal</span>
+            <h1 className="mt-6 font-sans font-expanded font-extrabold text-ink tracking-tight leading-[1.05] text-4xl md:text-5xl">
+              Privacy Policy
+            </h1>
+            <p className="mt-6 text-lg text-ink-soft leading-relaxed">
+              Your privacy and data security are fundamental to our mission. This policy outlines
+              how we protect and handle your information.
+            </p>
+            <div className="mt-5 font-mono text-xs text-ink-faint uppercase tracking-[0.14em]">
+              Last updated · September 2025
+            </div>
 
-        {/* Content Sections */}
-        <div className="space-y-8">
-
-          {/* Information We Collect */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Eye className="h-5 w-5 mr-2 text-blue-600" />
+            {/* 01 — Information We Collect */}
+            <div className="mt-12 border-t border-rule pt-8">
+              <div className="font-mono text-xs text-ledger mb-3">01</div>
+              <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
                 Information We Collect
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Personal Information</h4>
-                <p className="text-gray-600">
-                  We collect information you provide directly to us, such as when you create an account, use our services,
-                  or contact us for support. This may include your name, email address, phone number, and company information.
-                </p>
+              </h2>
+              <div className="space-y-5">
+                <div>
+                  <h3 className="font-semibold text-ink mb-1.5">Personal Information</h3>
+                  <p className="text-ink-soft leading-relaxed">
+                    We collect information you provide directly to us, such as when you create an
+                    account, use our services, or contact us for support. This may include your
+                    name, email address, phone number, and company information.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-ink mb-1.5">Usage Data</h3>
+                  <p className="text-ink-soft leading-relaxed">
+                    We automatically collect certain information about your use of our services,
+                    including IP addresses, browser types, access times, pages viewed, and the
+                    referring website.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-ink mb-1.5">Compliance Data</h3>
+                  <p className="text-ink-soft leading-relaxed">
+                    For our RegTech services, we may process compliance-related data as necessary
+                    to provide our services, always in accordance with applicable privacy laws and
+                    regulations.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Usage Data</h4>
-                <p className="text-gray-600">
-                  We automatically collect certain information about your use of our services, including IP addresses,
-                  browser types, access times, pages viewed, and the referring website.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Compliance Data</h4>
-                <p className="text-gray-600">
-                  For our RegTech services, we may process compliance-related data as necessary to provide our services,
-                  always in accordance with applicable privacy laws and regulations.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+            </div>
 
-          {/* How We Use Information */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <FileText className="h-5 w-5 mr-2 text-green-600" />
+            {/* 02 — How We Use Your Information */}
+            <div className="mt-12 border-t border-rule pt-8">
+              <div className="font-mono text-xs text-ledger mb-3">02</div>
+              <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
                 How We Use Your Information
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Provide, maintain, and improve our services</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Process transactions and send related information</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Send technical notices, updates, and support messages</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Respond to your comments, questions, and requests</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Comply with legal obligations and enforce our terms</span>
-                </li>
+              </h2>
+              <ul className="space-y-2.5 text-ink-soft leading-relaxed list-disc pl-5">
+                <li>Provide, maintain, and improve our services</li>
+                <li>Process transactions and send related information</li>
+                <li>Send technical notices, updates, and support messages</li>
+                <li>Respond to your comments, questions, and requests</li>
+                <li>Comply with legal obligations and enforce our terms</li>
               </ul>
-            </CardContent>
-          </Card>
+            </div>
 
-          {/* Data Security */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Lock className="h-5 w-5 mr-2 text-purple-600" />
-                Data Security & Protection
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-600">
+            {/* 03 — Data Security & Protection */}
+            <div className="mt-12 border-t border-rule pt-8">
+              <div className="font-mono text-xs text-ledger mb-3">03</div>
+              <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
+                Data Security &amp; Protection
+              </h2>
+              <p className="text-ink-soft leading-relaxed mb-5">
                 We implement comprehensive security measures to protect your personal information:
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h5 className="font-semibold text-blue-900 mb-2">Encryption</h5>
-                  <p className="text-blue-700 text-sm">All data is encrypted in transit and at rest using industry-standard protocols.</p>
+              <div className="space-y-5">
+                <div>
+                  <h3 className="font-semibold text-ink mb-1.5">Encryption</h3>
+                  <p className="text-ink-soft leading-relaxed">
+                    All data is encrypted in transit and at rest using industry-standard protocols.
+                  </p>
                 </div>
-                <div className="bg-green-50 p-4 rounded-lg">
-                  <h5 className="font-semibold text-green-900 mb-2">Access Controls</h5>
-                  <p className="text-green-700 text-sm">Strict access controls and regular security audits ensure data protection.</p>
+                <div>
+                  <h3 className="font-semibold text-ink mb-1.5">Access Controls</h3>
+                  <p className="text-ink-soft leading-relaxed">
+                    Strict access controls and regular security audits ensure data protection.
+                  </p>
                 </div>
-                <div className="bg-purple-50 p-4 rounded-lg">
-                  <h5 className="font-semibold text-purple-900 mb-2">Compliance</h5>
-                  <p className="text-purple-700 text-sm">Regular compliance audits and certifications maintain security standards.</p>
+                <div>
+                  <h3 className="font-semibold text-ink mb-1.5">Compliance</h3>
+                  <p className="text-ink-soft leading-relaxed">
+                    Regular compliance audits and certifications maintain security standards.
+                  </p>
                 </div>
-                <div className="bg-orange-50 p-4 rounded-lg">
-                  <h5 className="font-semibold text-orange-900 mb-2">Monitoring</h5>
-                  <p className="text-orange-700 text-sm">Continuous monitoring and threat detection protect against unauthorized access.</p>
+                <div>
+                  <h3 className="font-semibold text-ink mb-1.5">Monitoring</h3>
+                  <p className="text-ink-soft leading-relaxed">
+                    Continuous monitoring and threat detection protect against unauthorized access.
+                  </p>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
 
-          {/* Data Sharing */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <AlertTriangle className="h-5 w-5 mr-2 text-orange-600" />
-                Information Sharing & Disclosure
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 mb-4">
-                We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:
+            {/* 04 — Information Sharing & Disclosure */}
+            <div className="mt-12 border-t border-rule pt-8">
+              <div className="font-mono text-xs text-ledger mb-3">04</div>
+              <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
+                Information Sharing &amp; Disclosure
+              </h2>
+              <p className="text-ink-soft leading-relaxed mb-4">
+                We do not sell, trade, or otherwise transfer your personal information to third
+                parties without your consent, except in the following circumstances:
               </p>
-              <ul className="space-y-2 text-gray-600">
-                <li>• <strong>Service Providers:</strong> Trusted third-party service providers who assist in operating our services</li>
-                <li>• <strong>Legal Requirements:</strong> When required by law or to protect our rights and safety</li>
-                <li>• <strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
-                <li>• <strong>Consent:</strong> With your explicit consent for specific purposes</li>
+              <ul className="space-y-2.5 text-ink-soft leading-relaxed list-disc pl-5">
+                <li>
+                  <strong className="text-ink">Service Providers:</strong> Trusted third-party
+                  service providers who assist in operating our services
+                </li>
+                <li>
+                  <strong className="text-ink">Legal Requirements:</strong> When required by law or
+                  to protect our rights and safety
+                </li>
+                <li>
+                  <strong className="text-ink">Business Transfers:</strong> In connection with a
+                  merger, acquisition, or sale of assets
+                </li>
+                <li>
+                  <strong className="text-ink">Consent:</strong> With your explicit consent for
+                  specific purposes
+                </li>
               </ul>
-            </CardContent>
-          </Card>
+            </div>
 
-          {/* Contact Information */}
-          <Card className="bg-blue-50 border-blue-200">
-            <CardContent className="pt-6">
-              <div className="text-center">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">Questions About Privacy?</h3>
-                <p className="text-blue-700 mb-4">
-                  If you have any questions about this Privacy Policy or our data practices, please contact us:
+            {/* 05 — Contact */}
+            <div className="mt-12 border-t border-rule pt-8">
+              <div className="font-mono text-xs text-ledger mb-3">05</div>
+              <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
+                Questions About Privacy?
+              </h2>
+              <p className="text-ink-soft leading-relaxed mb-5">
+                If you have any questions about this Privacy Policy or our data practices, please
+                contact us:
+              </p>
+              <div className="space-y-2 text-ink-soft leading-relaxed">
+                <p>
+                  <strong className="text-ink">Email:</strong> info@gaigentic.ai
                 </p>
-                <div className="space-y-2 text-blue-800">
-                  <p><strong>Email:</strong> info@gaigentic.ai</p>
-                  <p><strong>Phone:</strong> +31 6 20343034</p>
-                  <p><strong>Address:</strong> Gustav Mahlerplein 2, 1082MA Amsterdam, Netherlands</p>
-                </div>
+                <p>
+                  <strong className="text-ink">Phone:</strong> +31 6 20343034
+                </p>
+                <p>
+                  <strong className="text-ink">Address:</strong> Gustav Mahlerplein 2, 1082MA
+                  Amsterdam, Netherlands
+                </p>
               </div>
-            </CardContent>
-          </Card>
-
+            </div>
+          </div>
         </div>
-      </main>
+      </section>
     </div>
   );
 };

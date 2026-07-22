@@ -1,287 +1,123 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  ArrowRight,
-  BadgeCheck,
-  BarChart3,
-  Brain,
-  CreditCard,
-  Database,
-  FileText,
-  Gauge,
-  Layers,
-  Lock,
-  MessageSquare,
-  ScrollText,
-  Shield,
-  Sparkles,
-  Users,
-  Zap,
-} from "lucide-react";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+
+const dataSources = [
+  {
+    ref: "SOURCE · E-COMMERCE",
+    name: "E-commerce",
+    detail: "Marketplace and storefront transaction history folded into the borrower's activity coverage.",
+  },
+  {
+    ref: "SOURCE · PAYMENTS",
+    name: "Payments",
+    detail: "Payment-rail transactions with chargeback rates and payment source diversity analysis.",
+  },
+  {
+    ref: "SOURCE · FINTECH",
+    name: "Fintech",
+    detail: "Fintech platform activity normalized into the unified Borrower 360 profile.",
+  },
+  {
+    ref: "SOURCE · TELCO",
+    name: "Telco",
+    detail: "Telco metrics: tenure, bill punctuality, and top-up behavior as stability signals.",
+  },
+  {
+    ref: "SOURCE · BANK",
+    name: "Bank",
+    detail: "Cashflow metrics — inflow, outflow, and net flow — over a 90-day rolling window.",
+  },
+  {
+    ref: "SOURCE · CARD",
+    name: "Card",
+    detail: "Card transaction data feeding volatility scoring and the stability index.",
+  },
+];
+
+const agents = [
+  {
+    index: "01",
+    name: "Copilot Chat",
+    detail:
+      "An AI assistant with persistent sessions, grounded in borrower data — ask questions about a borrower, a decision, or the portfolio and get answers tied to the underlying records.",
+  },
+  {
+    index: "02",
+    name: "Portfolio Watchdog",
+    detail:
+      "Automated anomaly detection across the portfolio — surfacing patterns that manual monitoring misses before they become losses.",
+  },
+  {
+    index: "03",
+    name: "Document Ingestion",
+    detail:
+      "Bank statement extraction and verification, turning uploaded documents into structured features the decisioning engine can use.",
+  },
+  {
+    index: "04",
+    name: "Policy Simulator",
+    detail:
+      "Natural language what-if analysis for policy changes — simulate a policy's impact on decisions before activating it.",
+  },
+  {
+    index: "05",
+    name: "Compliance",
+    detail:
+      "Adverse action notices, designed for compliance and based on specific decision reasons, plus group-based fair lending analysis to detect disparate impact and regulatory flags.",
+  },
+  {
+    index: "06",
+    name: "Collection",
+    detail:
+      "Risk scoring and outreach strategy generation feeding a priority-based collection queue — recovery effort where it matters most.",
+  },
+];
 
 const CredAI = () => {
-  const platformMetrics = [
-    {
-      icon: Gauge,
-      value: "<3s",
-      label: "Decisioning",
-      description: "Credit decisions returned in under 3 seconds using alternative data."
-    },
-    {
-      icon: Database,
-      value: "6 Sources",
-      label: "Alternative Data",
-      description: "E-commerce, payments, fintech, telco, bank, and card data unified."
-    },
-    {
-      icon: Brain,
-      value: "6 AI Agents",
-      label: "Intelligence",
-      description: "Copilot, Watchdog, Ingestion, Simulator, Compliance, and Collection agents."
-    },
-    {
-      icon: Shield,
-      value: "Policy Engine",
-      label: "Governance",
-      description: "Configurable rule-based decisioning with version control and audit trails."
-    }
-  ];
-
-  const capabilities = [
-    {
-      id: "decisioning",
-      icon: Gauge,
-      title: "Instant credit decisioning",
-      subtitle: "Borrower 360 with sub-3-second decisions",
-      problemHeadline: "Traditional credit scoring relies on limited bureau data, excluding thin-file and emerging-market borrowers.",
-      solutionSummary:
-        "CredAI evaluates consumer and SME borrowers using unified alternative data—e-commerce, payments, fintech, telco, bank, and card transactions—returning a scored decision in under 3 seconds.",
-      highlights: [
-        "90-day rolling window analysis with cashflow metrics",
-        "Stability index, chargeback rates, and transaction volatility scoring",
-        "Three decision outcomes: APPROVE, DECLINE, or REVIEW with full reasoning"
-      ],
-      sidePanel: {
-        kicker: "Decisioning",
-        title: "Beyond bureau scores",
-        points: [
-          "Credit scores (0–1000) with confidence levels and APR suggestions.",
-          "Key signals categorized as positive, negative, or neutral.",
-          "Next-best-action recommendations for each borrower."
-        ]
-      }
-    },
-    {
-      id: "data",
-      icon: Database,
-      title: "Unified alternative data",
-      subtitle: "Six data sources, one borrower view",
-      problemHeadline: "Borrower data is scattered across payment rails, telecom providers, and banking platforms with no unified view.",
-      solutionSummary:
-        "CredAI ingests and normalizes transaction data from e-commerce, payments, fintech, telco, bank, and card sources into a unified Borrower 360 profile.",
-      highlights: [
-        "Cashflow metrics: inflow, outflow, and net flow over 90 days",
-        "Activity coverage with transaction counts per data source",
-        "Telco metrics: tenure, bill punctuality, and top-up behavior"
-      ],
-      sidePanel: {
-        kicker: "Data",
-        title: "Complete borrower picture",
-        points: [
-          "Automated feature engineering from raw transaction data.",
-          "Payment source diversity and stability analysis.",
-          "Feature snapshots stored with each decision for auditability."
-        ]
-      }
-    },
-    {
-      id: "agents",
-      icon: Brain,
-      title: "AI-powered agent suite",
-      subtitle: "Six specialized agents for lending intelligence",
-      problemHeadline: "Manual portfolio monitoring, compliance checks, and collection strategies drain resources and miss patterns.",
-      solutionSummary:
-        "CredAI ships six AI agents—Copilot Chat, Portfolio Watchdog, Document Ingestion, Policy Simulator, Compliance, and Collection—each grounded in borrower data.",
-      highlights: [
-        "Copilot Chat: AI assistant with persistent sessions grounded in borrower data",
-        "Portfolio Watchdog: automated anomaly detection across the portfolio",
-        "Policy Simulator: natural language what-if analysis for policy changes"
-      ],
-      sidePanel: {
-        kicker: "Agents",
-        title: "Intelligence at every stage",
-        points: [
-          "Compliance agent for adverse action notices and fair lending analysis.",
-          "Collection agent for risk scoring and outreach strategy generation.",
-          "Document ingestion for bank statement extraction and verification."
-        ]
-      }
-    },
-    {
-      id: "policy",
-      icon: ScrollText,
-      title: "Flexible policy engine",
-      subtitle: "Version-controlled rules with full audit trail",
-      problemHeadline: "Static credit policies can't adapt to changing risk profiles, and policy changes lack governance and traceability.",
-      solutionSummary:
-        "CredAI's policy engine supports multiple versions with configurable parameters—amount caps, score thresholds, chargeback limits, transaction counts, and telco requirements—with active/inactive management.",
-      highlights: [
-        "Separate configurations for Consumer and SME borrower types",
-        "Minimum score thresholds for approval and review tiers",
-        "Decision simulation for what-if analysis before activation"
-      ],
-      sidePanel: {
-        kicker: "Policy",
-        title: "Governed by design",
-        points: [
-          "Full version history with audit trail of every policy change.",
-          "Active/inactive policy toggling with instant rollback.",
-          "Natural language policy impact analysis via the Simulator agent."
-        ]
-      }
-    }
-  ];
-
-  const comparisonRows = [
-    { dimension: "Decision speed", legacy: "Hours to days", credai: "<3 seconds", benefit: "Real-time lending" },
-    { dimension: "Data sources", legacy: "Bureau-only", credai: "6 alternative sources", benefit: "Financial inclusion" },
-    { dimension: "Borrower view", legacy: "Partial profile", credai: "Borrower 360", benefit: "Complete risk picture" },
-    { dimension: "Policy changes", legacy: "Dev cycle required", credai: "UI + natural language", benefit: "Instant adaptation" },
-    { dimension: "Compliance", legacy: "Manual review", credai: "AI-powered agents", benefit: "Automated oversight" },
-    { dimension: "Collections", legacy: "One-size-fits-all", credai: "Risk-scored outreach", benefit: "Higher recovery rates" }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-emerald-50/30">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-emerald-400/20 to-teal-400/20 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-gradient-to-r from-teal-400/20 to-cyan-400/20 rounded-full mix-blend-multiply filter blur-xl animate-float delay-1000"></div>
-          <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-gradient-to-r from-emerald-400/20 to-green-400/20 rounded-full mix-blend-multiply filter blur-xl animate-float delay-2000"></div>
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-        </div>
+    <div className="bg-ink min-h-screen pt-16">
+      {/* ============ HERO — paper sheet ============ */}
+      <section className="px-3 md:px-5 pt-3 md:pt-5">
+        <div className="bg-paper rounded-2xl md:rounded-3xl">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-12 pt-12 md:pt-16 pb-14 md:pb-20">
+            <div className="flex items-center justify-between mb-14 md:mb-20">
+              <span className="eyebrow text-ink-faint flex items-center gap-2">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-amber" aria-hidden />
+                CredAI
+              </span>
+              <span className="font-mono text-xs text-ink-faint hidden sm:block">
+                API-first credit decisioning
+              </span>
+            </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center bg-gradient-to-r from-emerald-100 to-teal-100 rounded-full px-4 py-2 mb-6 animate-fade-in-up">
-                <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent font-semibold text-sm">
-                  CredAI
-                </span>
-              </div>
+            <h1 className="font-sans font-expanded font-extrabold text-ink tracking-tight leading-[1.0] text-5xl md:text-7xl max-w-4xl">
+              Borrower 360 with <span className="text-ledger">instant decisioning</span>
+            </h1>
 
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in-up delay-200">
-                Borrower 360 with
-                <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent"> Instant Decisioning</span>
-              </h1>
-
-              <p className="text-xl text-gray-600 mb-8 max-w-2xl animate-fade-in-up delay-400">
-                API-first credit decisioning middleware that evaluates borrowers using <strong>6 alternative data sources</strong> and returns a scored decision in under <strong>3 seconds</strong>—with a full decisioning console for operations.
+            <div className="mt-10 grid md:grid-cols-2 gap-8 md:gap-16 items-end">
+              <p className="text-lg md:text-xl text-ink-soft leading-relaxed max-w-xl">
+                API-first credit decisioning middleware that evaluates consumer and SME borrowers
+                using six alternative data sources, designed to return a scored decision in under
+                3 seconds — with a full decisioning console for operations.
               </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up delay-600">
-                <Link to="/contact">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-2 border-gray-300 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 font-semibold px-8 py-4 rounded-xl transition-all duration-300"
-                  >
-                    Schedule Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
+              <div className="md:justify-self-end">
+                <Link
+                  to="/contact"
+                  className="eyebrow inline-flex items-center gap-2 bg-ink text-paper rounded-full px-6 py-3.5 hover:bg-ink-soft transition-colors"
+                >
+                  Schedule a demo
+                  <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 animate-fade-in-up delay-800">
-                {[
-                  { value: "<3s", label: "Decision Speed", color: "from-emerald-600 to-teal-600" },
-                  { value: "6", label: "Data Sources", color: "from-teal-600 to-cyan-600" },
-                  { value: "360\u00B0", label: "Borrower View", color: "from-green-600 to-emerald-600" },
-                ].map((chip, i) => (
-                  <motion.div
-                    key={chip.label}
-                    initial={{ rotateX: 90, opacity: 0 }}
-                    whileInView={{ rotateX: 0, opacity: 1 }}
-                    viewport={{ once: true, amount: 0.6 }}
-                    transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
-                    className="text-center group"
-                  >
-                    <div
-                      className={`text-sm md:text-base font-bold text-white mb-2 group-hover:scale-105 transition-transform duration-300 inline-block rounded-full px-4 py-2 bg-gradient-to-r ${chip.color}`}
-                    >
-                      {chip.value}
-                    </div>
-                    <p className="text-sm text-gray-600">{chip.label}</p>
-                  </motion.div>
-                ))}
-              </div>
             </div>
 
-            <div className="relative animate-fade-in-up delay-1000">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900">Platform Metrics</h3>
-                  <div className="flex space-x-2">
-                    <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  {platformMetrics.map((metric, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center p-4 rounded-lg border-2 border-emerald-200 bg-emerald-50 hover:bg-emerald-100 transition-colors duration-300"
-                    >
-                      <div className="w-10 h-10 rounded-full flex items-center justify-center mr-4 bg-emerald-600 text-white">
-                        <metric.icon className="w-5 h-5" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="font-semibold text-gray-900 text-lg">{metric.value}</div>
-                        <div className="text-sm font-medium text-gray-700">{metric.label}</div>
-                        <div className="text-xs text-gray-600 mt-1">{metric.description}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Product Preview */}
-      <section className="py-16 bg-gradient-to-b from-white to-slate-50/50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-10">
-            <Badge variant="outline" className="mb-4 px-3 py-1 text-emerald-700 border-emerald-200">
-              Live Product
-            </Badge>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Borrower 360 Console</h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Unified borrower view with alternative data sources, cashflow analysis, instant credit decisions, and AI-powered key signals—all in one dashboard.
-            </p>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative max-w-6xl mx-auto"
-          >
-            <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400/20 via-teal-400/20 to-cyan-400/20 rounded-3xl blur-2xl"></div>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
-              <div className="flex items-center gap-2 px-4 py-3 bg-slate-100 border-b border-slate-200">
-                <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                <span className="ml-3 text-sm text-slate-500 font-medium">CredAI - Borrower 360</span>
+            {/* Product screenshot — paper-bright card, hairline border */}
+            <div className="mt-14 md:mt-20 bg-paper-bright border border-rule rounded-xl overflow-hidden">
+              <div className="px-5 py-3 border-b border-rule flex items-baseline justify-between">
+                <span className="eyebrow text-ink-faint">Borrower 360 console</span>
+                <span className="font-mono text-xs text-ink-faint hidden sm:block">
+                  data sources · cashflow · decision · key signals
+                </span>
               </div>
               <img
                 src="/assets/credai-dashboard.png"
@@ -290,266 +126,146 @@ const CredAI = () => {
                 loading="lazy"
               />
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Core Capabilities */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Core capabilities</h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              From alternative data ingestion to AI-powered decisioning and policy governance—everything you need for inclusive, compliant credit.
-            </p>
-          </div>
-
-          <div className="space-y-10">
-            {capabilities.map((c, index) => (
-              <Card key={c.id} className="overflow-hidden border-0 shadow-2xl bg-white">
-                <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}>
-                  <div className="p-8 lg:p-12">
-                    <Badge variant="outline" className="mb-4 px-3 py-1 text-emerald-700 border-emerald-200">
-                      Capability {index + 1}
-                    </Badge>
-                    <h3 className="text-3xl font-bold text-slate-900 mb-3">{c.title}</h3>
-                    <p className="text-lg text-emerald-700 font-semibold mb-6">{c.subtitle}</p>
-
-                    <div className="space-y-5 mb-8">
-                      <div>
-                        <h4 className="text-base font-bold text-rose-600 mb-2">Challenge</h4>
-                        <p className="text-slate-600 leading-relaxed">{c.problemHeadline}</p>
-                      </div>
-                      <div>
-                        <h4 className="text-base font-bold text-emerald-700 mb-2">CredAI</h4>
-                        <p className="text-slate-600 leading-relaxed">{c.solutionSummary}</p>
-                      </div>
-                    </div>
-
-                    <div className="grid gap-3">
-                      {c.highlights.map((h) => (
-                        <div key={h} className="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50/60 p-4">
-                          <Zap className="h-5 w-5 text-emerald-700 mt-0.5 flex-shrink-0" />
-                          <div className="text-slate-700 leading-relaxed">{h}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="bg-gradient-to-br from-slate-50 to-emerald-50 p-8 lg:p-12 flex items-center">
-                    <div className="w-full">
-                      <div className="flex items-center gap-3 mb-6">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 flex items-center justify-center shadow-lg">
-                          <c.icon className="h-6 w-6 text-white" />
-                        </div>
-                        <div>
-                          <div className="text-sm font-semibold text-slate-600">{c.sidePanel.kicker}</div>
-                          <div className="text-xl font-bold text-slate-900">{c.sidePanel.title}</div>
-                        </div>
-                      </div>
-                      <div className="grid gap-4">
-                        {c.sidePanel.points.map((p) => (
-                          <div key={p} className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white/70 p-5">
-                            <Sparkles className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
-                            <div className="text-slate-700 leading-relaxed">{p}</div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
 
-      {/* Architecture */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">API-first architecture</h2>
-            <p className="text-lg text-slate-600 max-w-4xl mx-auto">
-              Three-tier system: API layer for decisioning logic, Agents layer for AI-powered intelligence, and a full-featured Web UI for operations.
+      {/* ============ WHY — dark ============ */}
+      <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
+          <div>
+            <div className="eyebrow text-paper/45 mb-6">Why alternative data</div>
+            <h2 className="font-sans font-expanded font-extrabold text-paper tracking-tight leading-tight text-4xl md:text-5xl">
+              Bureau scores end where most borrowers begin.
+            </h2>
+          </div>
+          <div className="space-y-5 text-paper/65 leading-relaxed text-lg max-w-xl">
+            <p>
+              Traditional credit scoring relies on limited bureau data, excluding thin-file and
+              emerging-market borrowers. CredAI ingests and normalizes transaction data from six
+              alternative sources into a unified Borrower 360 profile, with automated feature
+              engineering from raw transactions and a feature snapshot stored with each decision
+              for auditability.
+            </p>
+            <p>
+              Every decision resolves to one of three outcomes — APPROVE, DECLINE, or REVIEW —
+              with full reasoning: a credit score (0–1000) with confidence level, key signals
+              categorized as positive, negative, or neutral, APR suggestions, and next-best-action
+              recommendations.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
-            {[
-              { icon: Layers, title: "API Layer", desc: "Core decisioning logic, policy engine, feature computation, and borrower management endpoints." },
-              { icon: Brain, title: "Agents Layer", desc: "Six AI agents for chat, portfolio monitoring, document ingestion, simulation, compliance, and collections." },
-              { icon: BarChart3, title: "Decisioning Console", desc: "Dashboard with portfolio overview, decision history, borrower search, and policy management." }
-            ].map((item) => (
-              <Card key={item.title} className="bg-white/70 backdrop-blur border border-slate-200 shadow-lg">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 flex items-center justify-center shadow-md mb-4">
-                    <item.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="text-xl font-bold text-slate-900">{item.title}</div>
-                  <div className="mt-2 text-slate-600 leading-relaxed">{item.desc}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+      {/* Hatch divider */}
+      <div className="max-w-[1400px] mx-auto px-5 md:px-12">
+        <div className="h-10 hatch-band rounded-sm" aria-hidden />
+      </div>
 
-          <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6">
-            <div className="text-sm font-semibold text-slate-600 mb-4">Traditional Scoring vs CredAI</div>
-            <div className="hidden md:block overflow-x-auto">
-              <table className="min-w-full divide-y divide-slate-200">
-                <thead className="bg-slate-50">
-                  <tr>
-                    <th className="px-5 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Dimension</th>
-                    <th className="px-5 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Traditional</th>
-                    <th className="px-5 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">CredAI</th>
-                    <th className="px-5 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Benefit</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-100 text-sm text-slate-800">
-                  {comparisonRows.map((row) => (
-                    <tr key={row.dimension} className="hover:bg-slate-50/60">
-                      <td className="px-5 py-4 font-medium text-slate-900">{row.dimension}</td>
-                      <td className="px-5 py-4">
-                        <span className="inline-flex items-center rounded-full border border-rose-200 bg-rose-50 text-rose-700 px-2.5 py-1">
-                          {row.legacy}
-                        </span>
-                      </td>
-                      <td className="px-5 py-4">
-                        <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 text-emerald-700 px-2.5 py-1">
-                          {row.credai}
-                        </span>
-                      </td>
-                      <td className="px-5 py-4">
-                        <span className="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-50 text-indigo-700 px-2.5 py-1">
-                          {row.benefit}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+      {/* ============ SIX AGENTS — dark index rows ============ */}
+      <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
+        <div className="eyebrow text-paper/45 mb-8">Six AI agents</div>
+        <div className="border-t border-paper/10">
+          {agents.map((agent) => (
+            <div
+              key={agent.index}
+              className="grid md:grid-cols-[56px_220px_1fr] gap-4 md:gap-6 py-8 border-b border-paper/10"
+            >
+              <span className="font-mono text-xs text-paper/35 pt-1.5">{agent.index}</span>
+              <h3 className="font-sans font-expanded font-bold text-2xl text-paper tracking-tight">
+                {agent.name}
+              </h3>
+              <p className="text-paper/60 leading-relaxed max-w-2xl">{agent.detail}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ============ DATA SOURCES + GOVERNANCE — paper sheet ============ */}
+      <section className="px-3 md:px-5">
+        <div className="bg-paper rounded-2xl md:rounded-3xl">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
+            <div className="flex items-baseline justify-between mb-10 md:mb-14">
+              <span className="eyebrow text-ink-faint">Six data sources, one borrower view</span>
+              <span className="font-mono text-xs text-ink-faint hidden sm:block">
+                unified · normalized · snapshot per decision
+              </span>
             </div>
 
-            <div className="md:hidden space-y-4">
-              {comparisonRows.map((row) => (
-                <div key={row.dimension} className="rounded-xl border border-slate-200 bg-white p-4">
-                  <div className="font-semibold text-slate-900">{row.dimension}</div>
-                  <div className="mt-3 grid grid-cols-6 gap-2 text-sm">
-                    <div className="col-span-2 text-slate-600">Traditional</div>
-                    <div className="col-span-4">
-                      <span className="inline-flex items-center rounded-full border border-rose-200 bg-rose-50 text-rose-700 px-2.5 py-1">
-                        {row.legacy}
-                      </span>
-                    </div>
-                    <div className="col-span-2 text-slate-600">CredAI</div>
-                    <div className="col-span-4">
-                      <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 text-emerald-700 px-2.5 py-1">
-                        {row.credai}
-                      </span>
-                    </div>
-                    <div className="col-span-2 text-slate-600">Benefit</div>
-                    <div className="col-span-4">
-                      <span className="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-50 text-indigo-700 px-2.5 py-1">
-                        {row.benefit}
-                      </span>
-                    </div>
-                  </div>
+            <div className="grid md:grid-cols-3 gap-px bg-rule rounded-xl overflow-hidden border border-rule">
+              {dataSources.map((source) => (
+                <div key={source.name} className="bg-paper-bright p-7 md:p-9">
+                  <div className="font-mono text-xs text-ledger mb-4">{source.ref}</div>
+                  <h3 className="font-sans font-bold text-xl text-ink mb-4 tracking-tight">
+                    {source.name}
+                  </h3>
+                  <p className="text-ink-soft leading-relaxed text-[15px]">{source.detail}</p>
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Dashboard & Compliance */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Dashboard & compliance</h2>
-            <p className="text-lg text-slate-600 max-w-4xl mx-auto">
-              A full-featured operations console with real-time analytics, fair lending analysis, and collection management built in.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: BarChart3,
-                title: "Portfolio overview",
-                desc: "Real-time metrics—total borrowers, approval rates, decision scores, and transaction volumes by source."
-              },
-              {
-                icon: BadgeCheck,
-                title: "Fair lending analysis",
-                desc: "Detect disparate impact and bias with group-based fairness testing and regulatory flag identification."
-              },
-              {
-                icon: FileText,
-                title: "Adverse action notices",
-                desc: "Automated generation of compliant adverse action notices based on specific decision reasons."
-              },
-              {
-                icon: MessageSquare,
-                title: "Collection management",
-                desc: "Priority-based collection queue with risk scoring and intelligent outreach strategy generation."
-              },
-              {
-                icon: Lock,
-                title: "Decision explainability",
-                desc: "Detailed reports with credit scores, confidence levels, key signals, and next-best-action recommendations."
-              },
-              {
-                icon: CreditCard,
-                title: "Consumer & SME support",
-                desc: "Unified platform supporting both consumer and SME borrower evaluation with type-specific policies."
-              }
-            ].map((item) => (
-              <Card key={item.title} className="bg-white/70 backdrop-blur border border-slate-200 shadow-lg">
-                <CardContent className="p-7">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 flex items-center justify-center shadow-md mb-4">
-                    <item.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="text-xl font-bold text-slate-900">{item.title}</div>
-                  <div className="mt-2 text-slate-600 leading-relaxed">{item.desc}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="mt-12 max-w-4xl mx-auto">
-            <Card className="bg-white/70 backdrop-blur border border-slate-200 shadow-xl">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 flex items-center justify-center shadow-lg flex-shrink-0">
-                    <Sparkles className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-sm font-semibold text-slate-600">Next step</div>
-                    <h3 className="text-2xl font-bold text-slate-900 mt-1">See CredAI in action</h3>
-                    <p className="mt-2 text-slate-600 leading-relaxed">
-                      Schedule a demo to explore Borrower 360 profiles, instant credit decisioning, and the full AI agent suite—tailored to your lending workflow.
-                    </p>
-                    <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                      <Link to="/contact">
-                        <Button className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:opacity-95">
-                          Contact us
-                          <ArrowRight className="ml-2 h-5 w-5" />
-                        </Button>
-                      </Link>
-                      <Link to="/solutions">
-                        <Button variant="outline" className="border-slate-300">
-                          Back to Solutions
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
+            {/* Policy & governance */}
+            <div className="mt-14 md:mt-20">
+              <div className="eyebrow text-ink-faint mb-8">Governed by design</div>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="border-t-2 border-ink pt-5">
+                  <div className="font-mono text-xs text-ledger mb-2">POLICY ENGINE</div>
+                  <p className="text-ink-soft text-[15px] leading-relaxed">
+                    Version-controlled rules with configurable parameters — amount caps, score
+                    thresholds, chargeback limits, transaction counts, telco requirements — with
+                    separate Consumer and SME configurations, active/inactive toggling, instant
+                    rollback, and an audit trail of every change.
+                  </p>
                 </div>
-              </CardContent>
-            </Card>
+                <div className="border-t-2 border-ink pt-5">
+                  <div className="font-mono text-xs text-ledger mb-2">FAIR LENDING</div>
+                  <p className="text-ink-soft text-[15px] leading-relaxed">
+                    Group-based fairness testing to detect disparate impact and bias, with
+                    regulatory flag identification and automated adverse action notices designed
+                    for compliance, based on specific decision reasons.
+                  </p>
+                </div>
+                <div className="border-t-2 border-ink pt-5">
+                  <div className="font-mono text-xs text-ledger mb-2">OPERATIONS CONSOLE</div>
+                  <p className="text-ink-soft text-[15px] leading-relaxed">
+                    Portfolio overview with real-time metrics — borrowers, approval rates,
+                    decision scores, transaction volumes by source — plus decision history,
+                    borrower search, policy management, and a priority-based collection queue.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ CTA ============ */}
+      <section className="px-3 md:px-5 py-3 md:py-5">
+        <div className="bg-ledger-deep rounded-2xl md:rounded-3xl">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24 text-center">
+            <div className="eyebrow text-paper/50 mb-6">Next step</div>
+            <h2 className="font-sans font-expanded font-extrabold text-paper tracking-tight leading-tight text-4xl md:text-6xl max-w-3xl mx-auto">
+              See a borrower scored end to end.
+            </h2>
+            <p className="mt-6 text-paper/65 leading-relaxed text-lg max-w-xl mx-auto">
+              Schedule a demo to explore Borrower 360 profiles, instant credit decisioning, and
+              the full AI agent suite — tailored to your lending workflow.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/contact"
+                className="eyebrow inline-flex items-center gap-2 bg-paper text-ink rounded-full px-7 py-4 hover:bg-paper-bright transition-colors"
+              >
+                Contact us
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+              <Link
+                to="/solutions"
+                className="eyebrow inline-flex items-center gap-2 border border-paper/25 text-paper rounded-full px-7 py-4 hover:border-paper/50 transition-colors"
+              >
+                Back to products
+              </Link>
+            </div>
           </div>
         </div>
       </section>

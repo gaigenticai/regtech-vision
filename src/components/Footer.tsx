@@ -1,76 +1,74 @@
-import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const footerSections = [
+  const columns = [
     {
       title: "Product",
       links: [
+        { name: "Gaigentic Verify", href: "/verify" },
         { name: "Products", href: "/solutions" },
         { name: "Platform", href: "/platform" },
-        { name: "Infrastructure", href: "/infrastructure" }
-      ]
+        { name: "Infrastructure", href: "/infrastructure" },
+      ],
     },
     {
       title: "Infrastructure",
       links: [
         { name: "Sentinel", href: "/infrastructure/sentinel" },
-        { name: "Cognito", href: "/infrastructure/cognito" }
-      ]
+        { name: "Cognito", href: "/infrastructure/cognito" },
+      ],
     },
     {
       title: "Company",
       links: [
-        { name: "About Us", href: "/about" },
-        { name: "Contact", href: "/contact" }
-      ]
-    }
+        { name: "About", href: "/about" },
+        { name: "Contact", href: "/contact" },
+        { name: "Security", href: "/security" },
+      ],
+    },
   ];
 
   return (
-    <footer className="bg-muted-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* Company Info */}
+    <footer className="bg-ink text-paper">
+      {/* Hatch divider */}
+      <div className="h-10 hatch-band" aria-hidden />
+
+      <div className="max-w-[1400px] mx-auto px-5 md:px-8 pt-14 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+          {/* Identity */}
           <div>
-            <div className="mb-4">
-              <div className="inline-block">
-                <span className="text-white text-lg font-normal leading-none">Gaigentic AI</span>
-              </div>
+            <div className="flex items-center gap-2.5 mb-5">
+              <span className="inline-block w-2.5 h-4 rounded-full bg-ledger" aria-hidden />
+              <span className="font-sans font-bold text-lg leading-none tracking-tight">
+                gaigentic<span className="text-tick">.ai</span>
+              </span>
             </div>
-            <p className="text-sm text-muted-300 mb-6 leading-relaxed">
-              Autonomous AI agents for financial compliance excellence. 
-              Transforming BFSI operations with intelligent automation.
+            <p className="text-sm text-paper/60 leading-relaxed max-w-xs">
+              The independent verification layer for AI-driven finance. Your AI does the work —
+              we're the independent check that lets you sign it.
             </p>
-            
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-sm text-muted-300">
-                <Mail className="h-4 w-4" />
-                <span>info@gaigentic.ai</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-300">
-                <Phone className="h-4 w-4" />
-                <span>+31 6 20343034 / +91 9841206769</span>
-              </div>
-              <div className="flex items-start space-x-2 text-sm text-muted-300">
-                <MapPin className="h-4 w-4 mt-0.5" />
-                <div>
-                  <div>Amsterdam • Chennai</div>
-                  <div className="text-xs mt-1">HQ: Gustav Mahlerplein 2, 1082MA<br />Amsterdam, Netherlands</div>
-                </div>
+
+            <div className="mt-6 space-y-1.5 font-mono text-xs text-paper/50">
+              <div>info@gaigentic.ai</div>
+              <div>+31 6 20343034 · +91 9841206769</div>
+              <div className="pt-2 text-paper/40">
+                Gustav Mahlerplein 2, 1082 MA Amsterdam
+                <br />
+                Amsterdam · Chennai
               </div>
             </div>
           </div>
 
-          {/* Footer Links */}
-          {footerSections.map((section, index) => (
-            <div key={index}>
-              <h4 className="text-sm font-semibold text-white mb-4">{section.title}</h4>
-              <ul className="space-y-2">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <Link to={link.href} className="text-sm text-muted-300 hover:text-primary transition-colors">
+          {columns.map((col) => (
+            <div key={col.title}>
+              <div className="eyebrow text-paper/40 mb-5">{col.title}</div>
+              <ul className="space-y-3">
+                {col.links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      to={link.href}
+                      className="text-sm text-paper/70 hover:text-paper transition-colors"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -80,23 +78,18 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-muted-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-muted-300">
-              © 2025 Gaigentic AI. All rights reserved.
-            </p>
-            <div className="flex space-x-6">
-              <Link to="/privacy-policy" className="text-sm text-muted-300 hover:text-primary transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms-of-service" className="text-sm text-muted-300 hover:text-primary transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/security" className="text-sm text-muted-300 hover:text-primary transition-colors">
-                Security
-              </Link>
-            </div>
+        <div className="border-t border-paper/10 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <p className="font-mono text-xs text-paper/40">© 2026 Gaigentic AI. All rights reserved.</p>
+          <div className="flex gap-6">
+            <Link to="/privacy-policy" className="font-mono text-xs text-paper/40 hover:text-paper/80 transition-colors">
+              Privacy
+            </Link>
+            <Link to="/terms-of-service" className="font-mono text-xs text-paper/40 hover:text-paper/80 transition-colors">
+              Terms
+            </Link>
+            <Link to="/security" className="font-mono text-xs text-paper/40 hover:text-paper/80 transition-colors">
+              Security
+            </Link>
           </div>
         </div>
       </div>
