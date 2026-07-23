@@ -54,7 +54,7 @@ const frameworks = [
 const DocumentIntelligence = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* Hero — paper */}
+      {/* Hero: paper */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -72,7 +72,7 @@ const DocumentIntelligence = () => {
               <span className="text-ledger">one governed pipeline</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl">
-              AI-powered document processing, extraction, and validation for compliance workflows —
+              AI-powered document processing, extraction, and validation for compliance workflows:
               accurate extraction, faster than manual review, with human validation where it
               matters.
             </p>
@@ -80,7 +80,7 @@ const DocumentIntelligence = () => {
         </div>
       </section>
 
-      {/* Challenge — dark */}
+      {/* Challenge: dark */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
           <div>
@@ -107,7 +107,7 @@ const DocumentIntelligence = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* Capabilities — dark index rows */}
+      {/* Capabilities: dark index rows */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="eyebrow text-paper/45 mb-8">Capabilities</div>
         <div className="border-t border-paper/10">
@@ -126,7 +126,7 @@ const DocumentIntelligence = () => {
         </div>
       </section>
 
-      {/* Frameworks — paper sheet */}
+      {/* Frameworks: paper sheet */}
       <section className="px-3 md:px-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
@@ -151,7 +151,7 @@ const DocumentIntelligence = () => {
               Process every document, consistently.
             </h2>
             <p className="mt-5 text-paper/65 leading-relaxed text-lg max-w-xl mx-auto">
-              Governed, AI-assisted document processing for your compliance workflows — with human
+              Governed, AI-assisted document processing for your compliance workflows, with human
               validation where it matters.
             </p>
             <Link

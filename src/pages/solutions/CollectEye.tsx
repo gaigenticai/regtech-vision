@@ -6,25 +6,25 @@ const capabilities = [
     index: "01",
     name: "Read-only ingestion",
     detail:
-      "CollectEye ingests portfolio data in shadow mode — read-only — while keeping your core systems untouched, so you can evaluate outcomes before changing operations. Read-only sync from your source system (e.g., Postgres) into a separate ops layer, with portfolio changes tracked over time for consistent case context. Designed to minimize integration effort and data egress.",
+      "CollectEye ingests portfolio data in shadow mode (read-only) while keeping your core systems untouched, so you can evaluate outcomes before changing operations. Read-only sync from your source system (e.g., Postgres) into a separate ops layer, with portfolio changes tracked over time for consistent case context. Designed to minimize integration effort and data egress.",
   },
   {
     index: "02",
     name: "Workflow layer",
     detail:
-      "A dedicated ops layer to manage assignments, case holds, queues, and work items — supported by agent recommendations and supervisor controls. Queue views, prioritization, and workload balancing across collectors; exception handling and approval gates where needed; playbooks and repeatable workflows to drive consistency.",
+      "A dedicated ops layer to manage assignments, case holds, queues, and work items, supported by agent recommendations and supervisor controls. Queue views, prioritization, and workload balancing across collectors; exception handling and approval gates where needed; playbooks and repeatable workflows to drive consistency.",
   },
   {
     index: "03",
     name: "Policy-gated comms",
     detail:
-      "Outbound and inbound communications are routed through policy controls, approvals, and logging — so every message is governed and reviewable. Human-in-loop or autonomous modes, configurable per policy. Inbound handling for STOP/opt-out, disputes, and complaints. A Template Studio manages scripts by channel, stage, product, and region.",
+      "Outbound and inbound communications are routed through policy controls, approvals, and logging, so every message is governed and reviewable. Human-in-loop or autonomous modes, configurable per policy. Inbound handling for STOP/opt-out, disputes, and complaints. A Template Studio manages scripts by channel, stage, product, and region.",
   },
   {
     index: "04",
     name: "Evidence ledger",
     detail:
-      "A full trail of recommendations and actions, including context, approvals, and outcomes — built for oversight and investigations. Decision Ledger for key actions with attribution, searchable audit logs and trace views to reproduce runs and decisions, and exportable evidence packs to support audits and incident response.",
+      "A full trail of recommendations and actions, including context, approvals, and outcomes, built for oversight and investigations. Decision Ledger for key actions with attribution, searchable audit logs and trace views to reproduce runs and decisions, and exportable evidence packs to support audits and incident response.",
   },
 ];
 
@@ -45,7 +45,7 @@ const rolloutStages = [
     ref: "STAGE 3 · AUTONOMOUS",
     name: "Scale",
     detail:
-      "Scale autonomy where policy allows — bounded by the same policy controls, with the evidence ledger recording every action.",
+      "Scale autonomy where policy allows, bounded by the same policy controls, with the evidence ledger recording every action.",
   },
 ];
 
@@ -70,7 +70,7 @@ const roles = [
 const CollectEye = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* ============ HERO — paper sheet ============ */}
+      {/* ============ HERO: paper sheet ============ */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 pt-12 md:pt-16 pb-14 md:pb-20">
@@ -91,7 +91,7 @@ const CollectEye = () => {
             <div className="mt-10 grid md:grid-cols-2 gap-8 md:gap-16 items-end">
               <p className="text-lg md:text-xl text-ink-soft leading-relaxed max-w-xl">
                 A policy-gated collections system that ingests portfolio data in a read-only shadow
-                layer and orchestrates assignments, communications, and evidence — without
+                layer and orchestrates assignments, communications, and evidence, without
                 requiring changes to your existing stack.
               </p>
               <div className="md:justify-self-end">
@@ -114,7 +114,7 @@ const CollectEye = () => {
         </div>
       </section>
 
-      {/* ============ WHY SHADOW MODE — dark ============ */}
+      {/* ============ WHY SHADOW MODE: dark ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
           <div>
@@ -131,7 +131,7 @@ const CollectEye = () => {
               gated action.
             </p>
             <p>
-              Autonomy is earned in stages — shadow, then gated, then autonomous — and stays
+              Autonomy is earned in stages: shadow, then gated, then autonomous. It stays
               bounded by policy at every stage, with an evidence trail from recommendations to
               outcomes.
             </p>
@@ -156,7 +156,7 @@ const CollectEye = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* ============ CORE CAPABILITIES — dark index rows ============ */}
+      {/* ============ CORE CAPABILITIES: dark index rows ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
         <div className="eyebrow text-paper/45 mb-8">Core capabilities</div>
         <div className="border-t border-paper/10">
@@ -175,7 +175,7 @@ const CollectEye = () => {
         </div>
       </section>
 
-      {/* ============ ROLES — paper sheet ============ */}
+      {/* ============ ROLES: paper sheet ============ */}
       <section className="px-3 md:px-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
@@ -213,7 +213,7 @@ const CollectEye = () => {
                   <div className="font-mono text-xs text-ledger mb-2">INBOUND HANDLING</div>
                   <p className="text-ink-soft text-[15px] leading-relaxed">
                     STOP/opt-out, disputes, and complaints captured and routed into workflows with
-                    audit trails — inbound is governed the same way outbound is.
+                    audit trails. Inbound is governed the same way outbound is.
                   </p>
                 </div>
                 <div className="border-t-2 border-ink pt-5">
@@ -239,7 +239,7 @@ const CollectEye = () => {
             </h2>
             <p className="mt-6 text-paper/65 leading-relaxed text-lg max-w-xl mx-auto">
               Schedule a demo to explore shadow-mode rollout, policy gating, and end-to-end
-              auditability — tailored to your portfolio.
+              auditability, tailored to your portfolio.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

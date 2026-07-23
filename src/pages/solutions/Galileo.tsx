@@ -7,7 +7,7 @@ const agents = [
     name: "Detective",
     role: "Data & fraud hunter",
     detail:
-      "Autonomous verification across Secretary of State lookups, SBA eligibility screening with NAICS code validation, fraud detection, digital footprint analysis, and document forensics — including PDF manipulation detection and circular transaction detection.",
+      "Autonomous verification across Secretary of State lookups, SBA eligibility screening with NAICS code validation, fraud detection, digital footprint analysis, and document forensics, including PDF manipulation detection and circular transaction detection.",
     supervisor: false,
   },
   {
@@ -15,7 +15,7 @@ const agents = [
     name: "Analyst",
     role: "Financial intelligence",
     detail:
-      "Auto-spreads tax returns (1120S, 1065, Schedule C), analyzes and categorizes bank statements, performs dual-ledger verification comparing accounting against banking data, and runs dynamic DSCR stress testing at -10%, -20%, and -30% — flagging discrepancies exceeding 10%.",
+      "Auto-spreads tax returns (1120S, 1065, Schedule C), analyzes and categorizes bank statements, performs dual-ledger verification comparing accounting against banking data, and runs dynamic DSCR stress testing at -10%, -20%, and -30%, flagging discrepancies exceeding 10%.",
     supervisor: false,
   },
   {
@@ -56,7 +56,7 @@ const loanTypes = [
 const Galileo = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* ============ HERO — paper sheet ============ */}
+      {/* ============ HERO: paper sheet ============ */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 pt-12 md:pt-16 pb-14 md:pb-20">
@@ -76,7 +76,7 @@ const Galileo = () => {
 
             <div className="mt-10 grid md:grid-cols-2 gap-8 md:gap-16 items-end">
               <p className="text-lg md:text-xl text-ink-soft leading-relaxed max-w-xl">
-                Four autonomous underwriting agents — Detective, Analyst, Judge, and Supervisor —
+                Four autonomous underwriting agents (Detective, Analyst, Judge, and Supervisor)
                 work together, designed to deliver fair, compliant, and explainable credit
                 decisions in under 30 seconds, with a complete chain-of-thought audit trail and
                 automatic escalation to a human when confidence falls below 90%.
@@ -92,7 +92,7 @@ const Galileo = () => {
               </div>
             </div>
 
-            {/* Product screenshot — paper-bright card, hairline border */}
+            {/* Product screenshot: paper-bright card, hairline border */}
             <div className="mt-14 md:mt-20 bg-paper-bright border border-rule rounded-xl overflow-hidden">
               <div className="px-5 py-3 border-b border-rule flex items-baseline justify-between">
                 <span className="eyebrow text-ink-faint">AI operations center</span>
@@ -111,7 +111,7 @@ const Galileo = () => {
         </div>
       </section>
 
-      {/* ============ WHY — dark ============ */}
+      {/* ============ WHY: dark ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
           <div>
@@ -129,7 +129,7 @@ const Galileo = () => {
             </p>
             <p>
               Galileo ships as a portable, API-first agentic engine that works on top of any
-              existing LOS — no system migration — plus a standalone LOS reference implementation
+              existing LOS with no system migration, plus a standalone LOS reference implementation
               for full-stack deployment.
             </p>
           </div>
@@ -141,7 +141,7 @@ const Galileo = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* ============ FOUR AGENTS — dark index rows ============ */}
+      {/* ============ FOUR AGENTS: dark index rows ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
         <div className="eyebrow text-paper/45 mb-8">The four agents</div>
         <div className="border-t border-paper/10">
@@ -171,7 +171,7 @@ const Galileo = () => {
                     >
                       Gaigentic Verify
                     </Link>
-                    —the same principle applied as a standalone layer across any finance-AI system.
+                    : the same principle applied as a standalone layer across any finance-AI system.
                   </p>
                 )}
               </div>
@@ -180,7 +180,7 @@ const Galileo = () => {
         </div>
       </section>
 
-      {/* ============ COMPLIANCE ALIGNMENT + INTEGRATIONS — paper sheet ============ */}
+      {/* ============ COMPLIANCE ALIGNMENT + INTEGRATIONS: paper sheet ============ */}
       <section className="px-3 md:px-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
@@ -196,7 +196,7 @@ const Galileo = () => {
                 <div className="font-mono text-xs text-ledger mb-2">ECOA · REGULATION B</div>
                 <p className="text-ink-soft text-[15px] leading-relaxed">
                   Designed for ECOA/Regulation B compliance: specific, evidenced adverse action
-                  reasons — max 4 per decision — with a full audit trail.
+                  reasons (max 4 per decision) with a full audit trail.
                 </p>
               </div>
               <div className="border-t-2 border-ink pt-5">
@@ -266,7 +266,7 @@ const Galileo = () => {
               Watch a credit decision reason itself out.
             </h2>
             <p className="mt-6 text-paper/65 leading-relaxed text-lg max-w-xl mx-auto">
-              Schedule a demo to see autonomous underwriting — from application intake through a
+              Schedule a demo to see autonomous underwriting, from application intake through a
               fully reasoned credit decision, designed for ECOA compliance and sub-30-second
               turnaround.
             </p>

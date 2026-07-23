@@ -16,7 +16,7 @@ const checks = [
   {
     name: "Challenge",
     detail:
-      "An independent model re-scores samples of agent decisions — especially the \"no alert\" ones, where regulatory risk hides. Disagreements escalate to your reviewers.",
+      "An independent model re-scores samples of agent decisions, especially the \"no alert\" ones, where regulatory risk hides. Disagreements escalate to your reviewers.",
   },
 ];
 
@@ -63,6 +63,13 @@ const products = [
     dot: "bg-amber",
     description: "Card scheme compliance and acquirer invoice reconciliation.",
   },
+  {
+    index: "07",
+    name: "Greenshield",
+    href: "/solutions/greenshield",
+    dot: "bg-amber",
+    description: "EU sustainability compliance across six regulatory regimes.",
+  },
 ];
 
 const frameworks = [
@@ -86,7 +93,7 @@ const frameworks = [
 const Index = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* ============ HERO — paper sheet ============ */}
+      {/* ============ HERO - paper sheet ============ */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 pt-12 md:pt-16 pb-14 md:pb-20">
@@ -108,7 +115,7 @@ const Index = () => {
 
             <div className="mt-10 md:mt-14 grid md:grid-cols-2 gap-8 md:gap-16 items-end">
               <p className="text-lg md:text-xl text-ink-soft leading-relaxed max-w-xl">
-                AI is entering the office of the CFO workflow by workflow — monitoring,
+                AI is entering the office of the CFO workflow by workflow: monitoring,
                 reconciliation, close, reporting. Gaigentic Verify is the independent check in
                 between: it continuously re-verifies what those agents produce and turns every
                 check into evidence built for supervisory review. One layer across the whole
@@ -141,7 +148,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ============ REGISTER — dark ============ */}
+      {/* ============ REGISTER - dark ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-20 items-start">
           <div>
@@ -153,7 +160,7 @@ const Index = () => {
             </h2>
             <p className="mt-6 text-paper/60 leading-relaxed max-w-md">
               Verify sits outside the systems doing the work. Outputs stream in read-only; each one
-              is recomputed, tested against policy, or challenged — and the result lands in a
+              is recomputed, tested against policy, or challenged, and the result lands in a
               register your supervisor can read.
             </p>
           </div>
@@ -168,7 +175,7 @@ const Index = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* ============ WHO CHECKS THE AI — dark ============ */}
+      {/* ============ WHO CHECKS THE AI - dark ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
         <div className="eyebrow text-paper/45 mb-6">The question</div>
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
@@ -179,7 +186,7 @@ const Index = () => {
           </h2>
           <div className="space-y-5 text-paper/65 leading-relaxed text-lg max-w-xl">
             <p>
-              Across the office of the CFO, AI agents are moving into production — transaction
+              Across the office of the CFO, AI agents are moving into production: transaction
               monitoring, reconciliation, close, reporting. The work gets faster. The
               accountability doesn't move: the CFO and the compliance officer still sign.
             </p>
@@ -197,7 +204,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ============ OFFICE OF THE CFO — dark ============ */}
+      {/* ============ OFFICE OF THE CFO - dark ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 pb-16 md:pb-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
           <div>
@@ -210,8 +217,8 @@ const Index = () => {
           </div>
           <div className="space-y-5 text-paper/65 leading-relaxed text-lg max-w-xl">
             <p>
-              The finance function adopts AI vendor by vendor — AP and AR, monitoring,
-              reconciliation and close, reporting, treasury — each tool with its own dashboard.
+              The finance function adopts AI vendor by vendor (AP and AR, monitoring,
+              reconciliation and close, reporting, treasury), each tool with its own dashboard.
               What the CFO signs is the sum of all of them.
             </p>
             <p>
@@ -223,7 +230,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ============ THREE CHECKS — paper sheet ============ */}
+      {/* ============ THREE CHECKS - paper sheet ============ */}
       <section className="px-3 md:px-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
@@ -258,7 +265,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ============ PRODUCT INDEX — dark ============ */}
+      {/* ============ PRODUCT INDEX - dark ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
         <div className="flex items-baseline justify-between mb-8">
           <span className="eyebrow text-paper/45">Products</span>
@@ -286,7 +293,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ============ CTA — deep green ============ */}
+      {/* ============ CTA - deep green ============ */}
       <section className="px-3 md:px-5 pb-3 md:pb-5">
         <div className="bg-ledger-deep rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24 text-center">

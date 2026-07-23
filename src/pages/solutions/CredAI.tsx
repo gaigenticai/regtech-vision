@@ -25,7 +25,7 @@ const dataSources = [
   {
     ref: "SOURCE · BANK",
     name: "Bank",
-    detail: "Cashflow metrics — inflow, outflow, and net flow — over a 90-day rolling window.",
+    detail: "Cashflow metrics (inflow, outflow, and net flow) over a 90-day rolling window.",
   },
   {
     ref: "SOURCE · CARD",
@@ -39,13 +39,13 @@ const agents = [
     index: "01",
     name: "Copilot Chat",
     detail:
-      "An AI assistant with persistent sessions, grounded in borrower data — ask questions about a borrower, a decision, or the portfolio and get answers tied to the underlying records.",
+      "An AI assistant with persistent sessions, grounded in borrower data. Ask questions about a borrower, a decision, or the portfolio and get answers tied to the underlying records.",
   },
   {
     index: "02",
     name: "Portfolio Watchdog",
     detail:
-      "Automated anomaly detection across the portfolio — surfacing patterns that manual monitoring misses before they become losses.",
+      "Automated anomaly detection across the portfolio, surfacing patterns that manual monitoring misses before they become losses.",
   },
   {
     index: "03",
@@ -57,7 +57,7 @@ const agents = [
     index: "04",
     name: "Policy Simulator",
     detail:
-      "Natural language what-if analysis for policy changes — simulate a policy's impact on decisions before activating it.",
+      "Natural language what-if analysis for policy changes: simulate a policy's impact on decisions before activating it.",
   },
   {
     index: "05",
@@ -69,14 +69,14 @@ const agents = [
     index: "06",
     name: "Collection",
     detail:
-      "Risk scoring and outreach strategy generation feeding a priority-based collection queue — recovery effort where it matters most.",
+      "Risk scoring and outreach strategy generation feeding a priority-based collection queue: recovery effort where it matters most.",
   },
 ];
 
 const CredAI = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* ============ HERO — paper sheet ============ */}
+      {/* ============ HERO: paper sheet ============ */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 pt-12 md:pt-16 pb-14 md:pb-20">
@@ -98,7 +98,7 @@ const CredAI = () => {
               <p className="text-lg md:text-xl text-ink-soft leading-relaxed max-w-xl">
                 API-first credit decisioning middleware that evaluates consumer and SME borrowers
                 using six alternative data sources, designed to return a scored decision in under
-                3 seconds — with a full decisioning console for operations.
+                3 seconds, with a full decisioning console for operations.
               </p>
               <div className="md:justify-self-end">
                 <Link
@@ -111,7 +111,7 @@ const CredAI = () => {
               </div>
             </div>
 
-            {/* Product screenshot — paper-bright card, hairline border */}
+            {/* Product screenshot: paper-bright card, hairline border */}
             <div className="mt-14 md:mt-20 bg-paper-bright border border-rule rounded-xl overflow-hidden">
               <div className="px-5 py-3 border-b border-rule flex items-baseline justify-between">
                 <span className="eyebrow text-ink-faint">Borrower 360 console</span>
@@ -130,7 +130,7 @@ const CredAI = () => {
         </div>
       </section>
 
-      {/* ============ WHY — dark ============ */}
+      {/* ============ WHY: dark ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
           <div>
@@ -148,7 +148,7 @@ const CredAI = () => {
               for auditability.
             </p>
             <p>
-              Every decision resolves to one of three outcomes — APPROVE, DECLINE, or REVIEW —
+              Every decision resolves to one of three outcomes (APPROVE, DECLINE, or REVIEW)
               with full reasoning: a credit score (0–1000) with confidence level, key signals
               categorized as positive, negative, or neutral, APR suggestions, and next-best-action
               recommendations.
@@ -162,7 +162,7 @@ const CredAI = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* ============ SIX AGENTS — dark index rows ============ */}
+      {/* ============ SIX AGENTS: dark index rows ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
         <div className="eyebrow text-paper/45 mb-8">Six AI agents</div>
         <div className="border-t border-paper/10">
@@ -181,7 +181,7 @@ const CredAI = () => {
         </div>
       </section>
 
-      {/* ============ DATA SOURCES + GOVERNANCE — paper sheet ============ */}
+      {/* ============ DATA SOURCES + GOVERNANCE: paper sheet ============ */}
       <section className="px-3 md:px-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
@@ -211,8 +211,8 @@ const CredAI = () => {
                 <div className="border-t-2 border-ink pt-5">
                   <div className="font-mono text-xs text-ledger mb-2">POLICY ENGINE</div>
                   <p className="text-ink-soft text-[15px] leading-relaxed">
-                    Version-controlled rules with configurable parameters — amount caps, score
-                    thresholds, chargeback limits, transaction counts, telco requirements — with
+                    Version-controlled rules with configurable parameters such as amount caps, score
+                    thresholds, chargeback limits, transaction counts, and telco requirements, with
                     separate Consumer and SME configurations, active/inactive toggling, instant
                     rollback, and an audit trail of every change.
                   </p>
@@ -228,8 +228,8 @@ const CredAI = () => {
                 <div className="border-t-2 border-ink pt-5">
                   <div className="font-mono text-xs text-ledger mb-2">OPERATIONS CONSOLE</div>
                   <p className="text-ink-soft text-[15px] leading-relaxed">
-                    Portfolio overview with real-time metrics — borrowers, approval rates,
-                    decision scores, transaction volumes by source — plus decision history,
+                    Portfolio overview with real-time metrics (borrowers, approval rates,
+                    decision scores, transaction volumes by source) plus decision history,
                     borrower search, policy management, and a priority-based collection queue.
                   </p>
                 </div>
@@ -249,7 +249,7 @@ const CredAI = () => {
             </h2>
             <p className="mt-6 text-paper/65 leading-relaxed text-lg max-w-xl mx-auto">
               Schedule a demo to explore Borrower 360 profiles, instant credit decisioning, and
-              the full AI agent suite — tailored to your lending workflow.
+              the full AI agent suite, tailored to your lending workflow.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

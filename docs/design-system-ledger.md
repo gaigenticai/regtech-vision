@@ -71,3 +71,8 @@ counting-number animations. No `rounded-3xl` cards inside sheets (sheets themsel
 Copy is factual and claim-safe: no invented numbers, no held certifications, no customer claims
 (honesty scrub of 2026-07-22 must be preserved). Regulatory references in mono
 (`DNB · SAFEST`, `EU AI ACT · ART. 12`). Sentence case everywhere except `.eyebrow` labels.
+
+**No em dashes (—) anywhere in copy or code comments** (user directive 2026-07-23: reads as
+AI-generated). Rewrite with commas, colons, sentence splits, or sparing parentheses. Middots (·)
+in mono labels are fine; number-range en dashes in mono data labels are fine. Never bash
+competitors by name anywhere on the public site.

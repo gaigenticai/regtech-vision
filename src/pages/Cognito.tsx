@@ -15,7 +15,7 @@ const stages = [
     index: "02",
     name: "Schema snapshots",
     detail:
-      "Capture schema snapshots and persist them as immutable artifacts per run — the ground truth every mapping decision refers back to.",
+      "Capture schema snapshots and persist them as immutable artifacts per run: the ground truth every mapping decision refers back to.",
     mono: "immutable artifacts · per run",
   },
   {
@@ -62,7 +62,7 @@ const capabilities = [
   {
     title: "Temporal-orchestrated runs",
     detail:
-      "Repeatable workflows for discovery, alignment, and reporting — every run is persisted and traceable, with history for enterprise programs.",
+      "Repeatable workflows for discovery, alignment, and reporting. Every run is persisted and traceable, with history for enterprise programs.",
   },
   {
     title: "Operational visibility",
@@ -84,7 +84,7 @@ const capabilities = [
 const Cognito = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* Hero — paper */}
+      {/* Hero: paper */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -94,7 +94,7 @@ const Cognito = () => {
             </h1>
             <p className="mt-8 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl">
               Cognito is a Temporal-orchestrated workflow and UI for schema discovery, field-level
-              alignment, reviewer decisions, and versioned export contracts — built for enterprise
+              alignment, reviewer decisions, and versioned export contracts, built for enterprise
               M&amp;A integration teams.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
@@ -116,7 +116,7 @@ const Cognito = () => {
         </div>
       </section>
 
-      {/* Workflow stages — dark index rows */}
+      {/* Workflow stages: dark index rows */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="flex items-baseline justify-between mb-8">
           <span className="eyebrow text-paper/45">The workflow spine</span>
@@ -148,7 +148,7 @@ const Cognito = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* Capabilities — dark grid */}
+      {/* Capabilities: dark grid */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="flex items-baseline justify-between mb-4">
           <span className="eyebrow text-paper/45">Decisions that survive audit</span>
@@ -156,7 +156,7 @@ const Cognito = () => {
         </div>
         <p className="text-paper/60 leading-relaxed max-w-2xl mb-10">
           Cognito is built for the real enterprise loop: durable workflows, evidence-backed
-          decisions, triage, approvals, and export contracts — without spreadsheet chaos.
+          decisions, triage, approvals, and export contracts, without spreadsheet chaos.
         </p>
         <div className="grid md:grid-cols-3 gap-px bg-paper/10 border border-paper/10 rounded-2xl overflow-hidden">
           {capabilities.map((capability) => (
@@ -170,7 +170,7 @@ const Cognito = () => {
         </div>
       </section>
 
-      {/* Sandbox — dark card, interactive */}
+      {/* Sandbox: dark card, interactive */}
       <section id="sandbox" className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="flex items-baseline justify-between mb-4">
           <span className="eyebrow text-paper/45">Cognito sandbox</span>
@@ -194,7 +194,7 @@ const Cognito = () => {
             </h2>
             <p className="mt-5 text-paper/65 leading-relaxed text-lg max-w-xl mx-auto">
               Bring order to schema alignment: durable workflows, evidence, triage, approvals, and
-              export contracts — without spreadsheet chaos.
+              export contracts, without spreadsheet chaos.
             </p>
             <div className="mt-7 font-mono text-xs text-paper/45">
               Temporal-orchestrated execution + history · evidence-backed approvals · versioned export contracts

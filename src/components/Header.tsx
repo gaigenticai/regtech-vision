@@ -24,6 +24,7 @@ const Header = () => {
         { name: "Galileo", href: "/solutions/galileo" },
         { name: "CredAI", href: "/solutions/credai" },
         { name: "CardOS", href: "/solutions/cardos" },
+        { name: "Greenshield", href: "/solutions/greenshield" },
       ],
     },
     { kind: "link" as const, name: "Platform", href: "/platform" },

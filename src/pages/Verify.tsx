@@ -7,7 +7,7 @@ const layers = [
     index: "01",
     name: "Connect",
     detail:
-      "Read-only connectors into your source systems — core banking, ERP, general ledger — and into any vendor's finance-AI agents. No write access, no stack changes. Vendor-agnostic is the point: we verify anyone's agents, including the ones you built yourself.",
+      "Read-only connectors into your source systems (core banking, ERP, general ledger) and into any vendor's finance-AI agents. No write access, no stack changes. Vendor-agnostic is the point: we verify anyone's agents, including the ones you built yourself.",
   },
   {
     index: "02",
@@ -34,7 +34,7 @@ const workflows = [
     ref: "AVAILABLE FIRST",
     name: "AML transaction monitoring",
     detail:
-      "Independent verification of AI-driven monitoring: sample re-screening, threshold and coverage checks, false-negative probes, drift detection — and the evidence file that shows your monitoring is supervised.",
+      "Independent verification of AI-driven monitoring: sample re-screening, threshold and coverage checks, false-negative probes, and drift detection, plus the evidence file that shows your monitoring is supervised.",
     accent: "text-tick",
   },
   {
@@ -56,7 +56,7 @@ const workflows = [
 const Verify = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* ============ HERO — paper sheet ============ */}
+      {/* ============ HERO - paper sheet ============ */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 pt-12 md:pt-16 pb-14 md:pb-20">
@@ -98,7 +98,7 @@ const Verify = () => {
         </div>
       </section>
 
-      {/* ============ THE QUESTION — dark ============ */}
+      {/* ============ THE QUESTION - dark ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
           <div>
@@ -115,7 +115,7 @@ const Verify = () => {
             </p>
             <p>
               Ask your external auditor whether they'd accept a company's self-audit. Independence
-              is not a feature an agent vendor can add — it is structural, and it is the property
+              is not a feature an agent vendor can add. It is structural, and it is the property
               Verify is built on.
             </p>
           </div>
@@ -127,7 +127,7 @@ const Verify = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* ============ OFFICE OF THE CFO — dark ============ */}
+      {/* ============ OFFICE OF THE CFO - dark ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
           <div>
@@ -138,8 +138,8 @@ const Verify = () => {
           </div>
           <div className="space-y-5 text-paper/65 leading-relaxed text-lg max-w-xl">
             <p>
-              The finance function is adopting AI workflow by workflow — AP and AR, monitoring,
-              reconciliation and close, reporting, treasury — usually from different vendors, each
+              The finance function is adopting AI workflow by workflow (AP and AR, monitoring,
+              reconciliation and close, reporting, treasury), usually from different vendors, each
               with its own dashboard. What the CFO signs is the sum of all of them.
             </p>
             <p>
@@ -157,7 +157,7 @@ const Verify = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* ============ FOUR LAYERS — dark index rows ============ */}
+      {/* ============ FOUR LAYERS - dark index rows ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
         <div className="eyebrow text-paper/45 mb-8">How Verify works</div>
         <div className="border-t border-paper/10">
@@ -176,14 +176,14 @@ const Verify = () => {
         </div>
       </section>
 
-      {/* ============ REGISTER — dark ============ */}
+      {/* ============ REGISTER - dark ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 pb-16 md:pb-24">
         <div className="bg-ink border border-paper/10 rounded-2xl p-5 md:p-8">
           <VerificationRegister />
         </div>
       </section>
 
-      {/* ============ WORKFLOWS — paper sheet ============ */}
+      {/* ============ WORKFLOWS - paper sheet ============ */}
       <section className="px-3 md:px-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
@@ -227,7 +227,7 @@ const Verify = () => {
                   <div className="font-mono text-xs text-ledger mb-2">INDEPENDENCE</div>
                   <p className="text-ink-soft text-[15px] leading-relaxed">
                     Verify doesn't certify models or write policy documents. It produces operational
-                    evidence that your AI-assisted workflows are checked — by a system that is never
+                    evidence that your AI-assisted workflows are checked by a system that is never
                     the one being checked.
                   </p>
                 </div>

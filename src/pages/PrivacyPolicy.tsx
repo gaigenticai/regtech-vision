@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
               Last updated · September 2025
             </div>
 
-            {/* 01 — Information We Collect */}
+            {/* 01 · Information We Collect */}
             <div className="mt-12 border-t border-rule pt-8">
               <div className="font-mono text-xs text-ledger mb-3">01</div>
               <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
@@ -52,7 +52,7 @@ const PrivacyPolicy = () => {
               </div>
             </div>
 
-            {/* 02 — How We Use Your Information */}
+            {/* 02 · How We Use Your Information */}
             <div className="mt-12 border-t border-rule pt-8">
               <div className="font-mono text-xs text-ledger mb-3">02</div>
               <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
@@ -67,7 +67,7 @@ const PrivacyPolicy = () => {
               </ul>
             </div>
 
-            {/* 03 — Data Security & Protection */}
+            {/* 03 · Data Security & Protection */}
             <div className="mt-12 border-t border-rule pt-8">
               <div className="font-mono text-xs text-ledger mb-3">03</div>
               <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
@@ -104,7 +104,7 @@ const PrivacyPolicy = () => {
               </div>
             </div>
 
-            {/* 04 — Information Sharing & Disclosure */}
+            {/* 04 · Information Sharing & Disclosure */}
             <div className="mt-12 border-t border-rule pt-8">
               <div className="font-mono text-xs text-ledger mb-3">04</div>
               <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
@@ -134,7 +134,7 @@ const PrivacyPolicy = () => {
               </ul>
             </div>
 
-            {/* 05 — Contact */}
+            {/* 05 · Contact */}
             <div className="mt-12 border-t border-rule pt-8">
               <div className="font-mono text-xs text-ledger mb-3">05</div>
               <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">

@@ -105,7 +105,7 @@ const apiSurface = [
 const Sentinel = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* Hero — paper */}
+      {/* Hero: paper */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -115,7 +115,7 @@ const Sentinel = () => {
             </h1>
             <p className="mt-8 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl">
               Sentinel is Gaigentic&rsquo;s reusable backend for durable sessions, hybrid retrieval,
-              connectors, tool execution, policy enforcement, and evidence-first audit trails —
+              connectors, tool execution, policy enforcement, and evidence-first audit trails,
               designed to plug into existing stacks without disruption.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
@@ -137,7 +137,7 @@ const Sentinel = () => {
         </div>
       </section>
 
-      {/* Capabilities — dark index rows */}
+      {/* Capabilities: dark index rows */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="flex items-baseline justify-between mb-8">
           <span className="eyebrow text-paper/45">What Sentinel includes</span>
@@ -176,7 +176,7 @@ const Sentinel = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* API surface — dark grid */}
+      {/* API surface: dark grid */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="flex items-baseline justify-between mb-4">
           <span className="eyebrow text-paper/45">Core API surface</span>
@@ -205,7 +205,7 @@ const Sentinel = () => {
         </div>
       </section>
 
-      {/* Sandbox — dark card, interactive */}
+      {/* Sandbox: dark card, interactive */}
       <section id="sandbox" className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="flex items-baseline justify-between mb-4">
           <span className="eyebrow text-paper/45">API sandbox</span>

@@ -18,7 +18,7 @@ const TermsOfService = () => {
               Effective · September 2025
             </div>
 
-            {/* 01 — Acceptance of Terms */}
+            {/* 01 · Acceptance of Terms */}
             <div className="mt-12 border-t border-rule pt-8">
               <div className="font-mono text-xs text-ledger mb-3">01</div>
               <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
@@ -31,7 +31,7 @@ const TermsOfService = () => {
               </p>
             </div>
 
-            {/* 02 — Service Description */}
+            {/* 02 · Service Description */}
             <div className="mt-12 border-t border-rule pt-8">
               <div className="font-mono text-xs text-ledger mb-3">02</div>
               <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
@@ -50,7 +50,7 @@ const TermsOfService = () => {
               </ul>
             </div>
 
-            {/* 03 — User Responsibilities */}
+            {/* 03 · User Responsibilities */}
             <div className="mt-12 border-t border-rule pt-8">
               <div className="font-mono text-xs text-ledger mb-3">03</div>
               <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
@@ -83,7 +83,7 @@ const TermsOfService = () => {
               </div>
             </div>
 
-            {/* 04 — Intellectual Property */}
+            {/* 04 · Intellectual Property */}
             <div className="mt-12 border-t border-rule pt-8">
               <div className="font-mono text-xs text-ledger mb-3">04</div>
               <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
@@ -102,7 +102,7 @@ const TermsOfService = () => {
               </p>
             </div>
 
-            {/* 05 — Service Availability & Support */}
+            {/* 05 · Service Availability & Support */}
             <div className="mt-12 border-t border-rule pt-8">
               <div className="font-mono text-xs text-ledger mb-3">05</div>
               <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
@@ -140,7 +140,7 @@ const TermsOfService = () => {
               </div>
             </div>
 
-            {/* 06 — Limitation of Liability */}
+            {/* 06 · Limitation of Liability */}
             <div className="mt-12 border-t border-rule pt-8">
               <div className="font-mono text-xs text-ledger mb-3">06</div>
               <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
@@ -158,7 +158,7 @@ const TermsOfService = () => {
               </p>
             </div>
 
-            {/* 07 — Termination */}
+            {/* 07 · Termination */}
             <div className="mt-12 border-t border-rule pt-8">
               <div className="font-mono text-xs text-ledger mb-3">07</div>
               <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">
@@ -175,7 +175,7 @@ const TermsOfService = () => {
               </ul>
             </div>
 
-            {/* 08 — Contact */}
+            {/* 08 · Contact */}
             <div className="mt-12 border-t border-rule pt-8">
               <div className="font-mono text-xs text-ledger mb-3">08</div>
               <h2 className="font-sans font-expanded font-bold text-2xl text-ink tracking-tight mb-5">

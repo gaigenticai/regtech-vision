@@ -9,7 +9,7 @@ const products = [
     dot: "bg-tick",
     tagline: "The independent verification layer",
     description:
-      "Continuous, independent verification of the outputs your finance-AI agents produce — AML monitoring decisions, reconciliations, filings — with tamper-evident evidence mapped to DNB SAFEST and EU AI Act Articles 12 & 14.",
+      "Continuous, independent verification of the outputs your finance-AI agents produce, such as AML monitoring decisions, reconciliations, and filings, with tamper-evident evidence mapped to DNB SAFEST and EU AI Act Articles 12 & 14.",
     tags: ["Independent by design", "Continuous", "Regulator-ready evidence", "Vendor-agnostic"],
   },
   {
@@ -19,7 +19,7 @@ const products = [
     dot: "bg-amber",
     tagline: "Governed agentic workflows for compliance",
     description:
-      "A suite of intelligent AI agents that works alongside teams across onboarding, monitoring, investigations, and reporting — with security and auditability built in.",
+      "A suite of intelligent AI agents that works alongside teams across onboarding, monitoring, investigations, and reporting, with security and auditability built in.",
     tags: ["End-to-end agent suite", "Audit-ready operations", "Works with your stack"],
   },
   {
@@ -39,7 +39,7 @@ const products = [
     dot: "bg-amber",
     tagline: "Agentic AI loan origination",
     description:
-      "Underwriting powered by four AI agents — Detective, Analyst, Judge, and Supervisor — designed for fair, explainable credit decisions in seconds, with a supervisor agent checking the others' work.",
+      "Underwriting powered by four AI agents (Detective, Analyst, Judge, and Supervisor) designed for fair, explainable credit decisions in seconds, with a supervisor agent checking the others' work.",
     tags: ["Rapid decisions", "ECOA-aligned", "Explainable AI"],
   },
   {
@@ -49,7 +49,7 @@ const products = [
     dot: "bg-amber",
     tagline: "API-first credit decisioning",
     description:
-      "Borrower 360 with instant decisioning — evaluate consumer and SME borrowers using alternative data sources, with a full decisioning console for operations.",
+      "Borrower 360 with instant decisioning: evaluate consumer and SME borrowers using alternative data sources, with a full decisioning console for operations.",
     tags: ["Instant decisioning", "Alternative data", "Policy engine"],
   },
   {
@@ -59,15 +59,25 @@ const products = [
     dot: "bg-amber",
     tagline: "Payments compliance & acquirer cost assurance",
     description:
-      "Card scheme rule updates turned into briefed, assigned workstreams — and every acquirer invoice line reconciled against the contract, with an acquirer-ready inquiry document for discrepancies.",
+      "Card scheme rule updates turned into briefed, assigned workstreams, and every acquirer invoice line reconciled against the contract, with an acquirer-ready inquiry document for discrepancies.",
     tags: ["Scheme compliance", "Invoice reconciliation", "Traceable findings"],
+  },
+  {
+    index: "07",
+    name: "Greenshield",
+    href: "/solutions/greenshield",
+    dot: "bg-amber",
+    tagline: "EU sustainability compliance",
+    description:
+      "EUDR, CSRD, CBAM, PPWR, VSME, and GHG Protocol / ISO 14064-1 in a single platform: assessments grounded in regulation text, traceable calculations, and filings generated in the format the regulator expects.",
+    tags: ["Six EU regimes", "Satellite deforestation analysis", "iXBRL filing export"],
   },
 ];
 
 const Solutions = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* Hero strip — paper */}
+      {/* Hero strip - paper */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -78,7 +88,7 @@ const Solutions = () => {
               <span className="text-ledger">Workflows that earn it.</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl">
-              Our flagship, Verify, independently checks what finance AI produces — anyone's
+              Our flagship, Verify, independently checks what finance AI produces. Anyone's
               finance AI. Our workflow products are built to the same standard we verify against:
               governed, auditable, integrated with your existing stack.
             </p>
@@ -86,7 +96,7 @@ const Solutions = () => {
         </div>
       </section>
 
-      {/* Product index — dark, expanded rows */}
+      {/* Product index - dark, expanded rows */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="border-t border-paper/10">
           {products.map((product) => (

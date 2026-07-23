@@ -12,7 +12,7 @@ const workflows = [
     index: "02",
     name: "Invoice analysis",
     detail:
-      "Extracts the rate card from your acquirer contract, parses each monthly invoice — text or scanned — and reconciles every fee line against what the contract says, combining deterministic SQL checks with LLM reasoning. Discrepancies become a downloadable, acquirer-ready inquiry document.",
+      "Extracts the rate card from your acquirer contract, parses each monthly invoice, text or scanned, and reconciles every fee line against what the contract says, combining deterministic SQL checks with LLM reasoning. Discrepancies become a downloadable, acquirer-ready inquiry document.",
   },
 ];
 
@@ -20,7 +20,7 @@ const capabilities = [
   {
     name: "Document intelligence",
     detail:
-      "Layout-aware parsing for contracts, rulebooks, bulletins, and invoices — including OCR for scanned documents.",
+      "Layout-aware parsing for contracts, rulebooks, bulletins, and invoices, including OCR for scanned documents.",
   },
   {
     name: "Hybrid retrieval",
@@ -30,19 +30,19 @@ const capabilities = [
   {
     name: "Deterministic + LLM reconciliation",
     detail:
-      "Fee lines are checked with SQL where the math is exact, and with LLM reasoning where contract language needs interpretation — each finding traceable to its source clause.",
+      "Fee lines are checked with SQL where the math is exact, and with LLM reasoning where contract language needs interpretation, with each finding traceable to its source clause.",
   },
   {
     name: "Action tracking",
     detail:
-      "Scheme updates become assigned, trackable workstreams per function — evidence of who handled what, when.",
+      "Scheme updates become assigned, trackable workstreams per function: evidence of who handled what, when.",
   },
 ];
 
 const CardOS = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* Hero — paper */}
+      {/* Hero: paper */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -64,13 +64,13 @@ const CardOS = () => {
               CardOS keeps a card-issuing or acquiring business on top of the two documents that
               quietly cost it the most: the scheme rulebook and the acquirer invoice. Rule updates
               become briefed, assigned workstreams; invoices are reconciled line-by-line against
-              the contract — with every finding traceable to its source.
+              the contract, with every finding traceable to its source.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Workflows — dark index rows */}
+      {/* Workflows: dark index rows */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="eyebrow text-paper/45 mb-8">Two workflows</div>
         <div className="border-t border-paper/10">
@@ -94,7 +94,7 @@ const CardOS = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* Capabilities — paper card grid */}
+      {/* Capabilities: paper card grid */}
       <section className="px-3 md:px-5 py-12 md:py-16">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -117,7 +117,7 @@ const CardOS = () => {
             <div className="mt-12 border-t-2 border-ink pt-5 max-w-3xl">
               <div className="font-mono text-xs text-ledger mb-2">FOR THE OFFICE OF THE CFO</div>
               <p className="text-ink-soft text-[15px] leading-relaxed">
-                Acquirer fees are one of the largest unexamined cost lines in a payments P&amp;L —
+                Acquirer fees are one of the largest unexamined cost lines in a payments P&amp;L:
                 checked rarely, disputed later, evidenced poorly. CardOS applies the same
                 discipline we apply everywhere: don't trust the invoice, recompute it from the
                 contract, and keep the evidence.
@@ -135,7 +135,7 @@ const CardOS = () => {
               See it on your own invoice.
             </h2>
             <p className="mt-5 text-paper/65 leading-relaxed text-lg max-w-xl mx-auto">
-              Bring one acquirer contract and one monthly invoice — the reconciliation makes the
+              Bring one acquirer contract and one monthly invoice. The reconciliation makes the
               case better than a slide deck can.
             </p>
             <Link

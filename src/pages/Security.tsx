@@ -7,7 +7,7 @@ const topics = [
     blocks: [
       {
         heading: "Defense in depth",
-        body: "At Gaigentic AI, security is not an afterthought — it's fundamental to our platform architecture. We implement a defense-in-depth strategy that protects your data at every layer.",
+        body: "At Gaigentic AI, security is not an afterthought: it's fundamental to our platform architecture. We implement a defense-in-depth strategy that protects your data at every layer.",
       },
       {
         heading: "Zero trust",
@@ -122,7 +122,7 @@ const topics = [
 const Security = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* Hero — paper */}
+      {/* Hero: paper */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -141,7 +141,7 @@ const Security = () => {
         </div>
       </section>
 
-      {/* Topics — dark index rows */}
+      {/* Topics: dark index rows */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="border-t border-paper/10">
           {topics.map((topic) => (
@@ -171,7 +171,7 @@ const Security = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* Report security issues — paper sheet */}
+      {/* Report security issues: paper sheet */}
       <section className="px-3 md:px-5 py-14 md:py-20 pb-3 md:pb-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">

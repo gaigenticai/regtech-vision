@@ -62,7 +62,7 @@ const frameworks = [
 const KYCAutomation = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* Hero — paper */}
+      {/* Hero: paper */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -80,7 +80,7 @@ const KYCAutomation = () => {
               <span className="text-ledger">and auditable</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl">
-              Governed agentic KYC workflows — with human oversight built in — that speed up
+              Governed agentic KYC workflows, with human oversight built in, that speed up
               customer onboarding with accurate identity verification and support your compliance
               standards. Every decision is reviewable, at a lower cost per check.
             </p>
@@ -88,7 +88,7 @@ const KYCAutomation = () => {
         </div>
       </section>
 
-      {/* Challenge — dark */}
+      {/* Challenge: dark */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
           <div>
@@ -115,7 +115,7 @@ const KYCAutomation = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* Capabilities — dark index rows */}
+      {/* Capabilities: dark index rows */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="eyebrow text-paper/45 mb-8">Capabilities</div>
         <div className="border-t border-paper/10">
@@ -134,7 +134,7 @@ const KYCAutomation = () => {
         </div>
       </section>
 
-      {/* Frameworks — paper sheet */}
+      {/* Frameworks: paper sheet */}
       <section className="px-3 md:px-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
@@ -159,7 +159,7 @@ const KYCAutomation = () => {
               Bring governed KYC to your onboarding.
             </h2>
             <p className="mt-5 text-paper/65 leading-relaxed text-lg max-w-xl mx-auto">
-              Governed, auditable KYC automation for your customer onboarding — with human
+              Governed, auditable KYC automation for your customer onboarding, with human
               oversight at every step.
             </p>
             <Link

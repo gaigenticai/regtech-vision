@@ -6,7 +6,7 @@ const pillars = [
     index: "01",
     name: "Deployment",
     detail:
-      "Runs where your risk appetite says it should: your cloud (AWS, Azure, GCP) or fully on-premises, with EU data residency respected. On-prem or hosted LLMs — your call, switchable per workload.",
+      "Runs where your risk appetite says it should: your cloud (AWS, Azure, GCP) or fully on-premises, with EU data residency respected. On-prem or hosted LLMs: your call, switchable per workload.",
   },
   {
     index: "02",
@@ -18,7 +18,7 @@ const pillars = [
     index: "03",
     name: "Integration",
     detail:
-      "API-first, read-only where possible. Designed to integrate with core banking platforms (e.g. Temenos, Finastra), ERPs, CRMs, and custom systems — without requiring changes to your existing stack.",
+      "API-first, read-only where possible. Designed to integrate with core banking platforms (e.g. Temenos, Finastra), ERPs, CRMs, and custom systems without requiring changes to your existing stack.",
   },
   {
     index: "04",
@@ -49,7 +49,7 @@ const rollout = [
 const Platform = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* Hero — paper */}
+      {/* Hero - paper */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -60,13 +60,13 @@ const Platform = () => {
             <p className="mt-8 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl">
               One platform underneath Verify and our workflow products: secure deployment in your
               environment, read-only integration with your stack, and observability designed for
-              audit — not retrofitted for it.
+              audit, not retrofitted for it.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Pillars — dark index rows */}
+      {/* Pillars - dark index rows */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="eyebrow text-paper/45 mb-8">Four pillars</div>
         <div className="border-t border-paper/10">
@@ -90,7 +90,7 @@ const Platform = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* Rollout — dark */}
+      {/* Rollout - dark */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="flex items-baseline justify-between mb-10">
           <span className="eyebrow text-paper/45">How rollout works</span>

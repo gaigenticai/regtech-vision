@@ -44,8 +44,8 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm text-paper/60 leading-relaxed max-w-xs">
-              The independent verification layer for AI-driven finance. Your AI does the work —
-              we're the independent check that lets you sign it.
+              The independent verification layer for AI-driven finance. Your AI does the work.
+              We're the independent check that lets you sign it.
             </p>
 
             <div className="mt-6 space-y-1.5 font-mono text-xs text-paper/50">

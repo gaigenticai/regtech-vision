@@ -26,7 +26,7 @@ const capabilities = [
     index: "03",
     name: "Evidence library",
     detail:
-      "Evidence catalog with owners and expirations — SOC 2, ISO, pen tests, BCP, DPIA · reuse across assessments with citations · gap detection for missing or stale artifacts · expiry alerts and renewal preparation.",
+      "Evidence catalog with owners and expirations (SOC 2, ISO, pen tests, BCP, DPIA) · reuse across assessments with citations · gap detection for missing or stale artifacts · expiry alerts and renewal preparation.",
   },
   {
     index: "04",
@@ -58,7 +58,7 @@ const frameworks = [
 const VendorRisk = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* Hero — paper */}
+      {/* Hero: paper */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -77,14 +77,14 @@ const VendorRisk = () => {
             </h1>
             <p className="mt-8 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl">
               Centralize evidence, automate risk-tiered renewals, and generate audit-ready
-              questionnaire responses grounded in approved artifacts — with citations and an
+              questionnaire responses grounded in approved artifacts, with citations and an
               immutable event history behind every output.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Challenge — dark */}
+      {/* Challenge: dark */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
           <div>
@@ -111,7 +111,7 @@ const VendorRisk = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* Capabilities — dark index rows */}
+      {/* Capabilities: dark index rows */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="eyebrow text-paper/45 mb-8">Capabilities</div>
         <div className="border-t border-paper/10">
@@ -130,7 +130,7 @@ const VendorRisk = () => {
         </div>
       </section>
 
-      {/* Frameworks — paper sheet */}
+      {/* Frameworks: paper sheet */}
       <section className="px-3 md:px-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">

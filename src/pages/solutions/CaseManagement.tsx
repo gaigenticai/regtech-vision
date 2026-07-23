@@ -58,7 +58,7 @@ const frameworks = [
 const CaseManagement = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* Hero — paper */}
+      {/* Hero: paper */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -77,14 +77,14 @@ const CaseManagement = () => {
             </h1>
             <p className="mt-8 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl">
               Intelligent investigation case management with assisted SAR drafting and workflow
-              orchestration — with human oversight built in. Less manual effort, consistent
+              orchestration, with human oversight built in. Less manual effort, consistent
               workflows, and SAR drafts prepared for human review.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Challenge — dark */}
+      {/* Challenge: dark */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
           <div>
@@ -111,7 +111,7 @@ const CaseManagement = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* Capabilities — dark index rows */}
+      {/* Capabilities: dark index rows */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="eyebrow text-paper/45 mb-8">Capabilities</div>
         <div className="border-t border-paper/10">
@@ -130,7 +130,7 @@ const CaseManagement = () => {
         </div>
       </section>
 
-      {/* Frameworks — paper sheet */}
+      {/* Frameworks: paper sheet */}
       <section className="px-3 md:px-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
@@ -155,7 +155,7 @@ const CaseManagement = () => {
               Clear the backlog. Keep the audit trail.
             </h2>
             <p className="mt-5 text-paper/65 leading-relaxed text-lg max-w-xl mx-auto">
-              Governed, AI-assisted case management for your investigation workflows — with human
+              Governed, AI-assisted case management for your investigation workflows, with human
               oversight at every decision point.
             </p>
             <Link

@@ -722,7 +722,7 @@ export default function CognitoSandbox() {
                                         {final.match.table}.{final.match.column}
                                       </span>
                                     ) : (
-                                      <span className="text-xs text-gray-400">—</span>
+                                      <span className="text-xs text-gray-400">no match</span>
                                     )}
                                   </div>
 

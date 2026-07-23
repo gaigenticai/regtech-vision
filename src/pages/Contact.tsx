@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 const Contact = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* Hero — paper */}
+      {/* Hero - paper */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -13,7 +13,7 @@ const Contact = () => {
             </h1>
             <p className="mt-8 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl">
               Whether you want independent verification of your finance-AI outputs with Verify, or
-              governed agentic workflows for compliance and lending — write to us. We're onboarding
+              governed agentic workflows for compliance and lending, write to us. We're onboarding
               a small number of design partners in the Netherlands and wider EU, and the founders
               answer directly.
             </p>
@@ -60,19 +60,19 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* The discovery question — dark */}
+      {/* The discovery question - dark */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-start">
           <div>
             <div className="eyebrow text-paper/45 mb-6">Start with one question</div>
             <h2 className="font-sans font-expanded font-extrabold text-paper tracking-tight leading-tight text-4xl md:text-5xl max-w-xl">
-              "If AI does your transaction monitoring — how do you prove to DNB that it's working?"
+              "If AI does your transaction monitoring, how do you prove to DNB that it's working?"
             </h2>
           </div>
           <div className="space-y-5 text-paper/65 leading-relaxed text-lg max-w-xl lg:pt-2">
             <p>
               If the honest answer is "the vendor's dashboard," that's the conversation we'd like
-              to have. Bring your compliance officer — the first meeting is about your workflows
+              to have. Bring your compliance officer: the first meeting is about your workflows
               and your supervisor's expectations, not a product demo.
             </p>
           </div>

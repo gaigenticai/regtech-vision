@@ -25,7 +25,7 @@ const products = [
 const Infrastructure = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* Hero — paper */}
+      {/* Hero - paper */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -34,14 +34,14 @@ const Infrastructure = () => {
               Core building blocks for <span className="text-ledger">enterprise-grade AI</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl">
-              The infrastructure underneath our products — and available on its own. Built to make
+              The infrastructure underneath our products, and available on its own. Built to make
               regulated systems safe, observable, and repeatable.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Product index — dark */}
+      {/* Product index - dark */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="border-t border-paper/10">
           {products.map((product) => (

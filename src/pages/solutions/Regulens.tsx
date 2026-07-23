@@ -79,7 +79,7 @@ const areas = [
 const Regulens = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* ============ HERO — paper sheet ============ */}
+      {/* ============ HERO: paper sheet ============ */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 pt-12 md:pt-16 pb-14 md:pb-20">
@@ -100,7 +100,7 @@ const Regulens = () => {
 
             <div className="mt-10 grid md:grid-cols-2 gap-8 md:gap-16 items-end">
               <p className="text-lg md:text-xl text-ink-soft leading-relaxed max-w-xl">
-                End-to-end governed agentic workflows — with human oversight built in — that reduce
+                End-to-end governed agentic workflows, with human oversight built in, that reduce
                 manual effort, lower compliance costs, and help you evidence regulatory adherence
                 across all BFSI operations. Each solution works independently or as part of an
                 integrated compliance ecosystem.
@@ -123,7 +123,7 @@ const Regulens = () => {
         </div>
       </section>
 
-      {/* ============ TWELVE AREAS — dark index rows ============ */}
+      {/* ============ TWELVE AREAS: dark index rows ============ */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-16 md:py-24">
         <div className="flex items-baseline justify-between mb-8">
           <span className="eyebrow text-paper/45">The twelve areas</span>
@@ -154,7 +154,7 @@ const Regulens = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* ============ VERIFY NOTE — paper sheet ============ */}
+      {/* ============ VERIFY NOTE: paper sheet ============ */}
       <section className="px-3 md:px-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
@@ -171,7 +171,7 @@ const Regulens = () => {
                   <Link to="/verify" className="text-ledger font-semibold hover:underline">
                     Gaigentic Verify
                   </Link>
-                  , our verification layer that checks what finance-AI agents produce — so your
+                  , our verification layer that checks what finance-AI agents produce, so your
                   team can review, trust, and evidence the results.
                 </p>
                 <div className="pt-2 border-t border-rule">
@@ -194,7 +194,7 @@ const Regulens = () => {
               See Regulens against your real workflows.
             </h2>
             <p className="mt-6 text-paper/65 leading-relaxed text-lg max-w-xl mx-auto">
-              A tailored, solution-specific demonstration — scoped to the compliance areas that
+              A tailored, solution-specific demonstration, scoped to the compliance areas that
               matter to you, with human oversight built in from day one.
             </p>
             <Link

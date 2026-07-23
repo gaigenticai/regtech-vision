@@ -58,7 +58,7 @@ const frameworks = [
 const FraudDetection = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* Hero — paper */}
+      {/* Hero: paper */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -76,7 +76,7 @@ const FraudDetection = () => {
               <span className="text-ledger">as fast as fraud does</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl">
-              ML-powered fraud detection with behavioral analysis and anomaly detection — real-time
+              ML-powered fraud detection with behavioral analysis and anomaly detection: real-time
               analysis, adaptive models, and fewer false positives, with human review of
               high-impact decisions.
             </p>
@@ -84,7 +84,7 @@ const FraudDetection = () => {
         </div>
       </section>
 
-      {/* Challenge — dark */}
+      {/* Challenge: dark */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
           <div>
@@ -111,7 +111,7 @@ const FraudDetection = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* Capabilities — dark index rows */}
+      {/* Capabilities: dark index rows */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="eyebrow text-paper/45 mb-8">Capabilities</div>
         <div className="border-t border-paper/10">
@@ -130,7 +130,7 @@ const FraudDetection = () => {
         </div>
       </section>
 
-      {/* Frameworks — paper sheet */}
+      {/* Frameworks: paper sheet */}
       <section className="px-3 md:px-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
@@ -155,7 +155,7 @@ const FraudDetection = () => {
               Catch it in real time.
             </h2>
             <p className="mt-5 text-paper/65 leading-relaxed text-lg max-w-xl mx-auto">
-              Governed, adaptive fraud detection for your prevention program — with human review
+              Governed, adaptive fraud detection for your prevention program, with human review
               of high-impact decisions.
             </p>
             <Link

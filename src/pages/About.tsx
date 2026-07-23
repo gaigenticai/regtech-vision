@@ -56,7 +56,7 @@ const facts = [
 const About = () => {
   return (
     <div className="bg-ink min-h-screen pt-16">
-      {/* Hero — paper */}
+      {/* Hero - paper */}
       <section className="px-3 md:px-5 pt-3 md:pt-5">
         <div className="bg-paper rounded-2xl md:rounded-3xl">
           <div className="max-w-[1400px] mx-auto px-5 md:px-12 py-12 md:py-16">
@@ -67,7 +67,7 @@ const About = () => {
             <p className="mt-8 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl">
               We're industry veterans with decades of combined experience across financial services
               and AI. As finance teams hand real work to AI agents, we build the independent
-              verification layer that checks what those agents produce — and governed agentic
+              verification layer that checks what those agents produce, and governed agentic
               workflows engineered to the same standard.
             </p>
 
@@ -84,7 +84,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Leadership — dark */}
+      {/* Leadership - dark */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="eyebrow text-paper/45 mb-8">Leadership</div>
         <div className="grid md:grid-cols-2 gap-px bg-paper/10 border border-paper/10 rounded-2xl overflow-hidden">
@@ -152,7 +152,7 @@ const About = () => {
         <div className="h-10 hatch-band rounded-sm" aria-hidden />
       </div>
 
-      {/* What we believe — dark */}
+      {/* What we believe - dark */}
       <section className="max-w-[1400px] mx-auto px-5 md:px-12 py-14 md:py-20">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
           <div>
@@ -166,13 +166,13 @@ const About = () => {
           <div className="space-y-5 text-paper/65 leading-relaxed text-lg max-w-xl">
             <p>
               Financial institutions don't need more AI promises. They need AI whose work can be
-              checked — by something that isn't the AI itself. That conviction runs through
+              checked by something that isn't the AI itself. That conviction runs through
               everything we ship: read-only where possible, evidence by default, human oversight as
               a product feature rather than a slide.
             </p>
             <p>
               We build from the Netherlands for the EU, where supervisors have said clearly what
-              they expect from AI in finance. We think that clarity is an advantage — for us, and
+              they expect from AI in finance. We think that clarity is an advantage, for us and
               for the institutions we work with.
             </p>
           </div>
@@ -187,7 +187,7 @@ const About = () => {
               Talk to the founders.
             </h2>
             <p className="mt-5 text-paper/65 leading-relaxed text-lg max-w-xl mx-auto">
-              We answer directly — no sales layer. If you run AI in a regulated finance workflow,
+              We answer directly, with no sales layer. If you run AI in a regulated finance workflow,
               we'd like to hear how you prove it works.
             </p>
             <Link

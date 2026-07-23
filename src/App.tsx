@@ -33,6 +33,7 @@ import CollectEye from "./pages/solutions/CollectEye";
 import Galileo from "./pages/solutions/Galileo";
 import CredAI from "./pages/solutions/CredAI";
 import CardOS from "./pages/solutions/CardOS";
+import Greenshield from "./pages/solutions/Greenshield";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Security from "./pages/Security";
@@ -59,8 +60,8 @@ const App = () => (
           <Route path="/solutions/galileo" element={<Galileo />} />
           <Route path="/solutions/credai" element={<CredAI />} />
           <Route path="/solutions/cardos" element={<CardOS />} />
-          {/* Greenshield hidden pending NDA */}
-          <Route path="/solutions/canopy" element={<Navigate to="/solutions" replace />} />
+          <Route path="/solutions/greenshield" element={<Greenshield />} />
+          <Route path="/solutions/canopy" element={<Navigate to="/solutions/greenshield" replace />} />
 
           <Route path="/solutions/regulens/kyc-automation" element={<KYCAutomation />} />
           <Route path="/solutions/regulens/lending-compliance" element={<LendingCompliance />} />
